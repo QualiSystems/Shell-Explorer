@@ -1,3 +1,3 @@
 Shell-Explorer
 
-Script used to generate shells.yaml file, which include list of all Shells, and packages.
+Script used to generate shells.yaml file, which includes a list of all Shells, and packages.
