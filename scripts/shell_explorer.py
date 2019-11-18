@@ -35,8 +35,8 @@ class ShellExplorer(object):
 
     TABLE_TEMPLATE = {KEYS.SHELL_L1: [], KEYS.SHELL_1G: [], KEYS.SHELL_2G: [], KEYS.PACKAGE: []}
 
-    def __init__(self, user, password, org=None):
-        self.github = Github(user, password)
+    def __init__(self, auth_key, org=None):
+        self.github = Github(auth_key)
         self._org = org
         # self.shells_table = {self.KEYS.SHELL_L1: [], self.KEYS.SHELL_1G: [], self.KEYS.SHELL_2G: [],
         #                      self.KEYS.PACKAGE: []}
@@ -147,10 +147,10 @@ class ShellExplorer(object):
 
 
 if __name__ == '__main__':
-    print(sys.argv)
-    username = sys.argv[1]
-    password = sys.argv[2]
-    organization = sys.argv[3]
-    shells_file = sys.argv[4]
-    se = ShellExplorer(username, password, organization)
+    # print(sys.argv)
+    # username = sys.argv[1]
+    # password = sys.argv[2]
+    organization = "Quali"
+    shells_file = sys.argv[2]
+    se = ShellExplorer(sys.argv[1], organization)
     se.scan_to_file(shells_file)
