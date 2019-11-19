@@ -2,6 +2,7 @@ import re
 import sys
 from collections import OrderedDict
 from copy import deepcopy
+from difflib import Differ
 
 import yaml
 from github import Github
@@ -142,15 +143,27 @@ class ShellExplorer(object):
         table = self._explore_org(self._org)
         self._save(path, table)
 
-    def update_repo(self, repo_name, path):
-        pass
+    def scan_and_commit(self, path, branch):
+        table = self._explore_org(self._org)
+        data = yaml.dump(table, default_flow_style=False, allow_unicode=True, encoding=None)
+        org = self._get_org(self._org)
+        repo = org.get_repo("Shell-Explorer")
+        message = "Scanned Shells"
+        ref = repo.get_branch(branch).commit.sha
+        content = repo.get_contents(path, ref)
+        repo_data = content.decoded_content.decode("utf-8")
+        if not data == repo_data:
+            result = repo.update_file(path, message, data, content.sha, branch=branch)
+            print(result)
 
 
 if __name__ == '__main__':
     # print(sys.argv)
     # username = sys.argv[1]
     # password = sys.argv[2]
-    organization = "Quali"
-    shells_file = sys.argv[2]
-    se = ShellExplorer(sys.argv[1], organization)
-    se.scan_to_file(shells_file)
+    _auth_key = sys.argv[1]
+    _shells_file = sys.argv[2]
+    _organization = sys.argv[3]
+    _branch = sys.argv[4]
+    se = ShellExplorer(sys.argv[1], _organization)
+    se.scan_and_commit(_shells_file, _branch)
