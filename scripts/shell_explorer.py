@@ -165,5 +165,5 @@ if __name__ == '__main__':
     _shells_file = sys.argv[2]
     _organization = sys.argv[3]
     _branch = sys.argv[4]
-    se = ShellExplorer(sys.argv[1], _organization)
+    se = ShellExplorer(_auth_key, _organization)
     se.scan_and_commit(_shells_file, _branch)
