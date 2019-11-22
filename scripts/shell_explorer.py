@@ -26,7 +26,8 @@ class ShellExplorer(object):
         SHELL_1G = "SHELLS 1G"
         SHELL_2G = "SHELLS 2G"
         PACKAGE = "PACKAGES"
-        LATEST_VERSION = "version"
+        RELEASE_VERSION = "release_version"
+        RELEASE_DATE = "release_date"
         REPO_URL = "url"
         PYTHON_VER = "python_version"
 
@@ -105,8 +106,10 @@ class ShellExplorer(object):
             latest_version = releases[0].tag_name
             url = repo.html_url
             py_ver = self._python_ver(repo)
+            rel_date = releases[0].published_at
             repo_data = {
-                name: {self.KEYS.LATEST_VERSION: latest_version,
+                name: {self.KEYS.RELEASE_VERSION: latest_version,
+                       self.KEYS.RELEASE_DATE: rel_date,
                        self.KEYS.PYTHON_VER: py_ver,
                        self.KEYS.REPO_URL: url}}
             return repo_data
