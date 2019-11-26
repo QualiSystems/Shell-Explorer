@@ -146,7 +146,7 @@ PACKAGES:
 - cloudshell-shell-flows:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-shell-flows
-    version: 1.0.1
+    version: 1.0.2
 - cloudshell-cumulus-linux:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-cumulus-linux
@@ -171,6 +171,10 @@ PACKAGES:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard
     version: 3.0.2
+- cloudshell-shell-connectivity-flow:
+    python_version: null
+    url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
+    version: 1.0.0
 SHELLS 1G:
 - vCenterShell:
     python_version: null
@@ -566,3 +570,7 @@ SHELLS L1:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-L1-cgs
     version: 1.0.1
+- cloudshell-L1-ixia-visionedge:
+    python_version: null
+    url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge
+    version: 1.0.3
