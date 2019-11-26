@@ -566,6 +566,10 @@ SHELLS L1:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
     version: 1.0.1
+- cloudshell-L1-telebyte:
+    python_version: null
+    url: https://github.com/QualiSystems/cloudshell-L1-telebyte
+    version: 1.0.1
 - cloudshell-L1-cgs:
     python_version: null
     url: https://github.com/QualiSystems/cloudshell-L1-cgs
