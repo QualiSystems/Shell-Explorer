@@ -181,8 +181,8 @@ PACKAGES:
     url: https://github.com/QualiSystems/cloudshell-orch-ixia
 - cloudshell-shell-flows:
     python_version: null
-    release_date: 2019-09-30 10:51:58
-    release_version: 1.0.1
+    release_date: 2019-11-26 07:15:04
+    release_version: 1.0.2
     url: https://github.com/QualiSystems/cloudshell-shell-flows
 - cloudshell-cumulus-linux:
     python_version: null
@@ -214,6 +214,11 @@ PACKAGES:
     release_date: 2019-10-03 12:00:55
     release_version: 3.0.2
     url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard
+- cloudshell-shell-connectivity-flow:
+    python_version: null
+    release_date: null
+    release_version: 1.0.0
+    url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
 SHELLS 1G:
 - vCenterShell:
     python_version: null
@@ -707,3 +712,8 @@ SHELLS L1:
     release_date: 2019-09-03 11:53:36
     release_version: 1.0.1
     url: https://github.com/QualiSystems/cloudshell-L1-cgs
+- cloudshell-L1-ixia-visionedge:
+    python_version: null
+    release_date: 2019-11-25 11:08:34
+    release_version: 1.0.3
+    url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge
