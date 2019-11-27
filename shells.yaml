@@ -216,7 +216,7 @@ PACKAGES:
     url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard
 - cloudshell-shell-connectivity-flow:
     python_version: null
-    release_date: null
+    release_date: 2019-11-26 17:16:15
     release_version: 1.0.0
     url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
 SHELLS 1G:
@@ -707,6 +707,11 @@ SHELLS L1:
     release_date: 2019-01-02 14:32:45
     release_version: 1.0.1
     url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
+- cloudshell-L1-telebyte:
+    python_version: null
+    release_date: 2019-11-26 11:16:07
+    release_version: 1.0.1
+    url: https://github.com/QualiSystems/cloudshell-L1-telebyte
 - cloudshell-L1-cgs:
     python_version: null
     release_date: 2019-09-03 11:53:36
