@@ -11,8 +11,8 @@ PACKAGES:
     url: https://github.com/QualiSystems/cloudshell-networking
 - cloudshell-networking-cisco:
     python_version: null
-    release_date: 2019-09-30 12:10:44
-    release_version: 6.0.0
+    release_date: 2019-11-29 11:23:30
+    release_version: 6.0.1
     url: https://github.com/QualiSystems/cloudshell-networking-cisco
 - cloudshell-cli:
     python_version: null
@@ -26,8 +26,8 @@ PACKAGES:
     url: https://github.com/QualiSystems/cloudshell-snmp
 - cloudshell-networking-juniper:
     python_version: null
-    release_date: 2019-09-30 13:51:14
-    release_version: 5.0.2
+    release_date: 2019-11-28 08:19:43
+    release_version: 5.0.3
     url: https://github.com/QualiSystems/cloudshell-networking-juniper
 - cloudshell-core:
     python_version: null
