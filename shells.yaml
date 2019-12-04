@@ -633,8 +633,8 @@ SHELLS 2G:
     url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G
 - CGS-COS-Loadbalancer-Shell-2G:
     python_version: PY2
-    release_date: 2019-10-29 01:04:39
-    release_version: 1.0.0
+    release_date: 2019-12-04 11:12:11
+    release_version: 1.0.1
     url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G
 SHELLS L1:
 - cloudshell-L1-polatis:
