@@ -84,7 +84,13 @@ class ShellExplorer(object):
         return self._match_by_name(self.CONST.NAME_PATTERN_L1, name) and self._match_by_content(content,
                                                                                                 self.CONST.SHELL_L1_FILES)
 
-    def _python_ver(self, repo):
+    def _py_ver_by_rel_title(self, release):
+        if self.VALUES.PYTHON_VERSION_3.lower() in release.title.lower():
+            return self.VALUES.PYTHON_VERSION_3
+        elif self.VALUES.PYTHON_VERSION_2.lower() in release.title.lower():
+            return self.VALUES.PYTHON_VERSION_2
+
+    def _py_ver_by_metadata(self, repo):
         try:
             content = repo.get_contents(self.CONST.METADATA_FILE)
         except Exception as e:
