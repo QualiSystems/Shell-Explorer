@@ -626,6 +626,11 @@ SHELLS 2G:
     release_date: 2019-04-30 17:13:41
     release_version: 1.0.0
     url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G
+- Spirent-TestCenter-Controller-Shell-2G:
+    python_version: PY2
+    release_date: 2019-12-08 10:27:43
+    release_version: 2.0.1-Preview
+    url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
 - CGS-COS-Switch-Shell-2G:
     python_version: PY2
     release_date: 2019-09-21 16:46:36
