@@ -6,7 +6,7 @@ import yaml
 class Release(yaml.YAMLObject):
     yaml_tag = u"!Release"
 
-    def __init__(self, title, tag, published_at, release_url, python_version):
+    def __init__(self, title, tag, published_at=None, release_url=None, python_version=None):
         self.title = title
         self.tag = tag
         self.published_at = published_at
@@ -114,7 +114,7 @@ if __name__ == '__main__':
     shell4.releases.append(Release('Test Rel2', '1.2.4', datetime.datetime.now(), 'http://fsafasfff', 'PY3'))
 
     shells = [shell1, shell2, shell3, shell4]
-    shells = sorted(shells, key=lambda a: a.shell_type)
+    shells = sorted(shells, key=lambda a: a.yaml_tag)
 
     dump = yaml.dump(shells, default_flow_style=False, sort_keys=False)
 

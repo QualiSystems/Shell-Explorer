@@ -6,15 +6,16 @@ from difflib import Differ
 from functools import lru_cache
 
 import yaml
-from github import Github
+from github.Repository import Repository
+from github.GitRelease import GitRelease
 
-from scripts.entities import Repo, Package, ShellL1, Shell2G, Shell1G
+from scripts.entities import Repo, Package, ShellL1, Shell2G, Shell1G, Release
 from scripts.operations import RepoOperations, SerializationOperations
 
 
 class ShellExplorer(object):
     class CONFIG:
-        WORKING_ORG = "Quali"
+        EXPLORE_ORG = "Quali"
         WORKING_REPO = "Shell-Explorer"
         SHELLS_FILE = "shells.yaml"
         PACKAGES_FILE = "packages.yaml"
@@ -49,7 +50,7 @@ class ShellExplorer(object):
 
     def __init__(self, auth_key, branch):
         self.branch = branch
-        self.repo_operations = RepoOperations(auth_key, self.CONFIG.WORKING_ORG, self.CONFIG.WORKING_REPO)
+        self.repo_operations = RepoOperations(auth_key, self.CONFIG.EXPLORE_ORG, self.CONFIG.WORKING_REPO)
         self._repo_type_dict = OrderedDict(
             [(Package, self._is_it_a_package),
              (ShellL1, self.is_it_L1_shell),
@@ -57,13 +58,13 @@ class ShellExplorer(object):
              (Shell1G, self.is_it_1G_shell)])
 
     @property
-    @lru_cache
+    @lru_cache()
     def _shells(self):
         return set(SerializationOperations.load_table(
             self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
 
     @property
-    @lru_cache
+    @lru_cache()
     def _packages(self):
         return set(SerializationOperations.load_table(
             self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
@@ -91,10 +92,10 @@ class ShellExplorer(object):
         return self._match_by_name(self.CONST.NAME_PATTERN_L1, name) and self._match_by_content(content,
                                                                                                 self.CONST.SHELL_L1_FILES)
 
-    def _py_ver_by_rel_title(self, release):
-        if self.VALUES.PYTHON_VERSION_3.lower() in release.title.lower():
+    def _py_ver_by_rel_title(self, title):
+        if self.VALUES.PYTHON_VERSION_3.lower() in title.lower():
             return self.VALUES.PYTHON_VERSION_3
-        elif self.VALUES.PYTHON_VERSION_2.lower() in release.title.lower():
+        elif self.VALUES.PYTHON_VERSION_2.lower() in title.lower():
             return self.VALUES.PYTHON_VERSION_2
 
     def _py_ver_by_metadata(self, repo):
@@ -112,78 +113,82 @@ class ShellExplorer(object):
         else:
             return None
 
-    def _collect_repo_data(self, repo, repo_from_file=None):
+    def _repo_releases(self, repo):
         """
         :param repo:
         :param scripts.entities.Repo repo_from_file:
         :return:
         """
-        name = repo.name
-        releases = list(repo.get_releases())
-        if releases:
-            latest_version = releases[0].tag_name
-            url = repo.html_url
-            py_ver = self._python_ver(repo)
-            rel_date = releases[0].published_at
-            repo_data = {
-                name: {self.KEYS.RELEASE_VERSION: latest_version,
-                       self.KEYS.RELEASE_DATE: rel_date,
-                       self.KEYS.PYTHON_VER: py_ver,
-                       self.KEYS.REPO_URL: url}}
-            return repo_data
+        releases = []
+        for git_release in repo.get_releases():
+            releases.append(self._create_release_object(git_release))
+        return releases
+
+    def _create_release_object(self, git_release):
+        """
+
+        :param github.GitRelease.GitRelease git_release:
+        :return:
+        """
+        if git_release:
+            return Release(git_release.title, git_release.tag_name, git_release.published_at, git_release.html_url,
+                           self._py_ver_by_rel_title(git_release.title))
 
     def _extract_existing_repo(self, repo):
         repo = Repo(repo.name)
         shell = next(iter(self._shells.intersection({repo})), None)
         package = next(iter(self._packages.intersection({repo})), None)
-        return shell if shell else package
+        return shell or package
 
     def _explore_repo(self, repo):
+        """
+        :param github.Repository.Repository repo:
+        :return:
+        """
         repo_object = self._extract_existing_repo(repo)
-        if not repo_object and next(iter(repo.releases), None):
+        latest_release = self._create_release_object(next(iter(repo.get_releases()), None))
+        if not repo_object and latest_release:
             content = {c.name for c in repo.get_contents("")}
             repo_name = repo.name
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
                     repo_object = repo_class(repo_name, repo.html_url)
-        else:
+                    break
+        if not repo_object:
             return
-        self._collect_repo_data(repo, repo_object)
-        if repo_object.releases:
+        if latest_release not in set(repo_object.releases):
+            repo_object.releases = self._repo_releases(repo)
             if isinstance(repo_object, Package):
                 self._packages.add(repo_object)
             else:
                 self._shells.add(repo_object)
 
+    def _explore_org(self):
+        # table = deepcopy(self.TABLE_TEMPLATE)
+        # shells = set(self.repo_shells(branch))
+        # packages = set(self.repo_packages(branch))
 
-def _explore_org(self, branch):
-    # table = deepcopy(self.TABLE_TEMPLATE)
-    shells = set(self.repo_shells(branch))
-    packages = set(self.repo_packages(branch))
+        for repo in self.repo_operations.get_org_repos():
+            self._explore_repo(repo)
+        #     if not result:
+        #         continue
+        #     repo_type, data = result
+        #     if repo_type and data:
+        #         table[repo_type].append(data)
+        # return table
 
-    for repo in self.repo_operations.get_org_repos():
-
-        result = self._explore_repo(repo, shells, packages)
-        if not result:
-            continue
-        repo_type, data = result
-        if repo_type and data:
-            table[repo_type].append(data)
-    return table
-
-
-def scan_and_commit(self, path, branch):
-    table = self._explore_org(self._org)
-    data = yaml.dump(table, default_flow_style=False, allow_unicode=True, encoding=None)
-    org = self._get_org(self._org)
-    repo = org.get_repo()
-    message = "Scanned Shells"
-    ref = repo.get_branch(branch).commit.sha
-    content = repo.get_contents(path, ref)
-    repo_data = content.decoded_content.decode("utf-8")
-    if not data == repo_data:
-        result = repo.update_file(path, message, data, content.sha, branch=branch)
-        print(result)
+    def scan_and_commit(self):
+        self._explore_org()
+        # data = yaml.dump(table, default_flow_style=False, allow_unicode=True, encoding=None)
+        # org = self._get_org(self._org)
+        # repo = org.get_repo()
+        # message = "Scanned Shells"
+        # ref = repo.get_branch(branch).commit.sha
+        # content = repo.get_contents(path, ref)
+        # repo_data = content.decoded_content.decode("utf-8")
+        # if not data == repo_data:
+        #     result = repo.update_file(path, message, data, content.sha, branch=branch)
+        #     print(result)
 
 
 if __name__ == '__main__':
