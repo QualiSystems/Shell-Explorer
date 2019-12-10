@@ -26,7 +26,7 @@ class Release(yaml.YAMLObject):
 class Repo(yaml.YAMLObject):
     yaml_tag = "!Repository"
 
-    def __init__(self, name, url, releases=None):
+    def __init__(self, name, url=None, releases=None):
         self.name = name
         self.url = url
         self.releases = releases or []
@@ -42,16 +42,54 @@ class Repo(yaml.YAMLObject):
 
 
 class Shell(Repo):
-    yaml_tag = u'!Shell'
+    yaml_tag = u"!Shell"
 
-    class TYPE:
-        SHELL_L1 = "L1"
-        SHELL_1G = "1G"
-        SHELL_2G = "2G"
+    # class TYPE:
+    #     SHELL_L1 = "L1"
+    #     SHELL_1G = "1G"
+    #     SHELL_2G = "2G"
+    #
+    # shell_type = None
 
-    def __init__(self, name, url, shell_type, releases=None):
-        self.shell_type = shell_type
-        super().__init__(name, url, releases)
+    # def __init__(self, name, url, releases=None):
+    #     super().__init__(name, url, releases)
+    #
+
+    # def __hash__(self):
+    #     return Repo.__hash__(self) | hash(self.shell_type)
+    #
+    # def __eq__(self, other):
+    #     """
+    #     :param Shell other:
+    #     """
+    #     return Repo.__eq__(self, other) and self.shell_type == other.shell_type
+
+
+class ShellL1(Repo):
+    yaml_tag = "!Shell_L1"
+    # shell_type = Shell.TYPE.SHELL_L1
+
+    # def __init__(self, name, url, releases=None):
+    #     super().__init__(name, url, releases)
+    #     self.shell_type = self.TYPE.SHELL_L1
+
+
+class Shell1G(Repo):
+    yaml_tag = "!Shell_1G"
+    # shell_type = Shell.TYPE.SHELL_1G
+
+    # def __init__(self, name, url, releases=None):
+    #     super().__init__(name, url, releases)
+    #     self.shell_type = self.TYPE.SHELL_1G
+
+
+class Shell2G(Repo):
+    yaml_tag = "!Shell_2G"
+    # shell_type = Shell.TYPE.SHELL_2G
+
+    # def __init__(self, name, url, releases=None):
+    #     super().__init__(name, url, releases)
+    #     self.shell_type = self.TYPE.SHELL_2G
 
 
 class Package(Repo):
@@ -59,19 +97,19 @@ class Package(Repo):
 
 
 if __name__ == '__main__':
-    shell1 = Shell('Test Shell2', Shell.TYPE.SHELL_2G, 'http://sfsdfsfsdf2')
+    shell1 = Shell2G('Test Shell2', 'http://sfsdfsfsdf2')
     shell1.releases.append(Release('Test Rel1', '1.2.3', datetime.datetime.now(), 'http://fsafasf', 'PY2'))
     shell1.releases.append(Release('Test Rel2', '1.2.4', datetime.datetime.now(), 'http://fsafasfff', 'PY3'))
     #
-    shell2 = Shell('Test Shell1', Shell.TYPE.SHELL_1G, 'http://sfsdfsfsdf1')
+    shell2 = Shell2G('Test Shell1', 'http://sfsdfsfsdf1')
     shell2.releases.append(Release('Test Rel1', '1.2.3', datetime.datetime.now(), 'http://fsafasf', 'PY2'))
     shell2.releases.append(Release('Test Rel2', '1.2.4', datetime.datetime.now(), 'http://fsafasfff', 'PY3'))
 
-    shell3 = Shell('Test Shell2', Shell.TYPE.SHELL_1G, 'http://sfsdfsfsdf2')
+    shell3 = Shell1G('Test Shell2', 'http://sfsdfsfsdf2')
     shell3.releases.append(Release('Test Rel1', '1.2.3', datetime.datetime.now(), 'http://fsafasf', 'PY2'))
     shell3.releases.append(Release('Test Rel2', '1.2.4', datetime.datetime.now(), 'http://fsafasfff', 'PY3'))
 
-    shell4 = Shell('Test Shell4', Shell.TYPE.SHELL_2G, 'http://sfsdfsfsdf2')
+    shell4 = ShellL1('Test Shell4', 'http://sfsdfsfsdf2')
     shell4.releases.append(Release('Test Rel1', '1.2.3', datetime.datetime.now(), 'http://fsafasf', 'PY2'))
     shell4.releases.append(Release('Test Rel2', '1.2.4', datetime.datetime.now(), 'http://fsafasfff', 'PY3'))
 
