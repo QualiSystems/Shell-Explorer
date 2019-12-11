@@ -422,8 +422,8 @@ SHELLS 1G:
     url: https://github.com/QualiSystems/TRex-Controller-Shell
 - cloudshell-cp-core:
     python_version: null
-    release_date: 2018-08-30 10:55:33
-    release_version: 1.0.2
+    release_date: 2019-12-11 09:51:52
+    release_version: 1.0.4
     url: https://github.com/QualiSystems/cloudshell-cp-core
 - Spirent-AvalancheController-Shell:
     python_version: PY2
