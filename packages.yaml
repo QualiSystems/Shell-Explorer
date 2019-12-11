@@ -1,1 +1,440 @@
-[]
+- !Package
+  name: cloudshell-core
+  url: https://github.com/QualiSystems/cloudshell-core
+  releases:
+  - !Release
+    title: cloudshell-core-2.2.176
+    tag_name: 2.2.176
+    published_at: 2017-01-17 14:19:25
+    release_url: https://github.com/QualiSystems/cloudshell-core/releases/tag/2.2.176
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-automation-tests
+  url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
+  releases:
+  - !Release
+    title: cloudshell-shell-automation-tests 0.8.0
+    tag_name: 0.8.0
+    published_at: 2019-05-30 18:04:38
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.8.0
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-networking-standard
+  url: https://github.com/QualiSystems/cloudshell-shell-networking-standard
+  releases:
+  - !Release
+    title: cloudshell-shell-networking-standard 5.0.4
+    tag_name: 5.0.4
+    published_at: 2019-09-30 11:37:04
+    release_url: https://github.com/QualiSystems/cloudshell-shell-networking-standard/releases/tag/5.0.4
+    python_version: PY2
+- !Package
+  name: cloudshell-networking
+  url: https://github.com/QualiSystems/cloudshell-networking
+  releases:
+  - !Release
+    title: cloudshell-networking-5.1.0
+    tag_name: 5.1.0
+    published_at: 2018-04-02 10:51:39
+    release_url: https://github.com/QualiSystems/cloudshell-networking/releases/tag/5.1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-alcatel
+  url: https://github.com/QualiSystems/cloudshell-networking-alcatel
+  releases:
+  - !Release
+    title: cloudshell-networking-alcatel 1.2.5
+    tag_name: 1.2.5
+    published_at: 2019-05-23 14:51:27
+    release_url: https://github.com/QualiSystems/cloudshell-networking-alcatel/releases/tag/1.2.5
+    python_version: PY2
+- !Package
+  name: cloudshell-migration
+  url: https://github.com/QualiSystems/cloudshell-migration
+  releases:
+  - !Release
+    title: cloudshell-migration-1.2.2 PREVIEW
+    tag_name: 1.2.2
+    published_at: 2019-05-30 14:50:11
+    release_url: https://github.com/QualiSystems/cloudshell-migration/releases/tag/1.2.2
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-firewall-standard
+  url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard
+  releases:
+  - !Release
+    title: cloudshell-shell-firewall-standard 3.0.2
+    tag_name: 3.0.2
+    published_at: 2019-10-03 12:00:55
+    release_url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard/releases/tag/3.0.2
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-devices
+  url: https://github.com/QualiSystems/cloudshell-networking-devices
+  releases:
+  - !Release
+    title: cloudshell-networking-devices-2.8
+    tag_name: '2.8'
+    published_at: 2019-10-28 12:20:00
+    release_url: https://github.com/QualiSystems/cloudshell-networking-devices/releases/tag/2.8
+    python_version: PY2
+- !Package
+  name: cloudshell-firewall
+  url: https://github.com/QualiSystems/cloudshell-firewall
+  releases:
+  - !Release
+    title: cloudshell-firewall-3.0.3
+    tag_name: 3.0.3
+    published_at: 2018-04-23 11:57:32
+    release_url: https://github.com/QualiSystems/cloudshell-firewall/releases/tag/3.0.3
+    python_version: PY2
+- !Package
+  name: cloudshell-cgs
+  url: https://github.com/QualiSystems/cloudshell-cgs
+  releases:
+  - !Release
+    title: cloudshell-cgs-1.1.0
+    tag_name: '1.1'
+    published_at: 2019-10-28 12:24:09
+    release_url: https://github.com/QualiSystems/cloudshell-cgs/releases/tag/1.1
+    python_version: PY2
+- !Package
+  name: cloudshell-logging
+  url: https://github.com/QualiSystems/cloudshell-logging
+  releases:
+  - !Release
+    title: cloudshell-logging-1.0.3
+    tag_name: 1.0.3
+    published_at: 2019-09-12 12:06:25
+    release_url: https://github.com/QualiSystems/cloudshell-logging/releases/tag/1.0.3
+    python_version: PY2
+- !Package
+  name: cloudshell-firewall-a10
+  url: https://github.com/QualiSystems/cloudshell-firewall-a10
+  releases:
+  - !Release
+    title: cloudshell-firewall-a10-1.0.1
+    tag_name: 1.0.1
+    published_at: 2018-06-07 10:31:19
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-a10/releases/tag/1.0.1
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-standards
+  url: https://github.com/QualiSystems/cloudshell-shell-standards
+  releases:
+  - !Release
+    title: cloudshell-shell-standards 1.0.7
+    tag_name: 1.0.7
+    published_at: 2019-09-12 13:55:38
+    release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/1.0.7
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-core
+  url: https://github.com/QualiSystems/cloudshell-shell-core
+  releases:
+  - !Release
+    title: cloudshell-shell-core-5.0.4
+    tag_name: 5.0.4
+    published_at: 2019-09-30 10:08:20
+    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.0.4
+    python_version: PY2
+- !Package
+  name: cloudshell-cisco-aci
+  url: https://github.com/QualiSystems/cloudshell-cisco-aci
+  releases:
+  - !Release
+    title: cloudshell-cisco-aci-1.0.0
+    tag_name: 1.0.0
+    published_at: 2018-12-10 11:27:08
+    release_url: https://github.com/QualiSystems/cloudshell-cisco-aci/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-cumulus-linux
+  url: https://github.com/QualiSystems/cloudshell-cumulus-linux
+  releases:
+  - !Release
+    title: cloudshell-cumulus-linux-1.0.1
+    tag_name: 1.0.1
+    published_at: 2019-07-30 13:02:41
+    release_url: https://github.com/QualiSystems/cloudshell-cumulus-linux/releases/tag/1.0.1
+    python_version: PY2
+- !Package
+  name: cloudshell-snmp-autoload
+  url: https://github.com/QualiSystems/cloudshell-snmp-autoload
+  releases:
+  - !Release
+    title: cloudshell-snmp-autoload 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-09-30 10:43:38
+    release_url: https://github.com/QualiSystems/cloudshell-snmp-autoload/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-connectivity-flow
+  url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
+  releases:
+  - !Release
+    title: cloudshell-shell-connectivity-flow 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-11-26 17:16:15
+    release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-L1-networking-core
+  url: https://github.com/QualiSystems/cloudshell-L1-networking-core
+  releases:
+  - !Release
+    title: CloudShell-L1-Networking-Core 1.0.8
+    tag_name: 1.0.8
+    published_at: 2018-12-05 13:54:58
+    release_url: https://github.com/QualiSystems/cloudshell-L1-networking-core/releases/tag/1.0.8
+    python_version: PY2
+- !Package
+  name: cloudshell-tg-teravm
+  url: https://github.com/QualiSystems/cloudshell-tg-teravm
+  releases:
+  - !Release
+    title: cloudshell-tg-teravm-1.1.0
+    tag_name: 1.1.0
+    published_at: 2018-11-06 14:29:23
+    release_url: https://github.com/QualiSystems/cloudshell-tg-teravm/releases/tag/1.1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-orch-trex
+  url: https://github.com/QualiSystems/cloudshell-orch-trex
+  releases:
+  - !Release
+    title: Cloudshell orchestration trex sanbox PREVIEW
+    tag_name: 1.0.0
+    published_at: 2018-02-27 17:43:15
+    release_url: https://github.com/QualiSystems/cloudshell-orch-trex/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-arista
+  url: https://github.com/QualiSystems/cloudshell-networking-arista
+  releases:
+  - !Release
+    title: cloudshell-networking-arista 2.0.3
+    tag_name: 2.0.3
+    published_at: 2019-07-03 11:47:23
+    release_url: https://github.com/QualiSystems/cloudshell-networking-arista/releases/tag/2.0.3
+    python_version: PY2
+- !Package
+  name: cloudshell-tg-breaking-point
+  url: https://github.com/QualiSystems/cloudshell-tg-breaking-point
+  releases:
+  - !Release
+    title: cloudshell-tg-breaking-point-2.0.2
+    tag_name: 2.0.2
+    published_at: 2019-02-13 15:15:11
+    release_url: https://github.com/QualiSystems/cloudshell-tg-breaking-point/releases/tag/2.0.2
+    python_version: PY2
+- !Package
+  name: cloudshell-sdn-odl
+  url: https://github.com/QualiSystems/cloudshell-sdn-odl
+  releases:
+  - !Release
+    title: cloudshell-sdn-odl-1.0
+    tag_name: 1.0.0
+    published_at: 2017-11-09 17:15:59
+    release_url: https://github.com/QualiSystems/cloudshell-sdn-odl/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-firewall-fortinet
+  url: https://github.com/QualiSystems/cloudshell-firewall-fortinet
+  releases:
+  - !Release
+    title: cloudshell-firewall-fortinet 1.1.0
+    tag_name: 1.1.0
+    published_at: 2019-10-02 13:10:21
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-fortinet/releases/tag/1.1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-traffic-virtual
+  url: https://github.com/QualiSystems/cloudshell-traffic-virtual
+  releases:
+  - !Release
+    title: cloudshell-traffic-virtual-1.1.0
+    tag_name: 1.1.0
+    published_at: 2019-03-04 10:37:45
+    release_url: https://github.com/QualiSystems/cloudshell-traffic-virtual/releases/tag/1.1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-ericsson-extended
+  url: https://github.com/QualiSystems/cloudshell-networking-ericsson-extended
+  releases:
+  - !Release
+    title: cloudshell-networking-ericsson-extended-1.0.0.20
+    tag_name: 1.0.0.20
+    published_at: 2017-02-20 17:42:10
+    release_url: https://github.com/QualiSystems/cloudshell-networking-ericsson-extended/releases/tag/1.0.0.20
+    python_version: PY2
+- !Package
+  name: cloudshell-recorder
+  url: https://github.com/QualiSystems/cloudshell-recorder
+  releases:
+  - !Release
+    title: cloudshell-recorder-1.1.1
+    tag_name: 1.1.1
+    published_at: 2019-10-10 15:59:38
+    release_url: https://github.com/QualiSystems/cloudshell-recorder/releases/tag/1.1.1
+    python_version: PY2
+- !Package
+  name: cloudshell-orch-ixia
+  url: https://github.com/QualiSystems/cloudshell-orch-ixia
+  releases:
+  - !Release
+    title: cloudshell-orch-ixia 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-06-03 08:31:12
+    release_url: https://github.com/QualiSystems/cloudshell-orch-ixia/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-autodiscovery
+  url: https://github.com/QualiSystems/cloudshell-autodiscovery
+  releases:
+  - !Release
+    title: CloudShell Autodiscovery Tool 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-06-04 09:27:02
+    release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-cli
+  url: https://github.com/QualiSystems/cloudshell-cli
+  releases:
+  - !Release
+    title: cloudshell-cli-4.0.1
+    tag_name: 4.0.1
+    published_at: 2019-09-27 15:28:50
+    release_url: https://github.com/QualiSystems/cloudshell-cli/releases/tag/4.0.1
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-huawei
+  url: https://github.com/QualiSystems/cloudshell-networking-huawei
+  releases:
+  - !Release
+    title: cloudshell-networking-huawei-3.0.4
+    tag_name: 3.0.4
+    published_at: 2019-06-05 13:44:57
+    release_url: https://github.com/QualiSystems/cloudshell-networking-huawei/releases/tag/3.0.4
+    python_version: PY2
+- !Package
+  name: cloudshell-pdu-core
+  url: https://github.com/QualiSystems/cloudshell-pdu-core
+  releases:
+  - !Release
+    title: cloudshell-pdu-core
+    tag_name: 1.0.0
+    published_at: 2016-10-05 13:57:01
+    release_url: https://github.com/QualiSystems/cloudshell-pdu-core/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-tg-trex
+  url: https://github.com/QualiSystems/cloudshell-tg-trex
+  releases:
+  - !Release
+    title: cloudshell-tg-trex-1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2018-02-27 17:09:37
+    release_url: https://github.com/QualiSystems/cloudshell-tg-trex/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-cisco
+  url: https://github.com/QualiSystems/cloudshell-networking-cisco
+  releases:
+  - !Release
+    title: cloudshell-networking-cisco-6.0.1
+    tag_name: 6.0.1
+    published_at: 2019-11-29 11:23:30
+    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.0.1
+    python_version: PY2
+- !Package
+  name: cloudshell-package-repo-template
+  url: https://github.com/QualiSystems/cloudshell-package-repo-template
+  releases:
+  - !Release
+    title: cloudshell-template 1.1.0
+    tag_name: 1.1.0
+    published_at: 2019-10-01 17:49:35
+    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-sdn-odl-lithium
+  url: https://github.com/QualiSystems/cloudshell-sdn-odl-lithium
+  releases:
+  - !Release
+    title: SDN OpenDayLight Lithium Shell Release v1.0.0
+    tag_name: 1.0.0
+    published_at: 2017-05-24 14:49:23
+    release_url: https://github.com/QualiSystems/cloudshell-sdn-odl-lithium/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-shell-flows
+  url: https://github.com/QualiSystems/cloudshell-shell-flows
+  releases:
+  - !Release
+    title: cloudshell-shell-flows 1.0.2
+    tag_name: 1.0.2
+    published_at: 2019-11-26 07:15:04
+    release_url: https://github.com/QualiSystems/cloudshell-shell-flows/releases/tag/1.0.2
+    python_version: PY2
+- !Package
+  name: cloudshell-f5
+  url: https://github.com/QualiSystems/cloudshell-f5
+  releases:
+  - !Release
+    title: cloudshell-f5-1.0.0
+    tag_name: 1.0.0
+    published_at: 2018-12-12 15:55:30
+    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-firewall-panos
+  url: https://github.com/QualiSystems/cloudshell-firewall-panos
+  releases:
+  - !Release
+    title: CloudShell Firewall PanOS
+    tag_name: 1.0.1
+    published_at: 2019-07-15 14:14:18
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/1.0.1
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-ericsson
+  url: https://github.com/QualiSystems/cloudshell-networking-ericsson
+  releases:
+  - !Release
+    title: cloudshell-networking-ericsson 1.0
+    tag_name: '1.0'
+    published_at: 2016-09-12 11:57:32
+    release_url: https://github.com/QualiSystems/cloudshell-networking-ericsson/releases/tag/1.0
+    python_version: PY2
+- !Package
+  name: cloudshell-snmp
+  url: https://github.com/QualiSystems/cloudshell-snmp
+  releases:
+  - !Release
+    title: cloudshell-snmp-4.0.0
+    tag_name: 4.0.0
+    published_at: 2019-09-30 10:21:28
+    release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/4.0.0
+    python_version: PY2
+- !Package
+  name: cloudshell-networking-juniper
+  url: https://github.com/QualiSystems/cloudshell-networking-juniper
+  releases:
+  - !Release
+    title: cloudshell-networking-juniper-5.0.3
+    tag_name: 5.0.3
+    published_at: 2019-11-28 08:19:43
+    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.3
+    python_version: PY2
+- !Package
+  name: cloudshell-orch-vbp
+  url: https://github.com/QualiSystems/cloudshell-orch-vbp
+  releases:
+  - !Release
+    title: cloudshell-orch-vbp-1.1.0
+    tag_name: 1.1.0
+    published_at: 2019-03-04 10:33:13
+    release_url: https://github.com/QualiSystems/cloudshell-orch-vbp/releases/tag/1.1.0
+    python_version: PY2
