@@ -3,11 +3,11 @@ import sys
 from collections import OrderedDict
 from functools import lru_cache
 
-from scripts.entities import Repo, Package, ShellL1, Shell2G, Shell1G, Release
+from scripts.entities import Package, ShellL1, Shell2G, Shell1G, Release
 from scripts.operations import RepoOperations, SerializationOperations
 import logging
 
-logging.basicConfig(level=logging.DEBUG, stream=sys.stdout,
+logging.basicConfig(level=logging.INFO, stream=sys.stdout,
                     format="%(asctime)s [%(levelname)s]: %(name)s %(module)s - %(funcName)-20s %(message)s")
 
 
@@ -59,10 +59,10 @@ class ShellExplorer(object):
     @property
     @lru_cache()
     def _shells(self):
-        # return set(SerializationOperations.load_table(
-        #     self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
-        with open("/tmp/shells_local.yaml", "r") as ff:
-            return set(SerializationOperations.load_table(ff.read()))
+        return set(SerializationOperations.load_table(
+            self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
+        # with open("/tmp/shells_local.yaml", "r") as ff:
+        #     return set(SerializationOperations.load_table(ff.read()))
 
     @property
     @lru_cache()
@@ -72,10 +72,10 @@ class ShellExplorer(object):
     @property
     @lru_cache()
     def _packages(self):
-        # return set(SerializationOperations.load_table(
-        #     self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
-        with open("/tmp/packages_local.yaml", "r") as ff:
-            return set(SerializationOperations.load_table(ff.read()))
+        return set(SerializationOperations.load_table(
+            self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
+        # with open("/tmp/packages_local.yaml", "r") as ff:
+        #     return set(SerializationOperations.load_table(ff.read()))
 
     @property
     @lru_cache()
@@ -193,45 +193,25 @@ class ShellExplorer(object):
                 self._shells.add(repo_object)
 
     def _explore_org(self):
-        # table = deepcopy(self.TABLE_TEMPLATE)
-        # shells = set(self.repo_shells(branch))
-        # packages = set(self.repo_packages(branch))
-
         for repo in self.repo_operations.get_org_repos():
             self._explore_repo(repo)
-        #     if not result:
-        #         continue
-        #     repo_type, data = result
-        #     if repo_type and data:
-        #         table[repo_type].append(data)
-        # return table
 
     def scan_and_commit(self):
         self._explore_org()
         self.repo_operations.commit_if_changed(
             SerializationOperations.dump_table(sorted(list(self._shells), key=lambda x: x.yaml_tag)),
             self.CONFIG.SHELLS_FILE, self.branch)
-        self.repo_operations.commit_if_changed(self._packages, self.CONFIG.PACKAGES_FILE, self.branch)
-        # data = yaml.dump(table, default_flow_style=False, allow_unicode=True, encoding=None)
-        # org = self._get_org(self._org)
-        # repo = org.get_repo()
-        # message = "Scanned Shells"
-        # ref = repo.get_branch(branch).commit.sha
-        # content = repo.get_contents(path, ref)
-        # repo_data = content.decoded_content.decode("utf-8")
-        # if not data == repo_data:
-        #     result = repo.update_file(path, message, data, content.sha, branch=branch)
-        #     print(result)
+        self.repo_operations.commit_if_changed(SerializationOperations.dump_table(list(self._packages)),
+                                               self.CONFIG.PACKAGES_FILE, self.branch)
 
 
 if __name__ == '__main__':
     # print(sys.argv)
     # username = sys.argv[1]
     # password = sys.argv[2]
-    # _auth_key = sys.argv[1]
+    _auth_key = sys.argv[1]
     # _shells_file = sys.argv[2]
     # _organization = sys.argv[3]
-    # _branch = sys.argv[4]
-    # se = ShellExplorer(_auth_key, _organization)
-    # se.scan_and_commit(_shells_file, _branch)
-    pass
+    _branch = sys.argv[2]
+    se = ShellExplorer(_auth_key, _branch)
+    se.scan_and_commit()
