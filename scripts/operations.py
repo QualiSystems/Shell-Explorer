@@ -39,7 +39,7 @@ class RepoOperations(object):
         ref = self.working_repo.get_branch(branch).commit.sha
         content = self.working_repo.get_contents(path, ref)
         repo_data = content.decoded_content.decode("utf-8")
-        if not data == repo_data:
+        if data != repo_data:
             message = "ShellExplorer job {}".format(datetime.now())
             return self.working_repo.update_file(path, message, data, content.sha, branch=branch)
 

@@ -6,21 +6,21 @@ import yaml
 class Release(yaml.YAMLObject):
     yaml_tag = u"!Release"
 
-    def __init__(self, title, tag, published_at=None, release_url=None, python_version=None):
+    def __init__(self, title, tag_name, published_at=None, release_url=None, python_version=None):
         self.title = title
-        self.tag = tag
+        self.tag_name = tag_name
         self.published_at = published_at
         self.release_url = release_url
         self.python_version = python_version
 
     def __hash__(self):
-        return hash(self.title) ^ hash(self.tag)
+        return hash(self.title) ^ hash(self.tag_name)
 
     def __eq__(self, other):
         """
         :param Release other:
         """
-        return self.title == other.title and self.tag == other.tag
+        return self.title == other.title and self.tag_name == other.tag_name
 
 
 class Repo(yaml.YAMLObject):

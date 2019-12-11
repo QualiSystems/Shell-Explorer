@@ -1,16 +1,14 @@
 import re
 import sys
 from collections import OrderedDict
-from copy import deepcopy
-from difflib import Differ
 from functools import lru_cache
-
-import yaml
-from github.Repository import Repository
-from github.GitRelease import GitRelease
 
 from scripts.entities import Repo, Package, ShellL1, Shell2G, Shell1G, Release
 from scripts.operations import RepoOperations, SerializationOperations
+import logging
+
+logging.basicConfig(level=logging.DEBUG, stream=sys.stdout,
+                    format="%(asctime)s [%(levelname)s]: %(name)s %(module)s - %(funcName)-20s %(message)s")
 
 
 class ShellExplorer(object):
@@ -19,6 +17,7 @@ class ShellExplorer(object):
         WORKING_REPO = "Shell-Explorer"
         SHELLS_FILE = "shells.yaml"
         PACKAGES_FILE = "packages.yaml"
+        EXPLORE_RELEASES_DEPTH = 10
 
     class CONST:
         SHELL_L1_FILES = {"main.py"}
@@ -60,14 +59,28 @@ class ShellExplorer(object):
     @property
     @lru_cache()
     def _shells(self):
-        return set(SerializationOperations.load_table(
-            self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
+        # return set(SerializationOperations.load_table(
+        #     self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
+        with open("/tmp/shells_local.yaml", "r") as ff:
+            return set(SerializationOperations.load_table(ff.read()))
+
+    @property
+    @lru_cache()
+    def _shells_dict(self):
+        return {repo.name: repo for repo in self._shells}
 
     @property
     @lru_cache()
     def _packages(self):
-        return set(SerializationOperations.load_table(
-            self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
+        # return set(SerializationOperations.load_table(
+        #     self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
+        with open("/tmp/packages_local.yaml", "r") as ff:
+            return set(SerializationOperations.load_table(ff.read()))
+
+    @property
+    @lru_cache()
+    def _packages_dict(self):
+        return {repo.name: repo for repo in self._packages}
 
     def _match_by_content(self, content, file_list):
         if content.intersection(file_list) == file_list:
@@ -98,20 +111,37 @@ class ShellExplorer(object):
         elif self.VALUES.PYTHON_VERSION_2.lower() in title.lower():
             return self.VALUES.PYTHON_VERSION_2
 
-    def _py_ver_by_metadata(self, repo):
+    def _py3_ver_by_metadata(self, git_repo, release):
         try:
-            content = repo.get_contents(self.CONST.METADATA_FILE)
+            content = git_repo.get_contents(self.CONST.METADATA_FILE, release.tag_name)
         except Exception as e:
             content = None
 
         if content:
             match = re.search(self.CONST.PY_VER_PATTERN, content.decoded_content.decode("utf-8"))
             if match:
-                return self.VALUES.PYTHON_VERSION_3
+                return True
+
+    def _py_version(self, git_repo, release):
+        if self._py3_ver_by_metadata(git_repo, release):
+            return self.VALUES.PYTHON_VERSION_3
+        return self.VALUES.PYTHON_VERSION_2
+
+    def _filter_releases_by_py_ver(self, git_repo, releases, existing_releases):
+        """
+        :param git_repo:
+        :param list releases:
+        :param list existing_releases:
+        """
+        version_dict = {}
+        for release in releases:
+            if release not in existing_releases:
+                release.python_version = self._py_version(git_repo, release)
             else:
-                return self.VALUES.PYTHON_VERSION_2
-        else:
-            return None
+                release = existing_releases[existing_releases.index(release)]
+            if release.python_version not in version_dict:
+                version_dict[release.python_version] = release
+        return sorted(version_dict.values(), key=lambda x: x.published_at, reverse=True)
 
     def _repo_releases(self, repo):
         """
@@ -122,6 +152,8 @@ class ShellExplorer(object):
         releases = []
         for git_release in repo.get_releases():
             releases.append(self._create_release_object(git_release))
+            if len(releases) >= self.CONFIG.EXPLORE_RELEASES_DEPTH:
+                break
         return releases
 
     def _create_release_object(self, git_release):
@@ -131,33 +163,30 @@ class ShellExplorer(object):
         :return:
         """
         if git_release:
-            return Release(git_release.title, git_release.tag_name, git_release.published_at, git_release.html_url,
-                           self._py_ver_by_rel_title(git_release.title))
+            return Release(git_release.title, git_release.tag_name, git_release.published_at, git_release.html_url)
 
     def _extract_existing_repo(self, repo):
-        repo = Repo(repo.name)
-        shell = next(iter(self._shells.intersection({repo})), None)
-        package = next(iter(self._packages.intersection({repo})), None)
-        return shell or package
+        return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
 
     def _explore_repo(self, repo):
         """
         :param github.Repository.Repository repo:
         :return:
         """
+        logging.info("Explore {}".format(repo.name))
         repo_object = self._extract_existing_repo(repo)
-        latest_release = self._create_release_object(next(iter(repo.get_releases()), None))
-        if not repo_object and latest_release:
+        releases = self._repo_releases(repo)
+        if not repo_object and releases:
             content = {c.name for c in repo.get_contents("")}
             repo_name = repo.name
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
                     repo_object = repo_class(repo_name, repo.html_url)
                     break
-        if not repo_object:
+        if not repo_object or not releases:
             return
-        if latest_release not in set(repo_object.releases):
-            repo_object.releases = self._repo_releases(repo)
+        if releases[0] not in set(repo_object.releases):
+            repo_object.releases = self._filter_releases_by_py_ver(repo, releases, repo_object.releases)
             if isinstance(repo_object, Package):
                 self._packages.add(repo_object)
             else:
@@ -179,6 +208,10 @@ class ShellExplorer(object):
 
     def scan_and_commit(self):
         self._explore_org()
+        self.repo_operations.commit_if_changed(
+            SerializationOperations.dump_table(sorted(list(self._shells), key=lambda x: x.yaml_tag)),
+            self.CONFIG.SHELLS_FILE, self.branch)
+        self.repo_operations.commit_if_changed(self._packages, self.CONFIG.PACKAGES_FILE, self.branch)
         # data = yaml.dump(table, default_flow_style=False, allow_unicode=True, encoding=None)
         # org = self._get_org(self._org)
         # repo = org.get_repo()
@@ -195,9 +228,10 @@ if __name__ == '__main__':
     # print(sys.argv)
     # username = sys.argv[1]
     # password = sys.argv[2]
-    _auth_key = sys.argv[1]
-    _shells_file = sys.argv[2]
-    _organization = sys.argv[3]
-    _branch = sys.argv[4]
-    se = ShellExplorer(_auth_key, _organization)
-    se.scan_and_commit(_shells_file, _branch)
+    # _auth_key = sys.argv[1]
+    # _shells_file = sys.argv[2]
+    # _organization = sys.argv[3]
+    # _branch = sys.argv[4]
+    # se = ShellExplorer(_auth_key, _organization)
+    # se.scan_and_commit(_shells_file, _branch)
+    pass

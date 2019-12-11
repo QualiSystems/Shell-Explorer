@@ -448,12 +448,6 @@
     published_at: 2018-12-31 14:46:54
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/2.0.0
     python_version: PY2
-  - !Release
-    title: Juniper JunOS Router Shell 2G PY3 3.0.0
-    tag_name: 3.0.0
-    published_at: 2019-10-02 15:17:04
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.0
-    python_version: PY3
 - !Shell_2G
   name: IxVM-Deployment-App-Chassis-Shell-2G
   url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G
