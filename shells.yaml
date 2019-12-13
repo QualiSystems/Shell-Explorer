@@ -1,94 +1,4 @@
 - !Shell_1G
-  name: Ixia-IxLoadController-Shell
-  url: https://github.com/QualiSystems/Ixia-IxLoadController-Shell
-  releases:
-  - !Release
-    title: Ixia-IxLoadController-Shell 1.5.2-Preview
-    tag_name: 1.5.2-Preview
-    published_at: 2018-04-08 09:19:35
-    release_url: https://github.com/QualiSystems/Ixia-IxLoadController-Shell/releases/tag/1.5.2-Preview
-    python_version: PY2
-- !Shell_1G
-  name: Ericsson-IPOS-Shell
-  url: https://github.com/QualiSystems/Ericsson-IPOS-Shell
-  releases:
-  - !Release
-    title: Ericsson-IPOS-Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2016-09-12 12:11:23
-    release_url: https://github.com/QualiSystems/Ericsson-IPOS-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Ansible-Shell
-  url: https://github.com/QualiSystems/Ansible-Shell
-  releases:
-  - !Release
-    title: Release 1.5.1
-    tag_name: 1.5.1
-    published_at: 2019-05-26 15:12:09
-    release_url: https://github.com/QualiSystems/Ansible-Shell/releases/tag/1.5.1
-    python_version: PY2
-- !Shell_1G
-  name: Azure-Shell
-  url: https://github.com/QualiSystems/Azure-Shell
-  releases:
-  - !Release
-    title: Release 1.9.2 of Azure Shell
-    tag_name: 1.9.2
-    published_at: 2019-07-31 10:43:38
-    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/1.9.2
-    python_version: PY2
-- !Shell_1G
-  name: BreakingPoint-Chassis-Shell
-  url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell
-  releases:
-  - !Release
-    title: BreakingPoint Chassis Shell 1.0.1 PREVIEW
-    tag_name: 1.0.1
-    published_at: 2017-04-19 13:26:51
-    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell/releases/tag/1.0.1
-    python_version: PY2
-- !Shell_1G
-  name: PerfectStorm-Chassis-Shell
-  url: https://github.com/QualiSystems/PerfectStorm-Chassis-Shell
-  releases:
-  - !Release
-    title: PerfectStorm-Chassis-Shell 1.0.0-Preview
-    tag_name: 1.0.0-Preview
-    published_at: 2017-11-27 13:21:21
-    release_url: https://github.com/QualiSystems/PerfectStorm-Chassis-Shell/releases/tag/1.0.0-Preview
-    python_version: PY2
-- !Shell_1G
-  name: AWS-Shell
-  url: https://github.com/QualiSystems/AWS-Shell
-  releases:
-  - !Release
-    title: Release 2.4.2 of AWS Shell
-    tag_name: 2.4.2
-    published_at: 2019-07-31 10:18:49
-    release_url: https://github.com/QualiSystems/AWS-Shell/releases/tag/2.4.2
-    python_version: PY2
-- !Shell_1G
-  name: Cisco-ASA-Shell
-  url: https://github.com/QualiSystems/Cisco-ASA-Shell
-  releases:
-  - !Release
-    title: Cisco-ASA-Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2016-08-03 14:02:30
-    release_url: https://github.com/QualiSystems/Cisco-ASA-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Spirent-TestCenterController-Shell
-  url: https://github.com/QualiSystems/Spirent-TestCenterController-Shell
-  releases:
-  - !Release
-    title: Spirent-TestCenterController-Shell 1.5.3-Preview
-    tag_name: 1.5.3-Preview
-    published_at: 2019-01-27 10:38:42
-    release_url: https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases/tag/1.5.3-Preview
-    python_version: PY2
-- !Shell_1G
   name: TeraVM-Controller-Shell
   url: https://github.com/QualiSystems/TeraVM-Controller-Shell
   releases:
@@ -109,46 +19,6 @@
     release_url: https://github.com/QualiSystems/cloudshell-tg-teravm-vblade/releases/tag/1.0.0
     python_version: PY2
 - !Shell_1G
-  name: Cisco-AIREOS-Shell
-  url: https://github.com/QualiSystems/Cisco-AIREOS-Shell
-  releases:
-  - !Release
-    title: Cisco AIREOS Shell 1.0.50
-    tag_name: 1.0.50
-    published_at: 2016-09-06 14:58:36
-    release_url: https://github.com/QualiSystems/Cisco-AIREOS-Shell/releases/tag/1.0.50
-    python_version: PY2
-- !Shell_1G
-  name: Cisco-IOS-Shell
-  url: https://github.com/QualiSystems/Cisco-IOS-Shell
-  releases:
-  - !Release
-    title: Cisco IOS Shell 5.0.2
-    tag_name: 5.0.2
-    published_at: 2018-01-15 14:51:25
-    release_url: https://github.com/QualiSystems/Cisco-IOS-Shell/releases/tag/5.0.2
-    python_version: PY2
-- !Shell_1G
-  name: Spirent-AvalancheController-Shell
-  url: https://github.com/QualiSystems/Spirent-AvalancheController-Shell
-  releases:
-  - !Release
-    title: Spirent-AvalancheController-Shell 1.0.0-Preview
-    tag_name: 1.0.0-Preview
-    published_at: 2019-07-18 11:34:35
-    release_url: https://github.com/QualiSystems/Spirent-AvalancheController-Shell/releases/tag/1.0.0-Preview
-    python_version: PY2
-- !Shell_1G
-  name: Juniper-JunOS-Shell
-  url: https://github.com/QualiSystems/Juniper-JunOS-Shell
-  releases:
-  - !Release
-    title: Juniper_Junos_Shell-3.0.0
-    tag_name: 3.0.0
-    published_at: 2017-01-31 10:07:16
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Shell/releases/tag/3.0.0
-    python_version: PY2
-- !Shell_1G
   name: cloudshell-tg-breakingpoint-vblade
   url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vblade
   releases:
@@ -157,176 +27,6 @@
     tag_name: 2.0.0
     published_at: 2018-12-17 12:01:30
     release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vblade/releases/tag/2.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Ixia-IxNetworkController-Shell
-  url: https://github.com/QualiSystems/Ixia-IxNetworkController-Shell
-  releases:
-  - !Release
-    title: Ixia-IxNetworkController-Shell 1.6.4-Preview
-    tag_name: 1.6.4-Preview
-    published_at: 2019-06-27 14:04:16
-    release_url: https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases/tag/1.6.4-Preview
-    python_version: PY2
-- !Shell_1G
-  name: OpenStack-Shell
-  url: https://github.com/QualiSystems/OpenStack-Shell
-  releases:
-  - !Release
-    title: Release 1.5.0 of OpenStack Shell
-    tag_name: 1.5.0
-    published_at: 2018-07-25 13:08:13
-    release_url: https://github.com/QualiSystems/OpenStack-Shell/releases/tag/1.5.0
-    python_version: PY2
-- !Shell_1G
-  name: Ericsson-IPOS-Shell-Extended
-  url: https://github.com/QualiSystems/Ericsson-IPOS-Shell-Extended
-  releases:
-  - !Release
-    title: Ericsson IPOS Extended Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2017-02-20 17:35:44
-    release_url: https://github.com/QualiSystems/Ericsson-IPOS-Shell-Extended/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Ixia-IxChariotController-Shell
-  url: https://github.com/QualiSystems/Ixia-IxChariotController-Shell
-  releases:
-  - !Release
-    title: Ixia-IxChariotController-Shell 1.2.0-Preview
-    tag_name: 1.2.0-Preview
-    published_at: 2018-11-05 13:32:38
-    release_url: https://github.com/QualiSystems/Ixia-IxChariotController-Shell/releases/tag/1.2.0-Preview
-    python_version: PY2
-- !Shell_1G
-  name: Ixia-IxChariotServer-Shell
-  url: https://github.com/QualiSystems/Ixia-IxChariotServer-Shell
-  releases:
-  - !Release
-    title: Ixia-IxChariotServer-Shell 1.2.0-Preview
-    tag_name: 1.2.0-Preview
-    published_at: 2018-11-05 13:25:58
-    release_url: https://github.com/QualiSystems/Ixia-IxChariotServer-Shell/releases/tag/1.2.0-Preview
-    python_version: PY2
-- !Shell_1G
-  name: cloudshell-tg-breakingpoint-vchassis
-  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vchassis
-  releases:
-  - !Release
-    title: cloudshell-tg-breakingpoint-vchassis-2.0.0
-    tag_name: 2.0.0
-    published_at: 2018-12-17 12:00:17
-    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vchassis/releases/tag/2.0.0
-    python_version: PY2
-- !Shell_1G
-  name: vCenterShell
-  url: https://github.com/QualiSystems/vCenterShell
-  releases:
-  - !Release
-    title: Release 1.14.1
-    tag_name: 1.14.1
-    published_at: 2019-07-31 08:51:45
-    release_url: https://github.com/QualiSystems/vCenterShell/releases/tag/1.14.1
-    python_version: PY2
-- !Shell_1G
-  name: Ericsson-SEOS-Shell
-  url: https://github.com/QualiSystems/Ericsson-SEOS-Shell
-  releases:
-  - !Release
-    title: Ericsson-SEOS-Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2016-09-12 12:10:44
-    release_url: https://github.com/QualiSystems/Ericsson-SEOS-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: cloudshell-orch-sandbox
-  url: https://github.com/QualiSystems/cloudshell-orch-sandbox
-  releases:
-  - !Release
-    title: CloudShell v9.3 EA Sandbox Orchestration
-    tag_name: v9.3EA
-    published_at: 2019-07-31 12:45:28
-    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v9.3EA
-    python_version: PY2
-- !Shell_1G
-  name: BreakingPoint-Controller-Shell
-  url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell
-  releases:
-  - !Release
-    title: BreakingPoint Controller 1.2.3 PREVIEW
-    tag_name: 1.2.3
-    published_at: 2018-08-13 05:55:07
-    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell/releases/tag/1.2.3
-    python_version: PY2
-- !Shell_1G
-  name: Brocade-FastIron-Shell
-  url: https://github.com/QualiSystems/Brocade-FastIron-Shell
-  releases:
-  - !Release
-    title: Brocade FastIron Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2016-10-26 10:35:58
-    release_url: https://github.com/QualiSystems/Brocade-FastIron-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Bamboo-cloudshell-plugin
-  url: https://github.com/QualiSystems/Bamboo-cloudshell-plugin
-  releases:
-  - !Release
-    title: Beta 1
-    tag_name: '0.1'
-    published_at: 2017-04-12 13:18:26
-    release_url: https://github.com/QualiSystems/Bamboo-cloudshell-plugin/releases/tag/0.1
-    python_version: PY2
-- !Shell_1G
-  name: Cisco-IOSXR-Shell
-  url: https://github.com/QualiSystems/Cisco-IOSXR-Shell
-  releases:
-  - !Release
-    title: Cisco IOSXR Shell 2.0.2
-    tag_name: 2.0.2
-    published_at: 2018-01-16 12:52:57
-    release_url: https://github.com/QualiSystems/Cisco-IOSXR-Shell/releases/tag/2.0.2
-    python_version: PY2
-- !Shell_1G
-  name: cloudshell-cp-core
-  url: https://github.com/QualiSystems/cloudshell-cp-core
-  releases:
-  - !Release
-    title: Release 1.0.4
-    tag_name: 1.0.4
-    published_at: 2019-12-11 09:51:52
-    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/1.0.4
-    python_version: PY2
-- !Shell_1G
-  name: cloudshell-tg-teravm-vchassis
-  url: https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis
-  releases:
-  - !Release
-    title: cloudshell-tg-teravm-vchassis-1.2.0
-    tag_name: 1.2.0
-    published_at: 2019-03-04 11:29:09
-    release_url: https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis/releases/tag/1.2.0
-    python_version: PY2
-- !Shell_1G
-  name: Arista-EOS-Shell
-  url: https://github.com/QualiSystems/Arista-EOS-Shell
-  releases:
-  - !Release
-    title: Arista EOS Shell 1.0.0 -PREVIEW
-    tag_name: 1.0.0
-    published_at: 2017-04-04 14:50:06
-    release_url: https://github.com/QualiSystems/Arista-EOS-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_1G
-  name: Spirent-TestCenterChassis-Shell
-  url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell
-  releases:
-  - !Release
-    title: Spirent-TestCenterChassis-Shell 1.2.7-Preview
-    tag_name: 1.2.7-Preview
-    published_at: 2017-11-19 13:24:38
-    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell/releases/tag/1.2.7-Preview
     python_version: PY2
 - !Shell_1G
   name: Brocade-NetIron-Shell
@@ -339,24 +39,14 @@
     release_url: https://github.com/QualiSystems/Brocade-NetIron-Shell/releases/tag/1.0.0
     python_version: PY2
 - !Shell_1G
-  name: Cisco-NXOS-Shell
-  url: https://github.com/QualiSystems/Cisco-NXOS-Shell
+  name: OpenStack-Shell
+  url: https://github.com/QualiSystems/OpenStack-Shell
   releases:
   - !Release
-    title: Cisco NXOS Shell 5.0.2
-    tag_name: 5.0.2
-    published_at: 2018-01-15 16:19:51
-    release_url: https://github.com/QualiSystems/Cisco-NXOS-Shell/releases/tag/5.0.2
-    python_version: PY2
-- !Shell_1G
-  name: Raritan-PDU-Shell
-  url: https://github.com/QualiSystems/Raritan-PDU-Shell
-  releases:
-  - !Release
-    title: Raritan PDU Shell 1.0.0
-    tag_name: 1.0.0
-    published_at: 2016-10-05 13:59:42
-    release_url: https://github.com/QualiSystems/Raritan-PDU-Shell/releases/tag/1.0.0
+    title: Release 1.5.0 of OpenStack Shell
+    tag_name: 1.5.0
+    published_at: 2018-07-25 13:08:13
+    release_url: https://github.com/QualiSystems/OpenStack-Shell/releases/tag/1.5.0
     python_version: PY2
 - !Shell_1G
   name: TRex-Controller-Shell
@@ -369,14 +59,54 @@
     release_url: https://github.com/QualiSystems/TRex-Controller-Shell/releases/tag/1.0.0
     python_version: PY2
 - !Shell_1G
-  name: CustomScript-Shell
-  url: https://github.com/QualiSystems/CustomScript-Shell
+  name: Azure-Shell
+  url: https://github.com/QualiSystems/Azure-Shell
   releases:
   - !Release
-    title: ' Release 1.5.0'
-    tag_name: 1.5.0
-    published_at: 2018-07-25 13:56:01
-    release_url: https://github.com/QualiSystems/CustomScript-Shell/releases/tag/1.5.0
+    title: Release 1.9.2 of Azure Shell
+    tag_name: 1.9.2
+    published_at: 2019-07-31 10:43:38
+    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/1.9.2
+    python_version: PY2
+- !Shell_1G
+  name: Ericsson-IPOS-Shell
+  url: https://github.com/QualiSystems/Ericsson-IPOS-Shell
+  releases:
+  - !Release
+    title: Ericsson-IPOS-Shell 1.0.0
+    tag_name: 1.0.0
+    published_at: 2016-09-12 12:11:23
+    release_url: https://github.com/QualiSystems/Ericsson-IPOS-Shell/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_1G
+  name: Cisco-IOSXR-Shell
+  url: https://github.com/QualiSystems/Cisco-IOSXR-Shell
+  releases:
+  - !Release
+    title: Cisco IOSXR Shell 2.0.2
+    tag_name: 2.0.2
+    published_at: 2018-01-16 12:52:57
+    release_url: https://github.com/QualiSystems/Cisco-IOSXR-Shell/releases/tag/2.0.2
+    python_version: PY2
+- !Shell_1G
+  name: Raritan-PDU-Shell
+  url: https://github.com/QualiSystems/Raritan-PDU-Shell
+  releases:
+  - !Release
+    title: Raritan PDU Shell 1.0.0
+    tag_name: 1.0.0
+    published_at: 2016-10-05 13:59:42
+    release_url: https://github.com/QualiSystems/Raritan-PDU-Shell/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_1G
+  name: PerfectStorm-Chassis-Shell
+  url: https://github.com/QualiSystems/PerfectStorm-Chassis-Shell
+  releases:
+  - !Release
+    title: PerfectStorm-Chassis-Shell 1.0.0-Preview
+    tag_name: 1.0.0-Preview
+    published_at: 2017-11-27 13:21:21
+    release_url: https://github.com/QualiSystems/PerfectStorm-Chassis-Shell/releases/tag/1.0.0-Preview
     python_version: PY2
 - !Shell_1G
   name: Huawei-VRP-Shell
@@ -389,14 +119,134 @@
     release_url: https://github.com/QualiSystems/Huawei-VRP-Shell/releases/tag/2.0.0
     python_version: PY2
 - !Shell_1G
-  name: Ericsson-SEOS-Shell-Extended
-  url: https://github.com/QualiSystems/Ericsson-SEOS-Shell-Extended
+  name: Spirent-TestCenterChassis-Shell
+  url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell
   releases:
   - !Release
-    title: Ericsson SEOS Extended Shell 1.0.0
+    title: Spirent-TestCenterChassis-Shell 1.2.7-Preview
+    tag_name: 1.2.7-Preview
+    published_at: 2017-11-19 13:24:38
+    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell/releases/tag/1.2.7-Preview
+    python_version: PY2
+- !Shell_1G
+  name: vCenterShell
+  url: https://github.com/QualiSystems/vCenterShell
+  releases:
+  - !Release
+    title: Release 1.14.1
+    tag_name: 1.14.1
+    published_at: 2019-07-31 08:51:45
+    release_url: https://github.com/QualiSystems/vCenterShell/releases/tag/1.14.1
+    python_version: PY2
+- !Shell_1G
+  name: Ixia-IxLoadController-Shell
+  url: https://github.com/QualiSystems/Ixia-IxLoadController-Shell
+  releases:
+  - !Release
+    title: Ixia-IxLoadController-Shell 1.5.2-Preview
+    tag_name: 1.5.2-Preview
+    published_at: 2018-04-08 09:19:35
+    release_url: https://github.com/QualiSystems/Ixia-IxLoadController-Shell/releases/tag/1.5.2-Preview
+    python_version: PY2
+- !Shell_1G
+  name: cloudshell-cp-core
+  url: https://github.com/QualiSystems/cloudshell-cp-core
+  releases:
+  - !Release
+    title: Release 1.0.4
+    tag_name: 1.0.4
+    published_at: 2019-12-11 09:51:52
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/1.0.4
+    python_version: PY2
+- !Shell_1G
+  name: CustomScript-Shell
+  url: https://github.com/QualiSystems/CustomScript-Shell
+  releases:
+  - !Release
+    title: ' Release 1.5.0'
+    tag_name: 1.5.0
+    published_at: 2018-07-25 13:56:01
+    release_url: https://github.com/QualiSystems/CustomScript-Shell/releases/tag/1.5.0
+    python_version: PY2
+- !Shell_1G
+  name: Ansible-Shell
+  url: https://github.com/QualiSystems/Ansible-Shell
+  releases:
+  - !Release
+    title: Release 1.5.1
+    tag_name: 1.5.1
+    published_at: 2019-05-26 15:12:09
+    release_url: https://github.com/QualiSystems/Ansible-Shell/releases/tag/1.5.1
+    python_version: PY2
+- !Shell_1G
+  name: cloudshell-tg-breakingpoint-vchassis
+  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vchassis
+  releases:
+  - !Release
+    title: cloudshell-tg-breakingpoint-vchassis-2.0.0
+    tag_name: 2.0.0
+    published_at: 2018-12-17 12:00:17
+    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-vchassis/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_1G
+  name: Cisco-NXOS-Shell
+  url: https://github.com/QualiSystems/Cisco-NXOS-Shell
+  releases:
+  - !Release
+    title: Cisco NXOS Shell 5.0.2
+    tag_name: 5.0.2
+    published_at: 2018-01-15 16:19:51
+    release_url: https://github.com/QualiSystems/Cisco-NXOS-Shell/releases/tag/5.0.2
+    python_version: PY2
+- !Shell_1G
+  name: cloudshell-tg-virtual-trex
+  url: https://github.com/QualiSystems/cloudshell-tg-virtual-trex
+  releases:
+  - !Release
+    title: Cloudshell Virtual Traffic Generator TRex 1.0.0 PREVIEW
     tag_name: 1.0.0
-    published_at: 2017-02-20 17:48:03
-    release_url: https://github.com/QualiSystems/Ericsson-SEOS-Shell-Extended/releases/tag/1.0.0
+    published_at: 2018-02-27 17:52:49
+    release_url: https://github.com/QualiSystems/cloudshell-tg-virtual-trex/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_1G
+  name: Ericsson-SEOS-Shell
+  url: https://github.com/QualiSystems/Ericsson-SEOS-Shell
+  releases:
+  - !Release
+    title: Ericsson-SEOS-Shell 1.0.0
+    tag_name: 1.0.0
+    published_at: 2016-09-12 12:10:44
+    release_url: https://github.com/QualiSystems/Ericsson-SEOS-Shell/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_1G
+  name: Bamboo-cloudshell-plugin
+  url: https://github.com/QualiSystems/Bamboo-cloudshell-plugin
+  releases:
+  - !Release
+    title: Beta 1
+    tag_name: '0.1'
+    published_at: 2017-04-12 13:18:26
+    release_url: https://github.com/QualiSystems/Bamboo-cloudshell-plugin/releases/tag/0.1
+    python_version: PY2
+- !Shell_1G
+  name: Spirent-AvalancheController-Shell
+  url: https://github.com/QualiSystems/Spirent-AvalancheController-Shell
+  releases:
+  - !Release
+    title: Spirent-AvalancheController-Shell 1.0.0-Preview
+    tag_name: 1.0.0-Preview
+    published_at: 2019-07-18 11:34:35
+    release_url: https://github.com/QualiSystems/Spirent-AvalancheController-Shell/releases/tag/1.0.0-Preview
+    python_version: PY2
+- !Shell_1G
+  name: cloudshell-orch-sandbox
+  url: https://github.com/QualiSystems/cloudshell-orch-sandbox
+  releases:
+  - !Release
+    title: CloudShell v9.3 EA Sandbox Orchestration
+    tag_name: v9.3EA
+    published_at: 2019-07-31 12:45:28
+    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v9.3EA
     python_version: PY2
 - !Shell_1G
   name: Ixia-Chassis-Shell
@@ -409,180 +259,164 @@
     release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell/releases/tag/1.3.0-Preview
     python_version: PY2
 - !Shell_1G
-  name: cloudshell-tg-virtual-trex
-  url: https://github.com/QualiSystems/cloudshell-tg-virtual-trex
+  name: cloudshell-tg-teravm-vchassis
+  url: https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis
   releases:
   - !Release
-    title: Cloudshell Virtual Traffic Generator TRex 1.0.0 PREVIEW
+    title: cloudshell-tg-teravm-vchassis-1.2.0
+    tag_name: 1.2.0
+    published_at: 2019-03-04 11:29:09
+    release_url: https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis/releases/tag/1.2.0
+    python_version: PY2
+- !Shell_1G
+  name: AWS-Shell
+  url: https://github.com/QualiSystems/AWS-Shell
+  releases:
+  - !Release
+    title: Release 2.4.2 of AWS Shell
+    tag_name: 2.4.2
+    published_at: 2019-07-31 10:18:49
+    release_url: https://github.com/QualiSystems/AWS-Shell/releases/tag/2.4.2
+    python_version: PY2
+- !Shell_1G
+  name: Arista-EOS-Shell
+  url: https://github.com/QualiSystems/Arista-EOS-Shell
+  releases:
+  - !Release
+    title: Arista EOS Shell 1.0.0 -PREVIEW
     tag_name: 1.0.0
-    published_at: 2018-02-27 17:52:49
-    release_url: https://github.com/QualiSystems/cloudshell-tg-virtual-trex/releases/tag/1.0.0
+    published_at: 2017-04-04 14:50:06
+    release_url: https://github.com/QualiSystems/Arista-EOS-Shell/releases/tag/1.0.0
     python_version: PY2
-- !Shell_2G
-  name: Cisco-AIREOS-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G
+- !Shell_1G
+  name: Ericsson-SEOS-Shell-Extended
+  url: https://github.com/QualiSystems/Ericsson-SEOS-Shell-Extended
   releases:
   - !Release
-    title: Cisco AireOS Shell 2G 1.1.0
-    tag_name: 1.1.0
-    published_at: 2017-11-07 09:42:24
-    release_url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G/releases/tag/1.1.0
+    title: Ericsson SEOS Extended Shell 1.0.0
+    tag_name: 1.0.0
+    published_at: 2017-02-20 17:48:03
+    release_url: https://github.com/QualiSystems/Ericsson-SEOS-Shell-Extended/releases/tag/1.0.0
     python_version: PY2
-- !Shell_2G
-  name: Juniper-JunOS-Firewall-Shell-2G
-  url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G
+- !Shell_1G
+  name: Cisco-AIREOS-Shell
+  url: https://github.com/QualiSystems/Cisco-AIREOS-Shell
   releases:
   - !Release
-    title: Juniper JunOS Firewall Shell 2G 2.0.0
-    tag_name: 2.0.0
-    published_at: 2018-12-31 15:04:20
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/2.0.0
+    title: Cisco AIREOS Shell 1.0.50
+    tag_name: 1.0.50
+    published_at: 2016-09-06 14:58:36
+    release_url: https://github.com/QualiSystems/Cisco-AIREOS-Shell/releases/tag/1.0.50
     python_version: PY2
+- !Shell_1G
+  name: Juniper-JunOS-Shell
+  url: https://github.com/QualiSystems/Juniper-JunOS-Shell
+  releases:
   - !Release
-    title: Juniper JunOS Firewall Shell 2G PY3 3.0.0
+    title: Juniper_Junos_Shell-3.0.0
     tag_name: 3.0.0
-    published_at: 2019-10-03 12:20:34
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.0
-    python_version: PY3
-- !Shell_2G
-  name: Spirent-TestCenterChassis-Shell-2G
-  url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G
-  releases:
-  - !Release
-    title: Spirent-TestCenterChassis-Shell-2G 2.0.2-Preview
-    tag_name: 2.0.2-Preview
-    published_at: 2019-01-27 10:22:37
-    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G/releases/tag/2.0.2-Preview
+    published_at: 2017-01-31 10:07:16
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Shell/releases/tag/3.0.0
     python_version: PY2
-- !Shell_2G
-  name: Cisco-IOS-Switch-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G
+- !Shell_1G
+  name: Cisco-IOS-Shell
+  url: https://github.com/QualiSystems/Cisco-IOS-Shell
   releases:
   - !Release
-    title: Cisco IOS Switch Shell 2G 2.0.1
-    tag_name: 2.0.1
-    published_at: 2018-01-15 14:57:18
-    release_url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G/releases/tag/2.0.1
+    title: Cisco IOS Shell 5.0.2
+    tag_name: 5.0.2
+    published_at: 2018-01-15 14:51:25
+    release_url: https://github.com/QualiSystems/Cisco-IOS-Shell/releases/tag/5.0.2
     python_version: PY2
-- !Shell_2G
-  name: Cisco-ACI-EPG-Autoload-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G
+- !Shell_1G
+  name: Ixia-IxChariotServer-Shell
+  url: https://github.com/QualiSystems/Ixia-IxChariotServer-Shell
   releases:
   - !Release
-    title: Cisco ACI EPG Autoload 2 Generation 1.0.0 PREVIEW
+    title: Ixia-IxChariotServer-Shell 1.2.0-Preview
+    tag_name: 1.2.0-Preview
+    published_at: 2018-11-05 13:25:58
+    release_url: https://github.com/QualiSystems/Ixia-IxChariotServer-Shell/releases/tag/1.2.0-Preview
+    python_version: PY2
+- !Shell_1G
+  name: Brocade-FastIron-Shell
+  url: https://github.com/QualiSystems/Brocade-FastIron-Shell
+  releases:
+  - !Release
+    title: Brocade FastIron Shell 1.0.0
     tag_name: 1.0.0
-    published_at: 2018-12-10 11:42:44
-    release_url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G/releases/tag/1.0.0
+    published_at: 2016-10-26 10:35:58
+    release_url: https://github.com/QualiSystems/Brocade-FastIron-Shell/releases/tag/1.0.0
     python_version: PY2
-- !Shell_2G
-  name: Cisco-ACI-Ports-Autoload-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G
+- !Shell_1G
+  name: BreakingPoint-Chassis-Shell
+  url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell
   releases:
   - !Release
-    title: Cisco ACI Ports Autoload 2 Generation 1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2018-12-10 11:42:46
-    release_url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: BreakingPoint-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G
-  releases:
-  - !Release
-    title: BreakingPoint Chassis Shell 2G v1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2019-02-20 14:59:11
-    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: Cumulus-Linux-Switch-Shell-2G
-  url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G
-  releases:
-  - !Release
-    title: 'Cumulus Linux 2 Gen Shell 1.0.0 '
-    tag_name: 1.0.0
-    published_at: 2019-04-30 17:13:41
-    release_url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: CGS-COS-Loadbalancer-Shell-2G
-  url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G
-  releases:
-  - !Release
-    title: CGS COS Loadbalancer 2G 1.0.1
+    title: BreakingPoint Chassis Shell 1.0.1 PREVIEW
     tag_name: 1.0.1
-    published_at: 2019-12-04 11:12:11
-    release_url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G/releases/tag/1.0.1
+    published_at: 2017-04-19 13:26:51
+    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell/releases/tag/1.0.1
     python_version: PY2
-- !Shell_2G
-  name: Spirent-TestCenter-Controller-Shell-2G
-  url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
+- !Shell_1G
+  name: Cisco-ASA-Shell
+  url: https://github.com/QualiSystems/Cisco-ASA-Shell
   releases:
   - !Release
-    title: Spirent-TestCenter-Controller-Shell-2G 2.0.1-Preview
-    tag_name: 2.0.1-Preview
-    published_at: 2019-12-08 10:27:43
-    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/2.0.1-Preview
-    python_version: PY2
-- !Shell_2G
-  name: SDN-Opendaylight-Shell-2G
-  url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G
-  releases:
-  - !Release
-    title: SDN-Opendaylight-Shell-2G 1.0.0
+    title: Cisco-ASA-Shell 1.0.0
     tag_name: 1.0.0
-    published_at: 2017-11-09 17:14:23
-    release_url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G/releases/tag/1.0.0
+    published_at: 2016-08-03 14:02:30
+    release_url: https://github.com/QualiSystems/Cisco-ASA-Shell/releases/tag/1.0.0
     python_version: PY2
-- !Shell_2G
-  name: F5-BigIp-Firewall-Shell-2G
-  url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G
+- !Shell_1G
+  name: Ixia-IxNetworkController-Shell
+  url: https://github.com/QualiSystems/Ixia-IxNetworkController-Shell
   releases:
   - !Release
-    title: F5 BIG-IP Firewall Shell 2 Generation 1.0.0 PREVIEW
+    title: Ixia-IxNetworkController-Shell 1.6.4-Preview
+    tag_name: 1.6.4-Preview
+    published_at: 2019-06-27 14:04:16
+    release_url: https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases/tag/1.6.4-Preview
+    python_version: PY2
+- !Shell_1G
+  name: Ericsson-IPOS-Shell-Extended
+  url: https://github.com/QualiSystems/Ericsson-IPOS-Shell-Extended
+  releases:
+  - !Release
+    title: Ericsson IPOS Extended Shell 1.0.0
     tag_name: 1.0.0
-    published_at: 2018-12-12 15:55:33
-    release_url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G/releases/tag/1.0.0
+    published_at: 2017-02-20 17:35:44
+    release_url: https://github.com/QualiSystems/Ericsson-IPOS-Shell-Extended/releases/tag/1.0.0
     python_version: PY2
-- !Shell_2G
-  name: TeraVM-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G
+- !Shell_1G
+  name: Spirent-TestCenterController-Shell
+  url: https://github.com/QualiSystems/Spirent-TestCenterController-Shell
   releases:
   - !Release
-    title: TeraVM Chassis Shell 2 Generation 1.0.1
-    tag_name: 1.0.1
-    published_at: 2018-11-07 10:07:08
-    release_url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G/releases/tag/1.0.1
+    title: Spirent-TestCenterController-Shell 1.5.3-Preview
+    tag_name: 1.5.3-Preview
+    published_at: 2019-01-27 10:38:42
+    release_url: https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases/tag/1.5.3-Preview
     python_version: PY2
-- !Shell_2G
-  name: Arista-EOS-Router-Shell-2G
-  url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G
+- !Shell_1G
+  name: Ixia-IxChariotController-Shell
+  url: https://github.com/QualiSystems/Ixia-IxChariotController-Shell
   releases:
   - !Release
-    title: Arista EOS Router Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2018-06-12 11:48:42
-    release_url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G/releases/tag/1.0.0
+    title: Ixia-IxChariotController-Shell 1.2.0-Preview
+    tag_name: 1.2.0-Preview
+    published_at: 2018-11-05 13:32:38
+    release_url: https://github.com/QualiSystems/Ixia-IxChariotController-Shell/releases/tag/1.2.0-Preview
     python_version: PY2
-- !Shell_2G
-  name: PaloAlto-PanoOS-Static-Shell
-  url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell
+- !Shell_1G
+  name: BreakingPoint-Controller-Shell
+  url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell
   releases:
   - !Release
-    title: PaloAlto PanoOS Static Virtual Firewall Shell
-    tag_name: 1.0.0
-    published_at: 2018-10-04 20:33:15
-    release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: Huawei-VRP-Switch-Shell-2G
-  url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G
-  releases:
-  - !Release
-    title: Huawei VRP Switch Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2019-04-18 09:18:08
-    release_url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G/releases/tag/1.0.0
+    title: BreakingPoint Controller 1.2.3 PREVIEW
+    tag_name: 1.2.3
+    published_at: 2018-08-13 05:55:07
+    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell/releases/tag/1.2.3
     python_version: PY2
 - !Shell_2G
   name: Alcatel-Timetra-Router-Shell-2G
@@ -595,34 +429,104 @@
     release_url: https://github.com/QualiSystems/Alcatel-Timetra-Router-Shell-2G/releases/tag/1.1.1
     python_version: PY2
 - !Shell_2G
-  name: TeraVM-Virtual-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G
+  name: Cisco-ACI-Ports-Autoload-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G
   releases:
   - !Release
-    title: TeraVM Virtual Chassis Shell 2 Generation 1.0.0 PREVIEW
+    title: Cisco ACI Ports Autoload 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
-    published_at: 2019-03-04 13:18:37
-    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G/releases/tag/1.0.0
+    published_at: 2018-12-10 11:42:46
+    release_url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
-  name: BreakingPoint-Controller-Shell-2G
-  url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G
+  name: Spirent-TestCenter-Controller-Shell-2G
+  url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
   releases:
   - !Release
-    title: BreakingPoint Controller Shell 2G v1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2019-02-15 13:14:25
-    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/1.0.0
+    title: Spirent-TestCenter-Controller-Shell-2G 2.0.1-Preview
+    tag_name: 2.0.1-Preview
+    published_at: 2019-12-08 10:27:43
+    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/2.0.1-Preview
     python_version: PY2
 - !Shell_2G
-  name: Cisco-IOSXR-Router-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G
+  name: Ixia-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
   releases:
   - !Release
-    title: Cisco IOSXR Router Shell 2G 2.0.2
-    tag_name: 2.0.2
-    published_at: 2018-01-16 12:54:01
-    release_url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G/releases/tag/2.0.2
+    title: Ixia-Chassis-Shell-2G 2.0.4-Preview
+    tag_name: 2.0.4-Preview
+    published_at: 2018-06-07 14:23:59
+    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/2.0.4-Preview
+    python_version: PY2
+- !Shell_2G
+  name: Cisco-ACI-EPG-Autoload-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G
+  releases:
+  - !Release
+    title: Cisco ACI EPG Autoload 2 Generation 1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2018-12-10 11:42:44
+    release_url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: FortiGate-FortiOS-Firewall-Shell-2G
+  url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G
+  releases:
+  - !Release
+    title: FortiGate FortiOS Firewall Shell 2G 1.1.0
+    tag_name: 1.1.0
+    published_at: 2019-10-17 08:43:33
+    release_url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G/releases/tag/1.1.0
+    python_version: PY2
+- !Shell_2G
+  name: a10-acos-firewall-shell-2g
+  url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g
+  releases:
+  - !Release
+    title: A10 ACOS Firewall Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2018-04-25 09:44:18
+    release_url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Cisco-NXOS-Switch-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G
+  releases:
+  - !Release
+    title: Cisco NXOS Switch Shell 2G 2.0.1
+    tag_name: 2.0.1
+    published_at: 2018-01-15 15:41:18
+    release_url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G/releases/tag/2.0.1
+    python_version: PY2
+- !Shell_2G
+  name: TeraVM-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: TeraVM Chassis Shell 2 Generation 1.0.1
+    tag_name: 1.0.1
+    published_at: 2018-11-07 10:07:08
+    release_url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G/releases/tag/1.0.1
+    python_version: PY2
+- !Shell_2G
+  name: F5-BigIp-Firewall-Shell-2G
+  url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G
+  releases:
+  - !Release
+    title: F5 BIG-IP Firewall Shell 2 Generation 1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2018-12-12 15:55:33
+    release_url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Ixia-IxLoad-Controller-Shell-2G
+  url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G
+  releases:
+  - !Release
+    title: Ixia-IxLoad-Controller-Shell-2G 2.1.0-Preview
+    tag_name: 2.1.0-Preview
+    published_at: 2019-09-02 11:14:35
+    release_url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G/releases/tag/2.1.0-Preview
     python_version: PY2
 - !Shell_2G
   name: TeraVM-Controller-Shell-2G
@@ -635,14 +539,34 @@
     release_url: https://github.com/QualiSystems/TeraVM-Controller-Shell-2G/releases/tag/1.1.1
     python_version: PY2
 - !Shell_2G
-  name: cloudshell-tg-breakingpoint-static-vblade
-  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade
+  name: cloudshell-tg-breakingpoint-static-vchassis
+  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis
   releases:
   - !Release
-    title: CloudShell Traffic Generator BreakingPoint Static  Virtual Blade
+    title: CloudShell Traffic Generator BreakingPoint Static Virtual Chassis
     tag_name: 1.0.0
-    published_at: 2018-08-09 15:47:50
-    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade/releases/tag/1.0.0
+    published_at: 2018-08-09 15:50:00
+    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: PaloAlto-PanoOS-Shell
+  url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
+  releases:
+  - !Release
+    title: PaloAlto PanoOS Firewall Shell
+    tag_name: 1.0.0
+    published_at: 2018-10-04 15:07:15
+    release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: SDN-Opendaylight-Shell-2G
+  url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G
+  releases:
+  - !Release
+    title: SDN-Opendaylight-Shell-2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2017-11-09 17:14:23
+    release_url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
   name: Cisco-ASA-Firewall-Shell-2G
@@ -665,6 +589,56 @@
     release_url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G/releases/tag/1.0.1
     python_version: PY2
 - !Shell_2G
+  name: VyOS-Deployment-App-Shell-2G
+  url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G
+  releases:
+  - !Release
+    title: VyOS Deployment App 2nd Generation [PREVIEW]
+    tag_name: 1.0.1
+    published_at: 2018-09-12 09:33:15
+    release_url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G/releases/tag/1.0.1
+    python_version: PY2
+- !Shell_2G
+  name: IxVM-Deployment-App-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: IxVM Chassis Deployment App 2nd Generation 1.0.2
+    tag_name: 1.0.2
+    published_at: 2019-06-04 13:06:49
+    release_url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G/releases/tag/1.0.2
+    python_version: PY2
+- !Shell_2G
+  name: Arista-EOS-Router-Shell-2G
+  url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G
+  releases:
+  - !Release
+    title: Arista EOS Router Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2018-06-12 11:48:42
+    release_url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: BreakingPoint-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: BreakingPoint Chassis Shell 2G v1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2019-02-20 14:59:11
+    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: CGS-COS-Switch-Shell-2G
+  url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G
+  releases:
+  - !Release
+    title: CGS COS Switch Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-09-21 16:46:36
+    release_url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
   name: Juniper-JunOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
   releases:
@@ -681,96 +655,6 @@
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/2.0.0
     python_version: PY2
 - !Shell_2G
-  name: FortiGate-FortiOS-Firewall-Shell-2G
-  url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G
-  releases:
-  - !Release
-    title: FortiGate FortiOS Firewall Shell 2G 1.1.0
-    tag_name: 1.1.0
-    published_at: 2019-10-17 08:43:33
-    release_url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G/releases/tag/1.1.0
-    python_version: PY2
-- !Shell_2G
-  name: VyOS-Deployment-App-Shell-2G
-  url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G
-  releases:
-  - !Release
-    title: VyOS Deployment App 2nd Generation [PREVIEW]
-    tag_name: 1.0.1
-    published_at: 2018-09-12 09:33:15
-    release_url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G/releases/tag/1.0.1
-    python_version: PY2
-- !Shell_2G
-  name: a10-acos-firewall-shell-2g
-  url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g
-  releases:
-  - !Release
-    title: A10 ACOS Firewall Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2018-04-25 09:44:18
-    release_url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: TeraVM-Virtual-Blade-Shell-2G
-  url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G
-  releases:
-  - !Release
-    title: TeraVM Virtual Blade Shell 2 Generation 1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2019-03-04 13:06:41
-    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: cloudshell-tg-breakingpoint-static-vchassis
-  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis
-  releases:
-  - !Release
-    title: CloudShell Traffic Generator BreakingPoint Static Virtual Chassis
-    tag_name: 1.0.0
-    published_at: 2018-08-09 15:50:00
-    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: Huawei-VRP-Router-Shell-2G
-  url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G
-  releases:
-  - !Release
-    title: Huawei VRP Router Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2019-04-18 09:17:37
-    release_url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: TRex-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G
-  releases:
-  - !Release
-    title: TRex Chassis Shell 2 Generation 1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2018-02-27 17:33:14
-    release_url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
-  name: IxVM-Deployment-App-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G
-  releases:
-  - !Release
-    title: IxVM Chassis Deployment App 2nd Generation 1.0.2
-    tag_name: 1.0.2
-    published_at: 2019-06-04 13:06:49
-    release_url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G/releases/tag/1.0.2
-    python_version: PY2
-- !Shell_2G
-  name: CGS-COS-Switch-Shell-2G
-  url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G
-  releases:
-  - !Release
-    title: CGS COS Switch Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2019-09-21 16:46:36
-    release_url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
   name: Arista-EOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Arista-EOS-Switch-Shell-2G
   releases:
@@ -781,24 +665,14 @@
     release_url: https://github.com/QualiSystems/Arista-EOS-Switch-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
-  name: Ixia-Chassis-Shell-2G
-  url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
+  name: PaloAlto-PanoOS-Static-Shell
+  url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell
   releases:
   - !Release
-    title: Ixia-Chassis-Shell-2G 2.0.4-Preview
-    tag_name: 2.0.4-Preview
-    published_at: 2018-06-07 14:23:59
-    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/2.0.4-Preview
-    python_version: PY2
-- !Shell_2G
-  name: Cisco-NXOS-Switch-Shell-2G
-  url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G
-  releases:
-  - !Release
-    title: Cisco NXOS Switch Shell 2G 2.0.1
-    tag_name: 2.0.1
-    published_at: 2018-01-15 15:41:18
-    release_url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G/releases/tag/2.0.1
+    title: PaloAlto PanoOS Static Virtual Firewall Shell
+    tag_name: 1.0.0
+    published_at: 2018-10-04 20:33:15
+    release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
   name: Cisco-IOS-Router-Shell-2G
@@ -811,6 +685,36 @@
     release_url: https://github.com/QualiSystems/Cisco-IOS-Router-Shell-2G/releases/tag/2.0.1
     python_version: PY2
 - !Shell_2G
+  name: Cumulus-Linux-Switch-Shell-2G
+  url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G
+  releases:
+  - !Release
+    title: 'Cumulus Linux 2 Gen Shell 1.0.0 '
+    tag_name: 1.0.0
+    published_at: 2019-04-30 17:13:41
+    release_url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: CGS-COS-Loadbalancer-Shell-2G
+  url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G
+  releases:
+  - !Release
+    title: CGS COS Loadbalancer 2G 1.0.1
+    tag_name: 1.0.1
+    published_at: 2019-12-04 11:12:11
+    release_url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G/releases/tag/1.0.1
+    python_version: PY2
+- !Shell_2G
+  name: Cisco-AIREOS-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G
+  releases:
+  - !Release
+    title: Cisco AireOS Shell 2G 1.1.0
+    tag_name: 1.1.0
+    published_at: 2017-11-07 09:42:24
+    release_url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G/releases/tag/1.1.0
+    python_version: PY2
+- !Shell_2G
   name: Ixia-IxNetwork-Controller-Shell-2G
   url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G
   releases:
@@ -819,16 +723,6 @@
     tag_name: 2.1.0-Preview
     published_at: 2019-08-28 19:47:16
     release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/2.1.0-Preview
-    python_version: PY2
-- !Shell_2G
-  name: Ixia-IxLoad-Controller-Shell-2G
-  url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G
-  releases:
-  - !Release
-    title: Ixia-IxLoad-Controller-Shell-2G 2.1.0-Preview
-    tag_name: 2.1.0-Preview
-    published_at: 2019-09-02 11:14:35
-    release_url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G/releases/tag/2.1.0-Preview
     python_version: PY2
 - !Shell_2G
   name: Juniper-JunOS-Switch-Shell-2G
@@ -847,34 +741,120 @@
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.0
     python_version: PY3
 - !Shell_2G
-  name: PaloAlto-PanoOS-Shell
-  url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
+  name: TeraVM-Virtual-Blade-Shell-2G
+  url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G
   releases:
   - !Release
-    title: PaloAlto PanoOS Firewall Shell
+    title: TeraVM Virtual Blade Shell 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
-    published_at: 2018-10-04 15:07:15
-    release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell/releases/tag/1.0.0
+    published_at: 2019-03-04 13:06:41
+    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G/releases/tag/1.0.0
     python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-w2w-rome
-  url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome
+- !Shell_2G
+  name: Huawei-VRP-Router-Shell-2G
+  url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G
   releases:
   - !Release
-    title: Wave2Wave Rome L1 Shell v4.0.2
-    tag_name: 4.0.2
-    published_at: 2019-10-02 12:12:58
-    release_url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome/releases/tag/4.0.2
+    title: Huawei VRP Router Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-04-18 09:17:37
+    release_url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G/releases/tag/1.0.0
     python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-simpler_networks
-  url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks
+- !Shell_2G
+  name: Huawei-VRP-Switch-Shell-2G
+  url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G
   releases:
   - !Release
-    title: Simpler Networks L1 Shell v2.0.0 Preview
+    title: Huawei VRP Switch Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2019-04-18 09:18:08
+    release_url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Juniper-JunOS-Firewall-Shell-2G
+  url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G
+  releases:
+  - !Release
+    title: Juniper JunOS Firewall Shell 2G 2.0.0
     tag_name: 2.0.0
-    published_at: 2019-01-03 12:15:23
-    release_url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks/releases/tag/2.0.0
+    published_at: 2018-12-31 15:04:20
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/2.0.0
+    python_version: PY2
+  - !Release
+    title: Juniper JunOS Firewall Shell 2G PY3 3.0.0
+    tag_name: 3.0.0
+    published_at: 2019-10-03 12:20:34
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.0
+    python_version: PY3
+- !Shell_2G
+  name: cloudshell-tg-breakingpoint-static-vblade
+  url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade
+  releases:
+  - !Release
+    title: CloudShell Traffic Generator BreakingPoint Static  Virtual Blade
+    tag_name: 1.0.0
+    published_at: 2018-08-09 15:47:50
+    release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Cisco-IOS-Switch-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G
+  releases:
+  - !Release
+    title: Cisco IOS Switch Shell 2G 2.0.1
+    tag_name: 2.0.1
+    published_at: 2018-01-15 14:57:18
+    release_url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G/releases/tag/2.0.1
+    python_version: PY2
+- !Shell_2G
+  name: TeraVM-Virtual-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: TeraVM Virtual Chassis Shell 2 Generation 1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2019-03-04 13:18:37
+    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: BreakingPoint-Controller-Shell-2G
+  url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G
+  releases:
+  - !Release
+    title: BreakingPoint Controller Shell 2G v1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2019-02-15 13:14:25
+    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Spirent-TestCenterChassis-Shell-2G
+  url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G
+  releases:
+  - !Release
+    title: Spirent-TestCenterChassis-Shell-2G 2.0.2-Preview
+    tag_name: 2.0.2-Preview
+    published_at: 2019-01-27 10:22:37
+    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G/releases/tag/2.0.2-Preview
+    python_version: PY2
+- !Shell_2G
+  name: Cisco-IOSXR-Router-Shell-2G
+  url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G
+  releases:
+  - !Release
+    title: Cisco IOSXR Router Shell 2G 2.0.2
+    tag_name: 2.0.2
+    published_at: 2018-01-16 12:54:01
+    release_url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G/releases/tag/2.0.2
+    python_version: PY2
+- !Shell_2G
+  name: TRex-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: TRex Chassis Shell 2 Generation 1.0.0 PREVIEW
+    tag_name: 1.0.0
+    published_at: 2018-02-27 17:33:14
+    release_url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-ixia-visionedge
@@ -887,26 +867,6 @@
     release_url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge/releases/tag/1.0.3
     python_version: PY2
 - !Shell_L1
-  name: cloudshell-L1-telebyte
-  url: https://github.com/QualiSystems/cloudshell-L1-telebyte
-  releases:
-  - !Release
-    title: Telebyte L1 Shell v1.0.1
-    tag_name: 1.0.1
-    published_at: 2019-11-26 11:16:07
-    release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.1
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-fiberzone_afm
-  url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm
-  releases:
-  - !Release
-    title: FiberZone AFM L1 Shell v2.0.0 Preview
-    tag_name: 2.0.0
-    published_at: 2019-01-02 14:11:52
-    release_url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm/releases/tag/2.0.0
-    python_version: PY2
-- !Shell_L1
   name: cloudshell-L1-polatis
   url: https://github.com/QualiSystems/cloudshell-L1-polatis
   releases:
@@ -915,66 +875,6 @@
     tag_name: 3.0.0
     published_at: 2019-07-15 09:22:40
     release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.0
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-l1-ixia-xstream
-  url: https://github.com/QualiSystems/cloudshell-l1-ixia-xstream
-  releases:
-  - !Release
-    title: Ixia Xstream L1 Driver 1.0.0 Preview Release
-    tag_name: 1.0.0
-    published_at: 2017-09-15 13:48:58
-    release_url: https://github.com/QualiSystems/cloudshell-l1-ixia-xstream/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-netscout-teststream
-  url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream
-  releases:
-  - !Release
-    title: Netscout TestStream L1 Shell v5.0.1 PREVIEW
-    tag_name: 5.0.1
-    published_at: 2018-12-07 13:16:44
-    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.1
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-netvisor_virtualwire
-  url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire
-  releases:
-  - !Release
-    title: Pluribus Netvisor VirtualWire L1 Shell v2.0.0 Preview
-    tag_name: 2.0.0
-    published_at: 2019-01-03 10:33:12
-    release_url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases/tag/2.0.0
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-calient
-  url: https://github.com/QualiSystems/cloudshell-L1-calient
-  releases:
-  - !Release
-    title: Cloudshell L1 Calient Shell 1.0.3
-    tag_name: 1.0.3
-    published_at: 2018-04-24 15:18:20
-    release_url: https://github.com/QualiSystems/cloudshell-L1-calient/releases/tag/1.0.3
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-glimmerglass
-  url: https://github.com/QualiSystems/cloudshell-L1-glimmerglass
-  releases:
-  - !Release
-    title: Cloudshell L1 Glimmerglass Shell 1.0.4
-    tag_name: 1.0.4
-    published_at: 2018-11-08 10:54:16
-    release_url: https://github.com/QualiSystems/cloudshell-L1-glimmerglass/releases/tag/1.0.4
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-pluribus_netvisor_vle
-  url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
-  releases:
-  - !Release
-    title: Pluribus Netvisor VLE L1 Shell v1.0.1 Preview
-    tag_name: 1.0.1
-    published_at: 2019-01-02 14:32:45
-    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle/releases/tag/1.0.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-apcon-cli4
@@ -987,14 +887,44 @@
     release_url: https://github.com/QualiSystems/cloudshell-L1-apcon-cli4/releases/tag/2.0.1
     python_version: PY2
 - !Shell_L1
-  name: cloudshell-L1-cgs
-  url: https://github.com/QualiSystems/cloudshell-L1-cgs
+  name: cloudshell-l1-ixia-xstream
+  url: https://github.com/QualiSystems/cloudshell-l1-ixia-xstream
   releases:
   - !Release
-    title: CGS L1 Shell v1.0.1
+    title: Ixia Xstream L1 Driver 1.0.0 Preview Release
+    tag_name: 1.0.0
+    published_at: 2017-09-15 13:48:58
+    release_url: https://github.com/QualiSystems/cloudshell-l1-ixia-xstream/releases/tag/1.0.0
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-pluribus_netvisor_vle
+  url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
+  releases:
+  - !Release
+    title: Pluribus Netvisor VLE L1 Shell v1.0.1 Preview
     tag_name: 1.0.1
-    published_at: 2019-09-03 11:53:36
-    release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.1
+    published_at: 2019-01-02 14:32:45
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle/releases/tag/1.0.1
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-w2w-rome
+  url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome
+  releases:
+  - !Release
+    title: Wave2Wave Rome L1 Shell v4.0.2
+    tag_name: 4.0.2
+    published_at: 2019-10-02 12:12:58
+    release_url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome/releases/tag/4.0.2
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-netvisor_virtualwire
+  url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire
+  releases:
+  - !Release
+    title: Pluribus Netvisor VirtualWire L1 Shell v2.0.0 Preview
+    tag_name: 2.0.0
+    published_at: 2019-01-03 10:33:12
+    release_url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases/tag/2.0.0
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-horizon
@@ -1007,14 +937,14 @@
     release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-horizon/releases/tag/3.0.0
     python_version: PY2
 - !Shell_L1
-  name: cloudshell-L1-Telescent
-  url: https://github.com/QualiSystems/cloudshell-L1-Telescent
+  name: cloudshell-L1-cgs
+  url: https://github.com/QualiSystems/cloudshell-L1-cgs
   releases:
   - !Release
-    title: CloudShell L1 Telescent 1.0.2
-    tag_name: 1.0.2
-    published_at: 2018-02-19 13:48:04
-    release_url: https://github.com/QualiSystems/cloudshell-L1-Telescent/releases/tag/1.0.2
+    title: CGS L1 Shell v1.0.1
+    tag_name: 1.0.1
+    published_at: 2019-09-03 11:53:36
+    release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-mrv
@@ -1025,4 +955,74 @@
     tag_name: 2.0.3
     published_at: 2019-02-01 15:14:23
     release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.3
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-netscout-teststream
+  url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream
+  releases:
+  - !Release
+    title: Netscout TestStream L1 Shell v5.0.1 PREVIEW
+    tag_name: 5.0.1
+    published_at: 2018-12-07 13:16:44
+    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.1
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-glimmerglass
+  url: https://github.com/QualiSystems/cloudshell-L1-glimmerglass
+  releases:
+  - !Release
+    title: Cloudshell L1 Glimmerglass Shell 1.0.4
+    tag_name: 1.0.4
+    published_at: 2018-11-08 10:54:16
+    release_url: https://github.com/QualiSystems/cloudshell-L1-glimmerglass/releases/tag/1.0.4
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-calient
+  url: https://github.com/QualiSystems/cloudshell-L1-calient
+  releases:
+  - !Release
+    title: Cloudshell L1 Calient Shell 1.0.3
+    tag_name: 1.0.3
+    published_at: 2018-04-24 15:18:20
+    release_url: https://github.com/QualiSystems/cloudshell-L1-calient/releases/tag/1.0.3
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-fiberzone_afm
+  url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm
+  releases:
+  - !Release
+    title: FiberZone AFM L1 Shell v2.0.0 Preview
+    tag_name: 2.0.0
+    published_at: 2019-01-02 14:11:52
+    release_url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-simpler_networks
+  url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks
+  releases:
+  - !Release
+    title: Simpler Networks L1 Shell v2.0.0 Preview
+    tag_name: 2.0.0
+    published_at: 2019-01-03 12:15:23
+    release_url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-Telescent
+  url: https://github.com/QualiSystems/cloudshell-L1-Telescent
+  releases:
+  - !Release
+    title: CloudShell L1 Telescent 1.0.2
+    tag_name: 1.0.2
+    published_at: 2018-02-19 13:48:04
+    release_url: https://github.com/QualiSystems/cloudshell-L1-Telescent/releases/tag/1.0.2
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-telebyte
+  url: https://github.com/QualiSystems/cloudshell-L1-telebyte
+  releases:
+  - !Release
+    title: Telebyte L1 Shell v1.0.1
+    tag_name: 1.0.1
+    published_at: 2019-11-26 11:16:07
+    release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.1
     python_version: PY2
