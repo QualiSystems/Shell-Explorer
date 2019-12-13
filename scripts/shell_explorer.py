@@ -17,7 +17,7 @@ class ShellExplorer(object):
         WORKING_REPO = "Shell-Explorer"
         SHELLS_FILE = "shells.yaml"
         PACKAGES_FILE = "packages.yaml"
-        EXPLORE_RELEASES_DEPTH = 10
+        EXPLORE_RELEASES_DEPTH = 5
 
     class CONST:
         SHELL_L1_FILES = {"main.py"}
@@ -31,30 +31,18 @@ class ShellExplorer(object):
         METADATA_FILE = "/src/drivermetadata.xml"
         PY_VER_PATTERN = re.compile(r"PythonVersion=(.+)\s")
 
-    class KEYS:
-        SHELL_L1 = "SHELLS L1"
-        SHELL_1G = "SHELLS 1G"
-        SHELL_2G = "SHELLS 2G"
-        PACKAGE = "PACKAGES"
-        RELEASE_VERSION = "release_version"
-        RELEASE_DATE = "release_date"
-        REPO_URL = "url"
-        PYTHON_VER = "python_version"
-
     class VALUES:
         PYTHON_VERSION_2 = "PY2"
         PYTHON_VERSION_3 = "PY3"
-
-    TABLE_TEMPLATE = {KEYS.SHELL_L1: [], KEYS.SHELL_1G: [], KEYS.SHELL_2G: [], KEYS.PACKAGE: []}
 
     def __init__(self, auth_key, branch):
         self.branch = branch
         self.repo_operations = RepoOperations(auth_key, self.CONFIG.EXPLORE_ORG, self.CONFIG.WORKING_REPO)
         self._repo_type_dict = OrderedDict(
             [(Package, self._is_it_a_package),
-             (ShellL1, self.is_it_L1_shell),
-             (Shell2G, self.is_it_2G_shell),
-             (Shell1G, self.is_it_1G_shell)])
+             (ShellL1, self.is_it_l1_shell),
+             (Shell2G, self.is_it_2g_shell),
+             (Shell1G, self.is_it_1g_shell)])
 
     @property
     @lru_cache()
@@ -90,20 +78,20 @@ class ShellExplorer(object):
         return re.match(pattern, name)
 
     def _is_it_a_package(self, content, name):
-        return self._match_by_name(self.CONST.NAME_PATTERN_PACKAGE, name) and self._match_by_content(content,
-                                                                                                     self.CONST.PACKAGE_FILES)
+        return self._match_by_name(self.CONST.NAME_PATTERN_PACKAGE,
+                                   name) and self._match_by_content(content, self.CONST.PACKAGE_FILES)
 
-    def is_it_1G_shell(self, content, name):
-        return self._match_by_name(self.CONST.NAME_PATTERN_1G, name) or self._match_by_content(content,
-                                                                                               self.CONST.SHELL_1G_FILES)
+    def is_it_1g_shell(self, content, name):
+        return self._match_by_name(self.CONST.NAME_PATTERN_1G,
+                                   name) or self._match_by_content(content, self.CONST.SHELL_1G_FILES)
 
-    def is_it_2G_shell(self, content, name):
+    def is_it_2g_shell(self, content, name):
         return self._match_by_content(content, self.CONST.SHELL_2G_FILES) or self._match_by_name(
             self.CONST.NAME_PATTERN_2G, name)
 
-    def is_it_L1_shell(self, content, name):
-        return self._match_by_name(self.CONST.NAME_PATTERN_L1, name) and self._match_by_content(content,
-                                                                                                self.CONST.SHELL_L1_FILES)
+    def is_it_l1_shell(self, content, name):
+        return self._match_by_name(self.CONST.NAME_PATTERN_L1,
+                                   name) and self._match_by_content(content, self.CONST.SHELL_L1_FILES)
 
     def _py_ver_by_rel_title(self, title):
         if self.VALUES.PYTHON_VERSION_3.lower() in title.lower():
@@ -145,8 +133,7 @@ class ShellExplorer(object):
 
     def _repo_releases(self, repo):
         """
-        :param repo:
-        :param scripts.entities.Repo repo_from_file:
+        :param github.Repository.Repository repo:
         :return:
         """
         releases = []
@@ -158,7 +145,6 @@ class ShellExplorer(object):
 
     def _create_release_object(self, git_release):
         """
-
         :param github.GitRelease.GitRelease git_release:
         :return:
         """
