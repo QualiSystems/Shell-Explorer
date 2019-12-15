@@ -30,6 +30,12 @@ class Release(yaml.YAMLObject):
         """
         return self.published_at < other.published_at
 
+    def __str__(self):
+        return "{yaml_tag}({title},{python_version})".format(yaml_tag=self.yaml_tag, **self.__dict__)
+
+    def __repr__(self):
+        return self.__str__()
+
 
 @functools.total_ordering
 class Repo(yaml.YAMLObject):
@@ -54,6 +60,12 @@ class Repo(yaml.YAMLObject):
         :param Repo other:
         """
         return self.yaml_tag < other.yaml_tag or self.yaml_tag == other.yaml_tag and self.name < other.name
+
+    def __str__(self):
+        return "{yaml_tag}({name},{releases})".format(yaml_tag=self.yaml_tag, **self.__dict__)
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class Shell(Repo):

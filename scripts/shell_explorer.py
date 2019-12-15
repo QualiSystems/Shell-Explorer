@@ -142,7 +142,7 @@ class ShellExplorer(object):
             if release.python_version not in version_dict:
                 version_dict[release.python_version] = release
         sorted_releases = sorted(version_dict.values(), reverse=True)
-        logging.info(os.linesep.join(sorted_releases))
+        logging.info("New releases: {}".format(sorted_releases))
         return sorted_releases
 
     def _repo_releases(self, repo):
