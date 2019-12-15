@@ -1,6 +1,8 @@
+import os
 import re
 import sys
 from collections import OrderedDict
+from copy import deepcopy
 from functools import lru_cache
 
 from scripts.entities import Package, ShellL1, Shell2G, Shell1G, Release
@@ -46,11 +48,16 @@ class ShellExplorer(object):
 
     @property
     @lru_cache()
-    def _shells(self):
+    def _repo_shells(self):
         return set(SerializationOperations.load_table(
             self.repo_operations.get_working_content(self.branch, self.CONFIG.SHELLS_FILE)))
         # with open("/tmp/shells_local.yaml", "r") as ff:
         #     return set(SerializationOperations.load_table(ff.read()))
+
+    @property
+    @lru_cache()
+    def _shells(self):
+        return deepcopy(self._repo_shells)
 
     @property
     @lru_cache()
@@ -59,11 +66,16 @@ class ShellExplorer(object):
 
     @property
     @lru_cache()
-    def _packages(self):
+    def _repo_packages(self):
         return set(SerializationOperations.load_table(
             self.repo_operations.get_working_content(self.branch, self.CONFIG.PACKAGES_FILE)))
         # with open("/tmp/packages_local.yaml", "r") as ff:
         #     return set(SerializationOperations.load_table(ff.read()))
+
+    @property
+    @lru_cache()
+    def _packages(self):
+        return deepcopy(self._repo_packages)
 
     @property
     @lru_cache()
@@ -129,7 +141,9 @@ class ShellExplorer(object):
                 release = existing_releases[existing_releases.index(release)]
             if release.python_version not in version_dict:
                 version_dict[release.python_version] = release
-        return sorted(version_dict.values(), key=lambda x: x.published_at, reverse=True)
+        sorted_releases = sorted(version_dict.values(), reverse=True)
+        logging.info(os.linesep.join(sorted_releases))
+        return sorted_releases
 
     def _repo_releases(self, repo):
         """
@@ -167,11 +181,12 @@ class ShellExplorer(object):
             repo_name = repo.name
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
+                    logging.info("Adding {}".format(repo_name))
                     repo_object = repo_class(repo_name, repo.html_url)
                     break
         if not repo_object or not releases:
             return
-        if releases[0] not in set(repo_object.releases):
+        if releases[0] not in repo_object.releases:
             repo_object.releases = self._filter_releases_by_py_ver(repo, releases, repo_object.releases)
             if isinstance(repo_object, Package):
                 self._packages.add(repo_object)
@@ -187,7 +202,7 @@ class ShellExplorer(object):
         self.repo_operations.commit_if_changed(
             SerializationOperations.dump_table(sorted(list(self._shells), key=lambda x: x.yaml_tag)),
             self.CONFIG.SHELLS_FILE, self.branch)
-        self.repo_operations.commit_if_changed(SerializationOperations.dump_table(list(self._packages)),
+        self.repo_operations.commit_if_changed(SerializationOperations.dump_table(sorted(list(self._packages))),
                                                self.CONFIG.PACKAGES_FILE, self.branch)
 
 

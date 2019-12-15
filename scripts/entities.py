@@ -1,8 +1,10 @@
 import datetime
+import functools
 
 import yaml
 
 
+@functools.total_ordering
 class Release(yaml.YAMLObject):
     yaml_tag = u"!Release"
 
@@ -22,7 +24,14 @@ class Release(yaml.YAMLObject):
         """
         return self.title == other.title and self.tag_name == other.tag_name
 
+    def __lt__(self, other):
+        """
+        :param Release other:
+        """
+        return self.published_at < other.published_at
 
+
+@functools.total_ordering
 class Repo(yaml.YAMLObject):
     yaml_tag = "!Repository"
 
@@ -32,13 +41,19 @@ class Repo(yaml.YAMLObject):
         self.releases = releases or []
 
     def __hash__(self):
-        return hash(self.name)
+        return hash(self.yaml_tag) | hash(self.name)
 
     def __eq__(self, other):
         """
         :param Repo other:
         """
-        return self.name == other.name
+        return self.yaml_tag == other.yaml_tag and self.name == other.name
+
+    def __lt__(self, other):
+        """
+        :param Repo other:
+        """
+        return self.yaml_tag < other.yaml_tag or self.yaml_tag == other.yaml_tag and self.name < other.name
 
 
 class Shell(Repo):
