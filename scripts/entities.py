@@ -15,8 +15,11 @@ class Release(yaml.YAMLObject):
         self.release_url = release_url
         self.python_version = python_version
 
+    def match_str(self):
+        return self.title + self.tag_name
+
     def __hash__(self):
-        return hash(self.title) ^ hash(self.tag_name)
+        return hash(self.match_str())
 
     def __eq__(self, other):
         """
