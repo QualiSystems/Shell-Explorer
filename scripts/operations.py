@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime
 from functools import lru_cache
 
@@ -40,7 +41,8 @@ class RepoOperations(object):
         content = self.working_repo.get_contents(path, ref)
         repo_data = content.decoded_content.decode("utf-8")
         if data != repo_data:
-            message = "ShellExplorer job {}".format(datetime.now())
+            logging.info("Commit changes to {}".format(path))
+            message = "ShellExplorer {} {}".format(path, datetime.now())
             return self.working_repo.update_file(path, message, data, content.sha, branch=branch)
 
 
