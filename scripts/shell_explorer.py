@@ -134,12 +134,13 @@ class ShellExplorer(object):
         :param list existing_releases:
         """
         version_dict = {}
+        ex_rel_table = {r.match_str(): r for r in releases}
         for release in releases:
             if release not in existing_releases:
                 release.python_version = self._py_version(git_repo, release)
             else:
-                release = existing_releases[existing_releases.index(release)]
-            if release.python_version not in version_dict:
+                release = ex_rel_table.get(release.match_str())
+            if release.python_version and release.python_version not in version_dict:
                 version_dict[release.python_version] = release
         sorted_releases = sorted(version_dict.values(), reverse=True)
         logging.info("New releases: {}".format(sorted_releases))
@@ -200,7 +201,7 @@ class ShellExplorer(object):
     def scan_and_commit(self):
         self._explore_org()
         self.repo_operations.commit_if_changed(
-            SerializationOperations.dump_table(sorted(list(self._shells), key=lambda x: x.yaml_tag)),
+            SerializationOperations.dump_table(sorted(list(self._shells))),
             self.CONFIG.SHELLS_FILE, self.branch)
         self.repo_operations.commit_if_changed(SerializationOperations.dump_table(sorted(list(self._packages))),
                                                self.CONFIG.PACKAGES_FILE, self.branch)
