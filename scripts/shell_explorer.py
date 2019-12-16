@@ -182,8 +182,8 @@ class ShellExplorer(object):
             repo_name = repo.name
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
-                    logging.info("Adding {}".format(repo_name))
                     repo_object = repo_class(repo_name, repo.html_url)
+                    logging.info("Added {}".format(repo_object))
                     break
         if not repo_object or not releases:
             return
