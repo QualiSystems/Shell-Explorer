@@ -53,10 +53,10 @@
   url: https://github.com/QualiSystems/cloudshell-core
   releases:
   - !Release
-    title: cloudshell-core-3.0.1
-    tag_name: 3.0.1
-    published_at: null
-    release_url: https://github.com/QualiSystems/cloudshell-core/releases/tag/untagged-b549f2b92bac8a05d54f
+    title: cloudshell-core-2.2.176
+    tag_name: 2.2.176
+    published_at: 2017-01-17 14:19:25
+    release_url: https://github.com/QualiSystems/cloudshell-core/releases/tag/2.2.176
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
