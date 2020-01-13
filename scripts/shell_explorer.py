@@ -133,15 +133,18 @@ class ShellExplorer(object):
         :param list releases:
         :param list existing_releases:
         """
-        version_dict = {}
-        ex_rel_table = {r.match_str(): r for r in releases}
+        existing_releases = list(filter(lambda r: r in releases, existing_releases))
+        version_dict = {r.python_version: r for r in existing_releases}
         for release in releases:
             if release not in existing_releases:
                 release.python_version = self._py_version(git_repo, release)
+                if release.python_version:
+                    ex_rel = version_dict.get(release.python_version)
+                    if not ex_rel or release > ex_rel:
+                        version_dict[release.python_version] = release
             else:
-                release = ex_rel_table.get(release.match_str())
-            if release.python_version and release.python_version not in version_dict:
-                version_dict[release.python_version] = release
+                break
+
         sorted_releases = sorted(version_dict.values(), reverse=True)
         logging.info("New releases: {}".format(sorted_releases))
         return sorted_releases
@@ -151,12 +154,8 @@ class ShellExplorer(object):
         :param github.Repository.Repository repo:
         :return:
         """
-        releases = []
-        for git_release in repo.get_releases():
-            releases.append(self._create_release_object(git_release))
-            if len(releases) >= self.CONFIG.EXPLORE_RELEASES_DEPTH:
-                break
-        return releases
+        releases = [r for r in repo.get_releases() if r.published_at][:self.CONFIG.EXPLORE_RELEASES_DEPTH]
+        return list(map(self._create_release_object, sorted(releases, key=lambda r: r.published_at, reverse=True)))
 
     def _create_release_object(self, git_release):
         """
