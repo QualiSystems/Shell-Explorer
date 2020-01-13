@@ -669,6 +669,54 @@
     release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/2.1.0-Preview
     python_version: PY2
 - !Shell_2G
+  name: Juniper-JunOS-Firewall-Shell-2G
+  url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G
+  releases:
+  - !Release
+    title: Juniper JunOS Firewall Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-10 15:49:01
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.1
+    python_version: PY3
+  - !Release
+    title: Juniper JunOS Firewall Shell 2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2018-12-31 15:04:20
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Juniper-JunOS-Router-Shell-2G
+  url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
+  releases:
+  - !Release
+    title: Juniper JunOS Router Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-06 13:38:42
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.1
+    python_version: PY3
+  - !Release
+    title: Juniper JunOS Router Shell 2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2018-12-31 14:46:54
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_2G
+  name: Juniper-JunOS-Switch-Shell-2G
+  url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G
+  releases:
+  - !Release
+    title: Juniper JunOS Switch Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-06 15:11:54
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.1
+    python_version: PY3
+  - !Release
+    title: Juniper JunOS Switch Shell 2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2018-12-31 14:54:09
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_2G
   name: PaloAlto-PanoOS-Shell
   url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
   releases:
