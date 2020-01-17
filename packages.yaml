@@ -173,10 +173,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-cisco
   releases:
   - !Release
-    title: cloudshell-networking-cisco-6.0.1
-    tag_name: 6.0.1
-    published_at: 2019-11-29 11:23:30
-    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.0.1
+    title: cloudshell-networking-cisco 6.0.2
+    tag_name: 6.0.2
+    published_at: 2020-01-16 14:22:56
+    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.0.2
     python_version: PY2
 - !Package
   name: cloudshell-networking-devices
@@ -263,10 +263,10 @@
   url: https://github.com/QualiSystems/cloudshell-package-repo-template
   releases:
   - !Release
-    title: cloudshell-template 1.1.4
-    tag_name: 1.1.4
-    published_at: 2020-01-16 12:28:04
-    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.1.4
+    title: cloudshell-template 1.1.5
+    tag_name: 1.1.5
+    published_at: 2020-01-16 13:26:06
+    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.1.5
     python_version: PY2
 - !Package
   name: cloudshell-pdu-core
