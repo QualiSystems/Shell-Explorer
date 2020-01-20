@@ -593,10 +593,10 @@
   url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G
   releases:
   - !Release
-    title: F5 BigIp Loadbalancer Shell 2G 1.0.1
-    tag_name: 1.0.1
-    published_at: 2019-10-07 10:39:15
-    release_url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G/releases/tag/1.0.1
+    title: F5 BigIp Loadbalancer Shell 2G 1.0.2
+    tag_name: 1.0.2
+    published_at: 2020-01-13 14:13:04
+    release_url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G/releases/tag/1.0.2
     python_version: PY2
 - !Shell_2G
   name: FortiGate-FortiOS-Firewall-Shell-2G
@@ -673,10 +673,10 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G
   releases:
   - !Release
-    title: Juniper JunOS Firewall Shell 2G PY3 3.0.0
-    tag_name: 3.0.0
-    published_at: 2019-10-03 12:20:34
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.0
+    title: Juniper JunOS Firewall Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-10 15:49:01
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.1
     python_version: PY3
   - !Release
     title: Juniper JunOS Firewall Shell 2G 2.0.0
@@ -689,10 +689,10 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
   releases:
   - !Release
-    title: Juniper JunOS Router Shell 2G PY3 3.0.0
-    tag_name: 3.0.0
-    published_at: 2019-10-02 15:17:04
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.0
+    title: Juniper JunOS Router Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-06 13:38:42
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.1
     python_version: PY3
   - !Release
     title: Juniper JunOS Router Shell 2G 2.0.0
@@ -705,10 +705,10 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G
   releases:
   - !Release
-    title: Juniper JunOS Switch Shell 2G PY3 3.0.0
-    tag_name: 3.0.0
-    published_at: 2019-10-02 15:15:47
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.0
+    title: Juniper JunOS Switch Shell 2G PY3 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-01-06 15:11:54
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.1
     python_version: PY3
   - !Release
     title: Juniper JunOS Switch Shell 2G 2.0.0
@@ -967,6 +967,26 @@
     release_url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases/tag/2.0.0
     python_version: PY2
 - !Shell_L1
+  name: cloudshell-L1-pluribus-virtualwire
+  url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire
+  releases:
+  - !Release
+    title: Pluribus VirtualWire L1 Shell v3.0.0 Preview
+    tag_name: 3.0.0
+    published_at: 2019-12-30 16:28:55
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire/releases/tag/3.0.0
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-pluribus-vle
+  url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle
+  releases:
+  - !Release
+    title: Pluribus VLE L1 Shell v2.0.0 Preview
+    tag_name: 2.0.0
+    published_at: 2019-12-30 16:27:20
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.0.0
+    python_version: PY2
+- !Shell_L1
   name: cloudshell-L1-pluribus_netvisor_vle
   url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
   releases:
@@ -1005,6 +1025,16 @@
     tag_name: 1.0.1
     published_at: 2019-11-26 11:16:07
     release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.1
+    python_version: PY2
+- !Shell_L1
+  name: cloudshell-L1-test-switch
+  url: https://github.com/QualiSystems/cloudshell-L1-test-switch
+  releases:
+  - !Release
+    title: Test Switch 1.0.18
+    tag_name: 1.0.18
+    published_at: 2019-12-19 13:04:00
+    release_url: https://github.com/QualiSystems/cloudshell-L1-test-switch/releases/tag/1.0.18
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-w2w-rome
