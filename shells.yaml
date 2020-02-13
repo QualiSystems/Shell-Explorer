@@ -33,10 +33,10 @@
   url: https://github.com/QualiSystems/Azure-Shell
   releases:
   - !Release
-    title: Release 1.9.3 of Azure Shell
-    tag_name: 1.9.3
-    published_at: 2020-02-03 08:55:09
-    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/1.9.3
+    title: Release 2.0.0 of Azure Shell
+    tag_name: 2.0.0
+    published_at: 2020-02-10 17:51:51
+    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/2.0.0
     python_version: PY2
 - !Shell_1G
   name: Bamboo-cloudshell-plugin
@@ -643,10 +643,10 @@
   url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
   releases:
   - !Release
-    title: Ixia-Chassis-Shell-2G 2.0.4-Preview
-    tag_name: 2.0.4-Preview
-    published_at: 2018-06-07 14:23:59
-    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/2.0.4-Preview
+    title: Ixia-Chassis-Shell-2G 2.1.1-Preview
+    tag_name: 2.1.1-Preview
+    published_at: 2020-02-11 14:09:53
+    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/2.1.1-Preview
     python_version: PY2
 - !Shell_2G
   name: Ixia-IxLoad-Controller-Shell-2G
