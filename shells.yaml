@@ -931,10 +931,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-mrv
   releases:
   - !Release
-    title: MRV MCC L1 Shell v2.0.3 PREVIEW
-    tag_name: 2.0.3
-    published_at: 2019-02-01 15:14:23
-    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.3
+    title: MRV MCC L1 Shell v2.0.4 PREVIEW
+    tag_name: 2.0.4
+    published_at: 2020-02-26 11:51:43
+    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.4
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-horizon
