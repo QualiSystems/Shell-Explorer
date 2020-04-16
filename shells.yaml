@@ -1001,10 +1001,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-polatis
   releases:
   - !Release
-    title: Polatis L1 Shell v3.0.0
-    tag_name: 3.0.0
-    published_at: 2019-07-15 09:22:40
-    release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.0
+    title: Polatis L1 Shell v3.0.4
+    tag_name: 3.0.4
+    published_at: 2020-04-15 13:45:24
+    release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.4
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-simpler_networks
