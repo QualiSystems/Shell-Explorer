@@ -333,10 +333,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-core
   releases:
   - !Release
-    title: cloudshell-shell-core-5.0.4
-    tag_name: 5.0.4
-    published_at: 2019-09-30 10:08:20
-    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.0.4
+    title: cloudshell-shell-core-5.0.5
+    tag_name: 5.0.5
+    published_at: 2020-05-19 06:37:12
+    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.0.5
     python_version: PY2
 - !Package
   name: cloudshell-shell-firewall-standard
