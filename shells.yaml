@@ -663,6 +663,12 @@
   url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G
   releases:
   - !Release
+    title: Ixia-IxNetwork-Controller-Shell-2G 3.0.0-Preview
+    tag_name: 3.0.0-Preview
+    published_at: 2020-05-19 11:43:36
+    release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.0.0-Preview
+    python_version: PY3
+  - !Release
     title: Ixia-IxNetwork-Controller-Shell-2G 2.2.0-Preview
     tag_name: 2.2.0-Preview
     published_at: 2020-03-10 09:42:34
