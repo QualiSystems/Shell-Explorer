@@ -114,9 +114,9 @@
   releases:
   - !Release
     title: CloudShell Firewall PanOS
-    tag_name: 1.0.1
-    published_at: 2019-07-15 14:14:18
-    release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/1.0.1
+    tag_name: 1.0.4
+    published_at: 2020-05-19 14:47:58
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/1.0.4
     python_version: PY2
 - !Package
   name: cloudshell-logging
@@ -323,10 +323,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
   releases:
   - !Release
-    title: cloudshell-shell-connectivity-flow 1.0.1
-    tag_name: 1.0.1
-    published_at: 2019-12-12 13:21:57
-    release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/1.0.1
+    title: cloudshell-shell-connectivity-flow 1.1.0
+    tag_name: 1.1.0
+    published_at: 2020-05-19 14:32:46
+    release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/1.1.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-core
