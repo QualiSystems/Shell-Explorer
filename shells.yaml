@@ -33,10 +33,10 @@
   url: https://github.com/QualiSystems/Azure-Shell
   releases:
   - !Release
-    title: Release 2.0.1 of Azure Shell
-    tag_name: 2.0.1
-    published_at: 2020-06-11 09:05:00
-    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/2.0.1
+    title: Release 2.0.2 of Azure Shell
+    tag_name: 2.0.2
+    published_at: 2020-06-16 08:32:18
+    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/2.0.2
     python_version: PY2
 - !Shell_1G
   name: Bamboo-cloudshell-plugin
