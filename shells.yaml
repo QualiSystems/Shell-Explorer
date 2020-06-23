@@ -1067,10 +1067,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome
   releases:
   - !Release
-    title: Wave2Wave Rome L1 Shell v4.1.4
-    tag_name: 4.1.4
-    published_at: 2020-03-13 13:12:42
-    release_url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome/releases/tag/4.1.4
+    title: Wave2Wave Rome L1 Shell v4.2.0
+    tag_name: 4.2.0
+    published_at: 2020-06-22 12:29:17
+    release_url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome/releases/tag/4.2.0
     python_version: PY2
 - !Shell_L1
   name: cloudshell-l1-ixia-xstream
