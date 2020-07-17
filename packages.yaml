@@ -43,10 +43,10 @@
   url: https://github.com/QualiSystems/cloudshell-cli
   releases:
   - !Release
-    title: cloudshell-cli-4.0.1
-    tag_name: 4.0.1
-    published_at: 2019-09-27 15:28:50
-    release_url: https://github.com/QualiSystems/cloudshell-cli/releases/tag/4.0.1
+    title: cloudshell-cli 4.0.2
+    tag_name: 4.0.2
+    published_at: 2020-07-16 12:04:44
+    release_url: https://github.com/QualiSystems/cloudshell-cli/releases/tag/4.0.2
     python_version: PY2
 - !Package
   name: cloudshell-core
