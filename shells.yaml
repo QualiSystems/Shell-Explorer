@@ -579,6 +579,16 @@
     release_url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
+  name: DUT-Shell-2G
+  url: https://github.com/QualiSystems/DUT-Shell-2G
+  releases:
+  - !Release
+    title: 'DUT Shell 2G '
+    tag_name: 0.2.1
+    published_at: 2020-07-23 09:48:56
+    release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.1
+    python_version: PY3
+- !Shell_2G
   name: F5-BigIp-Firewall-Shell-2G
   url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G
   releases:
