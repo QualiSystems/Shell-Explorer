@@ -583,7 +583,7 @@
   url: https://github.com/QualiSystems/DUT-Shell-2G
   releases:
   - !Release
-    title: 'DUT Shell 2G '
+    title: DUT Shell 2G 0.2.1
     tag_name: 0.2.1
     published_at: 2020-07-23 09:48:56
     release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.1
