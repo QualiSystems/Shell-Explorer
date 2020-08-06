@@ -223,10 +223,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-juniper
   releases:
   - !Release
-    title: cloudshell-networking-juniper-5.0.3
-    tag_name: 5.0.3
-    published_at: 2019-11-28 08:19:43
-    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.3
+    title: cloudshell-networking-juniper 5.0.4
+    tag_name: 5.0.4
+    published_at: 2020-08-06 13:14:39
+    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.4
     python_version: PY2
 - !Package
   name: cloudshell-orch-ixia
@@ -263,10 +263,10 @@
   url: https://github.com/QualiSystems/cloudshell-package-repo-template
   releases:
   - !Release
-    title: cloudshell-template 1.1.7
-    tag_name: 1.1.7
-    published_at: 2020-07-18 17:58:09
-    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.1.7
+    title: cloudshell-template 1.1.8
+    tag_name: 1.1.8
+    published_at: 2020-08-05 17:28:51
+    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.1.8
     python_version: PY2
 - !Package
   name: cloudshell-pdu-core
