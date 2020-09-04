@@ -343,10 +343,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-core
   releases:
   - !Release
-    title: cloudshell-cp-core-2.0.0
-    tag_name: 2.0.0
-    published_at: 2020-09-02 14:47:33
-    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.0.0
+    title: cloudshell-cp-core 2.1.1
+    tag_name: 2.1.1
+    published_at: 2020-09-02 16:24:59
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.1.1
     python_version: PY2
 - !Shell_1G
   name: cloudshell-orch-sandbox
@@ -748,6 +748,16 @@
     published_at: 2020-08-30 07:06:14
     release_url: https://github.com/QualiSystems/OCI-Shell-2G/releases/tag/1.1.5
     python_version: PY2
+- !Shell_2G
+  name: OpenStack-Shell-2G
+  url: https://github.com/QualiSystems/OpenStack-Shell-2G
+  releases:
+  - !Release
+    title: 'OpenStack Shell 2G '
+    tag_name: 0.1.1
+    published_at: 2020-09-03 08:00:42
+    release_url: https://github.com/QualiSystems/OpenStack-Shell-2G/releases/tag/0.1.1
+    python_version: PY3
 - !Shell_2G
   name: PaloAlto-PanoOS-Shell
   url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
