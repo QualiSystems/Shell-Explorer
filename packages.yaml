@@ -63,20 +63,20 @@
   url: https://github.com/QualiSystems/cloudshell-cp-azure
   releases:
   - !Release
-    title: cloudshell-cp-azure 3.0.0
-    tag_name: 3.0.0
-    published_at: 2020-09-16 13:59:41
-    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.0.0
+    title: cloudshell-cp-azure 3.0.1
+    tag_name: 3.0.1
+    published_at: 2020-09-22 08:11:40
+    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.0.1
     python_version: PY2
 - !Package
   name: cloudshell-cp-openstack
   url: https://github.com/QualiSystems/cloudshell-cp-openstack
   releases:
   - !Release
-    title: cloudshell-cp-openstack 2.0.13
-    tag_name: 2.0.13
-    published_at: 2020-09-03 12:54:31
-    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/2.0.13
+    title: cloudshell-cp-openstack 2.0.14
+    tag_name: 2.0.14
+    published_at: 2020-09-23 09:56:51
+    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/2.0.14
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
@@ -333,10 +333,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
   releases:
   - !Release
-    title: cloudshell-shell-automation-tests 0.12.9
-    tag_name: 0.12.9
-    published_at: 2020-09-21 13:21:52
-    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.12.9
+    title: cloudshell-shell-automation-tests 0.12.10
+    tag_name: 0.12.10
+    published_at: 2020-09-22 08:58:27
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.12.10
     python_version: PY2
 - !Package
   name: cloudshell-shell-connectivity-flow
