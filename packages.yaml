@@ -333,10 +333,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
   releases:
   - !Release
-    title: cloudshell-shell-automation-tests 0.12.10
-    tag_name: 0.12.10
-    published_at: 2020-09-22 08:58:27
-    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.12.10
+    title: cloudshell-shell-automation-tests 0.13.0
+    tag_name: 0.13.0
+    published_at: 2020-09-29 08:30:04
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.13.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-connectivity-flow
