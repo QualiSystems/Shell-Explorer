@@ -3,10 +3,10 @@
   url: https://github.com/QualiSystems/AWS-Shell
   releases:
   - !Release
-    title: Release 2.4.4 of AWS Shell
-    tag_name: 2.4.4
-    published_at: 2020-05-26 10:37:02
-    release_url: https://github.com/QualiSystems/AWS-Shell/releases/tag/2.4.4
+    title: Release 2.5.1 of AWS Shell
+    tag_name: 2.5.1
+    published_at: 2020-10-27 09:19:47
+    release_url: https://github.com/QualiSystems/AWS-Shell/releases/tag/2.5.1
     python_version: PY2
 - !Shell_1G
   name: Ansible-Shell
@@ -33,10 +33,10 @@
   url: https://github.com/QualiSystems/Azure-Shell
   releases:
   - !Release
-    title: Release 2.0.2 of Azure Shell
-    tag_name: 2.0.2
-    published_at: 2020-06-16 08:32:18
-    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/2.0.2
+    title: Release 2.0.3 of Azure Shell
+    tag_name: 2.0.3
+    published_at: 2020-10-27 10:17:00
+    release_url: https://github.com/QualiSystems/Azure-Shell/releases/tag/2.0.3
     python_version: PY2
 - !Shell_1G
   name: Bamboo-cloudshell-plugin
@@ -343,10 +343,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-core
   releases:
   - !Release
-    title: cloudshell-cp-core 2.1.1
-    tag_name: 2.1.1
-    published_at: 2020-09-02 16:24:59
-    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.1.1
+    title: cloudshell-cp-core 1.1.0
+    tag_name: 1.1.0
+    published_at: 2020-10-27 13:10:04
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/1.1.0
     python_version: PY2
 - !Shell_1G
   name: cloudshell-orch-sandbox
@@ -905,10 +905,10 @@
   url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G
   releases:
   - !Release
-    title: TeraVM Virtual Chassis Shell 2 Generation 1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2019-03-04 13:18:37
-    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G/releases/tag/1.0.0
+    title: TeraVM Virtual Chassis Shell 2 Generation 1.1.0
+    tag_name: 1.1.0
+    published_at: 2020-10-28 10:50:42
+    release_url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G/releases/tag/1.1.0
     python_version: PY2
 - !Shell_2G
   name: VIRL-Shell-2G
