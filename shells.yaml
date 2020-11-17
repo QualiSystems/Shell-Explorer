@@ -933,6 +933,16 @@
     release_url: https://github.com/QualiSystems/VIRL-Shell-2G/releases/tag/1.0.2
     python_version: PY3
 - !Shell_2G
+  name: VMware-vCenter-Cloud-Provider-Shell-2G
+  url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
+  releases:
+  - !Release
+    title: VMware vCenter Cloud Provider Shell 2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2020-11-17 13:37:23
+    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    python_version: PY3
+- !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
   url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G
   releases:
