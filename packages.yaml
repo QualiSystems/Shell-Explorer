@@ -3,10 +3,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-networking-core
   releases:
   - !Release
-    title: CloudShell-L1-Networking-Core 1.0.13
-    tag_name: 1.0.13
-    published_at: 2020-06-22 09:18:20
-    release_url: https://github.com/QualiSystems/cloudshell-L1-networking-core/releases/tag/1.0.13
+    title: CloudShell-L1-Networking-Core 1.0.14
+    tag_name: 1.0.14
+    published_at: 2020-12-14 12:07:25
+    release_url: https://github.com/QualiSystems/cloudshell-L1-networking-core/releases/tag/1.0.14
     python_version: PY2
 - !Package
   name: cloudshell-autodiscovery
