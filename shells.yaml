@@ -791,10 +791,10 @@
   url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: Microsoft Azure Cloud Provider Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2020-09-21 15:26:39
-    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    title: Microsoft-Azure-Cloud-Provider-Shell-2G 1.1.2
+    tag_name: 1.1.2
+    published_at: 2020-12-16 13:46:24
+    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/1.1.2
     python_version: PY3
 - !Shell_2G
   name: OCI-Shell-2G
@@ -851,10 +851,10 @@
   url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
   releases:
   - !Release
-    title: Spirent-TestCenter-Controller-Shell-2G 3.0.0-Preview
-    tag_name: 3.0.0-Preview
-    published_at: 2020-11-10 18:59:49
-    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/3.0.0-Preview
+    title: Spirent-TestCenter-Controller-Shell-2G 3.0.1-Preview
+    tag_name: 3.0.1-Preview
+    published_at: 2020-12-16 07:25:11
+    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/3.0.1-Preview
     python_version: PY3
   - !Release
     title: Spirent-TestCenter-Controller-Shell-2G 2.0.1-Preview
@@ -1063,10 +1063,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-mrv
   releases:
   - !Release
-    title: MRV MCC L1 Shell v2.0.4 PREVIEW
-    tag_name: 2.0.4
-    published_at: 2020-02-26 11:51:43
-    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.4
+    title: MRV MCC L1 Shell v2.0.5 PREVIEW
+    tag_name: 2.0.5
+    published_at: 2020-12-15 12:52:47
+    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.5
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-horizon
