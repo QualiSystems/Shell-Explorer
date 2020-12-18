@@ -253,10 +253,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-juniper
   releases:
   - !Release
-    title: cloudshell-networking-juniper 5.0.4
-    tag_name: 5.0.4
-    published_at: 2020-08-06 13:14:39
-    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.4
+    title: cloudshell-networking-juniper 5.0.6
+    tag_name: 5.0.6
+    published_at: 2020-12-17 13:15:18
+    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.6
     python_version: PY2
 - !Package
   name: cloudshell-orch-ixia
