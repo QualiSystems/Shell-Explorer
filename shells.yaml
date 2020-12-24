@@ -759,10 +759,10 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
   releases:
   - !Release
-    title: Juniper JunOS Router Shell 2G PY3 3.0.1
-    tag_name: 3.0.1
-    published_at: 2020-01-06 13:38:42
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.1
+    title: Juniper-JunOS-Router-Shell-2G 3.0.2
+    tag_name: 3.0.2
+    published_at: 2020-12-23 16:06:04
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.2
     python_version: PY3
   - !Release
     title: Juniper JunOS Router Shell 2G 2.0.0
@@ -775,10 +775,10 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G
   releases:
   - !Release
-    title: Juniper JunOS Switch Shell 2G PY3 3.0.1
-    tag_name: 3.0.1
-    published_at: 2020-01-06 15:11:54
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.1
+    title: Juniper-JunOS-Switch-Shell-2G 3.0.2
+    tag_name: 3.0.2
+    published_at: 2020-12-23 16:00:05
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.2
     python_version: PY3
   - !Release
     title: Juniper JunOS Switch Shell 2G 2.0.0
@@ -943,10 +943,10 @@
   url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: VMware vCenter Cloud Provider Shell 2G 1.0.0
-    tag_name: 1.0.0
-    published_at: 2020-11-17 13:37:23
-    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    title: VMware-vCenter-Cloud-Provider-Shell-2G 2.0.1
+    tag_name: 2.0.1
+    published_at: 2020-12-24 14:50:04
+    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/2.0.1
     python_version: PY3
 - !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
