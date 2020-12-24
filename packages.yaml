@@ -83,10 +83,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
   releases:
   - !Release
-    title: cloudshell-cp-vcenter 2.0.0
-    tag_name: 2.0.0
-    published_at: 2020-11-12 12:20:22
-    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.0.0
+    title: cloudshell-cp-vcenter 2.1.1
+    tag_name: 2.1.1
+    published_at: 2020-12-23 23:54:57
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.1.1
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
@@ -253,10 +253,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-juniper
   releases:
   - !Release
-    title: cloudshell-networking-juniper 5.0.6
-    tag_name: 5.0.6
-    published_at: 2020-12-17 13:15:18
-    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.6
+    title: cloudshell-networking-juniper 5.0.7
+    tag_name: 5.0.7
+    published_at: 2020-12-23 15:44:41
+    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.7
     python_version: PY2
 - !Package
   name: cloudshell-orch-ixia
