@@ -293,10 +293,10 @@
   url: https://github.com/QualiSystems/cloudshell-package-repo-template
   releases:
   - !Release
-    title: cloudshell-package-repo-template 1.2.6
-    tag_name: 1.2.6
-    published_at: 2020-12-16 13:20:15
-    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.2.6
+    title: cloudshell-package-repo-template 1.2.8
+    tag_name: 1.2.8
+    published_at: 2020-12-28 11:56:25
+    release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.2.8
     python_version: PY2
 - !Package
   name: cloudshell-pdu-core
@@ -353,10 +353,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
   releases:
   - !Release
-    title: cloudshell-shell-automation-tests 0.14.3
-    tag_name: 0.14.3
-    published_at: 2020-12-10 11:59:08
-    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.14.3
+    title: cloudshell-shell-automation-tests 0.15.0
+    tag_name: 0.15.0
+    published_at: 2020-12-28 11:29:40
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.15.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-connectivity-flow
