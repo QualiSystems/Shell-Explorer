@@ -69,6 +69,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.1.0
     python_version: PY2
 - !Package
+  name: cloudshell-cp-core
+  url: https://github.com/QualiSystems/cloudshell-cp-core
+  releases:
+  - !Release
+    title: cloudshell-cp-core 2.1.2
+    tag_name: 2.1.2
+    published_at: 2021-01-26 09:24:36
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.1.2
+    python_version: PY2
+- !Package
   name: cloudshell-cp-kubernetes
   url: https://github.com/QualiSystems/cloudshell-cp-kubernetes
   releases:
@@ -83,20 +93,20 @@
   url: https://github.com/QualiSystems/cloudshell-cp-openstack
   releases:
   - !Release
-    title: cloudshell-cp-openstack 2.1.2
-    tag_name: 2.1.2
-    published_at: 2021-01-13 10:37:04
-    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/2.1.2
+    title: cloudshell-cp-openstack 2.2.0
+    tag_name: 2.2.0
+    published_at: 2021-02-15 15:25:40
+    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/2.2.0
     python_version: PY2
 - !Package
   name: cloudshell-cp-vcenter
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
   releases:
   - !Release
-    title: cloudshell-cp-vcenter 2.1.2
-    tag_name: 2.1.2
-    published_at: 2021-01-10 11:44:28
-    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.1.2
+    title: cloudshell-cp-vcenter 2.2.0
+    tag_name: 2.2.0
+    published_at: 2021-02-15 10:00:25
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.2.0
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
@@ -433,10 +443,10 @@
   url: https://github.com/QualiSystems/cloudshell-snmp
   releases:
   - !Release
-    title: cloudshell-snmp 4.0.1
-    tag_name: 4.0.1
-    published_at: 2020-07-21 13:43:58
-    release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/4.0.1
+    title: cloudshell-snmp 4.0.2
+    tag_name: 4.0.2
+    published_at: 2021-02-15 15:14:15
+    release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/4.0.2
     python_version: PY2
 - !Package
   name: cloudshell-snmp-autoload
