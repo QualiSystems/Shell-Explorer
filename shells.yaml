@@ -399,6 +399,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-tg-virtual-trex/releases/tag/1.0.0
     python_version: PY2
 - !Shell_1G
+  name: shell-as-service
+  url: https://github.com/QualiSystems/shell-as-service
+  releases:
+  - !Release
+    title: shell-as-service 0.1.0
+    tag_name: 0.1.0
+    published_at: 2021-01-21 17:18:38
+    release_url: https://github.com/QualiSystems/shell-as-service/releases/tag/0.1.0
+    python_version: PY2
+- !Shell_1G
   name: vCenterShell
   url: https://github.com/QualiSystems/vCenterShell
   releases:
@@ -947,10 +957,10 @@
   url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: VMware-vCenter-Cloud-Provider-Shell-2G 2.0.1
-    tag_name: 2.0.1
-    published_at: 2020-12-24 14:50:04
-    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/2.0.1
+    title: VMware-vCenter-Cloud-Provider-Shell-2G 2.1.0
+    tag_name: 2.1.0
+    published_at: 2021-02-15 13:13:01
+    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/2.1.0
     python_version: PY3
 - !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
