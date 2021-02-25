@@ -1,0 +1,26 @@
+name: Run Shell Explorer
+on:
+  workflow_dispatch:
+    inputs:
+      new_releases:
+        description: "a dictionary with a new releases: {repo-name: [release-id]}"
+        required: true
+        default: "{}"
+jobs:
+  run_shell_explorer:
+    name: run Shell Explorer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install pip -U
+          pip install -r scripts/shell_explorer/requirements.txt
+      - name: Execute Shell Explorer
+        #  todo change branch name
+        run: python -m scripts.shell_explorer.shell_explorer ${{ secrets.GITHUB_TOKEN }} add-github-actions '${{ github.event.inputs.new_releases }}'
