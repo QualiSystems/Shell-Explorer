@@ -1,9 +1,9 @@
 import logging
 from datetime import datetime
-from functools import lru_cache
+from functools import lru_cache, cached_property
 
 import yaml
-from github import Github
+from github import Github, Organization, Repository
 
 
 class RepoOperations(object):
@@ -18,18 +18,20 @@ class RepoOperations(object):
             if org.name == org_name:
                 return org
 
+    @cached_property
+    def org(self) -> Organization:
+        return self._get_org(self._org_name)
+
     @property
     @lru_cache()
     def working_repo(self):
-        org = self._get_org(self._org_name)
-        return org.get_repo(self._working_repo)
+        return self.org.get_repo(self._working_repo)
 
     def get_org_repos(self):
-        org = self._get_org(self._org_name)
-        if org:
-            return org.get_repos()
-        else:
-            return []
+        return self.org.get_repos()
+
+    def get_org_repo(self, name: str) -> Repository:
+        return self.org.get_repo(name)
 
     def get_working_content(self, branch, path):
         ref = self.working_repo.get_branch(branch).commit.sha

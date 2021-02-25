@@ -1,12 +1,15 @@
-import os
+import json
 import re
 import sys
 from collections import OrderedDict
 from copy import deepcopy
 from functools import lru_cache
+from typing import Optional
 
-from scripts.entities import Package, ShellL1, Shell2G, Shell1G, Release
-from scripts.operations import RepoOperations, SerializationOperations
+from github import Repository
+
+from scripts.shell_explorer.entities import Package, ShellL1, Shell2G, Shell1G, Release
+from scripts.shell_explorer.operations import RepoOperations, SerializationOperations
 import logging
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout,
@@ -37,8 +40,9 @@ class ShellExplorer(object):
         PYTHON_VERSION_2 = "PY2"
         PYTHON_VERSION_3 = "PY3"
 
-    def __init__(self, auth_key, branch):
+    def __init__(self, auth_key, branch, new_releases):
         self.branch = branch
+        self.new_releases: dict[str, list[int]] = json.loads(new_releases)
         self.repo_operations = RepoOperations(auth_key, self.CONFIG.EXPLORE_ORG, self.CONFIG.WORKING_REPO)
         self._repo_type_dict = OrderedDict(
             [(Package, self._is_it_a_package),
@@ -149,12 +153,13 @@ class ShellExplorer(object):
         logging.info("New releases: {}".format(sorted_releases))
         return sorted_releases
 
-    def _repo_releases(self, repo):
-        """
-        :param github.Repository.Repository repo:
-        :return:
-        """
-        releases = [r for r in repo.get_releases() if r.published_at][:self.CONFIG.EXPLORE_RELEASES_DEPTH]
+    def _repo_releases(
+            self, repo: Repository, release_ids: Optional[list[str]]
+    ) -> list[Release]:
+        if not release_ids:
+            releases = [r for r in repo.get_releases() if r.published_at][:self.CONFIG.EXPLORE_RELEASES_DEPTH]
+        else:
+            releases = list(map(repo.get_release, release_ids))
         return list(map(self._create_release_object, sorted(releases, key=lambda r: r.published_at, reverse=True)))
 
     def _create_release_object(self, git_release):
@@ -168,14 +173,10 @@ class ShellExplorer(object):
     def _extract_existing_repo(self, repo):
         return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
 
-    def _explore_repo(self, repo):
-        """
-        :param github.Repository.Repository repo:
-        :return:
-        """
+    def _explore_repo(self, repo: Repository, release_ids: Optional[list[int]] = None):
         logging.info("Explore {}".format(repo.name))
         repo_object = self._extract_existing_repo(repo)
-        releases = self._repo_releases(repo)
+        releases = self._repo_releases(repo, release_ids)
         if not repo_object and releases:
             content = {c.name for c in repo.get_contents("")}
             repo_name = repo.name
@@ -193,12 +194,17 @@ class ShellExplorer(object):
             else:
                 self._shells.add(repo_object)
 
-    def _explore_org(self):
-        for repo in self.repo_operations.get_org_repos():
-            self._explore_repo(repo)
+    def _explore_releases(self):
+        if not self.new_releases:
+            for repo in self.repo_operations.get_org_repos():
+                self._explore_repo(repo)
+        else:
+            for repo_name, release_ids in self.new_releases.items():
+                repo = self.repo_operations.get_org_repo(repo_name)
+                self._explore_repo(repo, release_ids)
 
     def scan_and_commit(self):
-        self._explore_org()
+        self._explore_releases()
         self.repo_operations.commit_if_changed(
             SerializationOperations.dump_table(sorted(list(self._shells))),
             self.CONFIG.SHELLS_FILE, self.branch)
@@ -214,5 +220,6 @@ if __name__ == '__main__':
     # _shells_file = sys.argv[2]
     # _organization = sys.argv[3]
     _branch = sys.argv[2]
-    se = ShellExplorer(_auth_key, _branch)
+    _new_releases = sys.argv[3]
+    se = ShellExplorer(_auth_key, _branch, _new_releases)
     se.scan_and_commit()

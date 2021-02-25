@@ -1,0 +1,21 @@
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  check-for-new-releases:
+    name: Check for new releases
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install pip -U
+          pip install -r scripts/check_for_new_releases/requirements.txt
+      - name: Execute Check for new releases
+        run: python -m scripts.check_for_new_releases.main ${{ secrets.GITHUB_TOKEN }}
