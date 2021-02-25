@@ -23,4 +23,4 @@ jobs:
           pip install -r scripts/shell_explorer/requirements.txt
       - name: Execute Shell Explorer
         #  todo change branch name
-        run: python -m scripts.shell_explorer.shell_explorer ${{ secrets.GITHUB_TOKEN }} add-github-actions '${{ github.event.inputs.new_releases }}'
+        run: python -m scripts.shell_explorer.shell_explorer ${{ secrets.GH_TOKEN_FOR_SHELL_EXPLORER }} add-github-actions '${{ github.event.inputs.new_releases }}'
