@@ -3,7 +3,11 @@ on:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
-    inputs: []
+    inputs:
+      empty:
+        description: "useless param"
+        required: false
+        default: ""
 
 jobs:
   check-for-new-releases:
