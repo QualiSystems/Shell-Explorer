@@ -18,4 +18,4 @@ jobs:
           python -m pip install pip -U
           pip install -r scripts/check_for_new_releases/requirements.txt
       - name: Execute Check for new releases
-        run: python -m scripts.check_for_new_releases.main ${{ secrets.GITHUB_TOKEN }}
+        run: python -m scripts.check_for_new_releases.main ${{ secrets.GH_TOKEN_FOR_SHELL_EXPLORER }}
