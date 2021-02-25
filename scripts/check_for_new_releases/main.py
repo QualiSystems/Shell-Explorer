@@ -32,8 +32,7 @@ def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list
 
 def run_shell_explorer_workflow(repo: Repository, new_releases: dict[str, list[int]]):
     workflow = repo.get_workflow(SHELL_EXPLORER_WORKFLOW_FILE_NAME)
-    # todo change branch
-    workflow.create_dispatch("add-github-actions", {"new_releases": new_releases})
+    workflow.create_dispatch("master", {"new_releases": new_releases})
 
 
 def main(token: str):

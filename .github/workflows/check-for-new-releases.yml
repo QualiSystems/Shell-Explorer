@@ -1,3 +1,4 @@
+name: Check for new releases
 on:
   schedule:
     - cron: "*/30 * * * *"
