@@ -2,6 +2,7 @@ name: Check for new releases
 on:
   schedule:
     - cron: "*/30 * * * *"
+  workflow_dispatch
 
 jobs:
   check-for-new-releases:
