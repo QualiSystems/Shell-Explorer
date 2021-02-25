@@ -1,5 +1,5 @@
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 import sys
 
 from github import Github, Repository, UnknownObjectException, Organization
@@ -12,11 +12,11 @@ SHELL_EXPLORER_WORKFLOW_FILE_NAME = "shell-explorer.yml"
 def get_time_of_last_run(repo: Repository) -> datetime:
     try:
         workflow = repo.get_workflow(WORKFLOW_FILE_NAME)
-        last_run = next(iter(workflow.get_runs()))
+        last_run = next(iter(workflow.get_runs(branch='master')))
     except (UnknownObjectException, StopIteration):
         return datetime(2021, 1, 1)
     else:
-        return last_run.created_at
+        return last_run.created_at - timedelta(minutes=5)
 
 
 def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list[int]]:
