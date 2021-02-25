@@ -12,7 +12,7 @@ SHELL_EXPLORER_WORKFLOW_FILE_NAME = "shell-explorer.yml"
 def get_time_of_last_run(repo: Repository) -> datetime:
     try:
         workflow = repo.get_workflow(WORKFLOW_FILE_NAME)
-        last_run = next(workflow.get_runs())
+        last_run = next(iter(workflow.get_runs()))
     except (UnknownObjectException, StopIteration):
         return datetime(2021, 1, 1)
     else:
