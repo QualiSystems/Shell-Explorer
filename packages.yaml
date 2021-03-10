@@ -113,10 +113,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
   releases:
   - !Release
-    title: cloudshell-cp-vcenter 2.2.0
-    tag_name: 2.2.0
-    published_at: 2021-02-15 10:00:25
-    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.2.0
+    title: cloudshell-cp-vcenter 2.3.0
+    tag_name: 2.3.0
+    published_at: 2021-03-01 16:12:57
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.3.0
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
@@ -383,10 +383,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
   releases:
   - !Release
-    title: cloudshell-shell-automation-tests 0.15.0
-    tag_name: 0.15.0
-    published_at: 2020-12-28 11:29:40
-    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.15.0
+    title: cloudshell-shell-automation-tests 0.15.5
+    tag_name: 0.15.5
+    published_at: 2021-03-05 15:06:07
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.15.5
     python_version: PY2
 - !Package
   name: cloudshell-shell-connectivity-flow
@@ -443,10 +443,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-standards
   releases:
   - !Release
-    title: cloudshell-shell-standards 1.1.1
-    tag_name: 1.1.1
-    published_at: 2020-09-02 16:37:29
-    release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/1.1.1
+    title: cloudshell-shell-standards 1.2.0
+    tag_name: 1.2.0
+    published_at: 2021-03-01 14:05:05
+    release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/1.2.0
     python_version: PY2
 - !Package
   name: cloudshell-snmp
