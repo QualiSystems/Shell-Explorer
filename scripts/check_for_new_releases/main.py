@@ -1,3 +1,4 @@
+import json
 from collections import defaultdict
 from datetime import datetime, timedelta
 import sys
@@ -24,7 +25,7 @@ def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list
     for repo in org.get_repos():
         for release in repo.get_releases():
             if release.published_at and release.published_at >= check_from:
-                new_releases[repo.name].append(repo.id)
+                new_releases[repo.name].append(release.id)
             else:
                 break
     return new_releases
@@ -32,7 +33,8 @@ def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list
 
 def run_shell_explorer_workflow(repo: Repository, new_releases: dict[str, list[int]]):
     workflow = repo.get_workflow(SHELL_EXPLORER_WORKFLOW_FILE_NAME)
-    workflow.create_dispatch("master", {"new_releases": new_releases})
+    data = json.dumps(new_releases)
+    workflow.create_dispatch("master", {"new_releases": data})
 
 
 def main(token: str):
