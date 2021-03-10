@@ -143,10 +143,10 @@
   url: https://github.com/QualiSystems/CustomScript-Shell
   releases:
   - !Release
-    title: ' Release 1.5.0'
-    tag_name: 1.5.0
-    published_at: 2018-07-25 13:56:01
-    release_url: https://github.com/QualiSystems/CustomScript-Shell/releases/tag/1.5.0
+    title: Release 1.5.1 (Cloudshell 2021.1 EA)
+    tag_name: 1.5.1
+    published_at: 2021-03-08 18:41:40
+    release_url: https://github.com/QualiSystems/CustomScript-Shell/releases/tag/1.5.1
     python_version: PY2
 - !Shell_1G
   name: Ericsson-IPOS-Shell
