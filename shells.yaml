@@ -615,10 +615,10 @@
   url: https://github.com/QualiSystems/DUT-Shell-2G
   releases:
   - !Release
-    title: DUT-Shell-2G 0.2.2
-    tag_name: 0.2.2
-    published_at: 2020-12-08 16:19:08
-    release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.2
+    title: DUT-Shell-2G 0.2.3
+    tag_name: 0.2.3
+    published_at: 2021-03-17 13:36:58
+    release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.3
     python_version: PY3
 - !Shell_2G
   name: F5-BIG-IP-Firewall-Shell-2G
