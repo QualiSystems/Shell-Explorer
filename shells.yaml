@@ -823,6 +823,16 @@
     release_url: https://github.com/QualiSystems/OpenStack-Shell-2G/releases/tag/0.1.1
     python_version: PY3
 - !Shell_2G
+  name: PaloAlto-PanOS-Firewall-Shell-2G
+  url: https://github.com/QualiSystems/PaloAlto-PanOS-Firewall-Shell-2G
+  releases:
+  - !Release
+    title: PaloAlto-PanOS-Firewall-Shell-2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2021-04-08 12:50:03
+    release_url: https://github.com/QualiSystems/PaloAlto-PanOS-Firewall-Shell-2G/releases/tag/2.0.0
+    python_version: PY3
+- !Shell_2G
   name: PaloAlto-PanoOS-Shell
   url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
   releases:
