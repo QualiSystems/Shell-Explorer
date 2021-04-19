@@ -183,10 +183,10 @@
   url: https://github.com/QualiSystems/cloudshell-huawei
   releases:
   - !Release
-    title: cloudshell-huawei 4.0.0
-    tag_name: 4.0.0
-    published_at: 2021-04-11 18:48:24
-    release_url: https://github.com/QualiSystems/cloudshell-huawei/releases/tag/4.0.0
+    title: cloudshell-huawei 4.0.1
+    tag_name: 4.0.1
+    published_at: 2021-04-19 13:21:27
+    release_url: https://github.com/QualiSystems/cloudshell-huawei/releases/tag/4.0.1
     python_version: PY2
 - !Package
   name: cloudshell-huawei-wdm
