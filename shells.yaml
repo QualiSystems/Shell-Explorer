@@ -429,6 +429,16 @@
     release_url: https://github.com/QualiSystems/Alcatel-Timetra-Router-Shell-2G/releases/tag/1.1.1
     python_version: PY2
 - !Shell_2G
+  name: Amazon-AWS-Cloud-Provider-Shell-2G
+  url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G
+  releases:
+  - !Release
+    title: Amazon-AWS-Cloud-Provider-Shell-2G 1.0.0
+    tag_name: 1.0.0
+    published_at: 2021-06-15 16:33:13
+    release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    python_version: PY3
+- !Shell_2G
   name: Arista-EOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G
   releases:
@@ -797,10 +807,10 @@
   url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.0.0
-    tag_name: 2.0.0
-    published_at: 2020-12-22 15:02:37
-    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.0.0
+    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.1.0
+    tag_name: 2.1.0
+    published_at: 2021-06-14 12:09:43
+    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.1.0
     python_version: PY3
 - !Shell_2G
   name: OCI-Shell-2G
@@ -872,6 +882,16 @@
     published_at: 2017-11-09 17:14:23
     release_url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G/releases/tag/1.0.0
     python_version: PY2
+- !Shell_2G
+  name: Spirent-TestCenter-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: Spirent-TestCenter-Chassis-Shell-2G 3.0.1
+    tag_name: 3.0.1
+    published_at: 2021-06-15 09:44:04
+    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G/releases/tag/3.0.1
+    python_version: PY3
 - !Shell_2G
   name: Spirent-TestCenter-Controller-Shell-2G
   url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
@@ -984,6 +1004,26 @@
     published_at: 2018-09-12 09:33:15
     release_url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G/releases/tag/1.0.1
     python_version: PY2
+- !Shell_2G
+  name: Xena-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: Xena-Chassis-Shell-2G 3.0.1
+    tag_name: 3.0.1
+    published_at: 2021-06-01 09:16:28
+    release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.0.1
+    python_version: PY3
+- !Shell_2G
+  name: Xena-Controller-Shell-2G
+  url: https://github.com/QualiSystems/Xena-Controller-Shell-2G
+  releases:
+  - !Release
+    title: Xena-Controller-Shell-2G 3.1.0
+    tag_name: 3.1.0
+    published_at: 2021-06-07 14:19:43
+    release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.1.0
+    python_version: PY3
 - !Shell_2G
   name: a10-acos-firewall-shell-2g
   url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g
