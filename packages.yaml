@@ -263,10 +263,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-cisco
   releases:
   - !Release
-    title: cloudshell-networking-cisco 6.1.3
-    tag_name: 6.1.3
-    published_at: 2021-01-26 09:39:31
-    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.1.3
+    title: cloudshell-networking-cisco 6.1.4
+    tag_name: 6.1.4
+    published_at: 2021-06-28 12:25:51
+    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.1.4
     python_version: PY2
 - !Package
   name: cloudshell-networking-cisco-nxos
