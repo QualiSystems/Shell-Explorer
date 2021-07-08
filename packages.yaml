@@ -253,10 +253,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-arista
   releases:
   - !Release
-    title: cloudshell-networking-arista 2.0.3
-    tag_name: 2.0.3
-    published_at: 2019-07-03 11:47:23
-    release_url: https://github.com/QualiSystems/cloudshell-networking-arista/releases/tag/2.0.3
+    title: cloudshell-networking-arista 2.0.5
+    tag_name: 2.0.5
+    published_at: 2021-07-08 13:51:39
+    release_url: https://github.com/QualiSystems/cloudshell-networking-arista/releases/tag/2.0.5
     python_version: PY2
 - !Package
   name: cloudshell-networking-cisco
