@@ -513,10 +513,10 @@
   url: https://github.com/QualiSystems/cloudshell-tc-scripts
   releases:
   - !Release
-    title: cloudshell-tc-scripts 3.0.3
-    tag_name: 3.0.3
-    published_at: 2021-04-13 11:12:16
-    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/3.0.3
+    title: cloudshell-tc-scripts 4.0.0
+    tag_name: 4.0.0
+    published_at: 2021-08-30 10:43:25
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/4.0.0
     python_version: PY2
 - !Package
   name: cloudshell-tg-breaking-point
