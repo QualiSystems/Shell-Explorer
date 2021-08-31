@@ -7,8 +7,6 @@ from copy import deepcopy
 from functools import lru_cache
 from typing import TYPE_CHECKING, Optional
 
-from github import Repository
-
 from scripts.shell_explorer.entities import Package, Release, Shell1G, Shell2G, ShellL1
 from scripts.shell_explorer.helpers import (
     PyVersion,
@@ -18,6 +16,7 @@ from scripts.shell_explorer.helpers import (
 from scripts.shell_explorer.operations import RepoOperations, SerializationOperations
 
 if TYPE_CHECKING:
+    from github import Repository
     from github.GitRelease import GitRelease
 
 
@@ -182,7 +181,7 @@ class ShellExplorer:
         return sorted_releases
 
     def _repo_releases(
-        self, repo: Repository, release_ids: Optional[list[str]]
+        self, repo: "Repository", release_ids: Optional[list[str]]
     ) -> list[Release]:
         if not release_ids:
             releases = [r for r in repo.get_releases() if r.published_at]
@@ -206,7 +205,9 @@ class ShellExplorer:
     def _extract_existing_repo(self, repo):
         return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
 
-    def _explore_repo(self, repo: Repository, release_ids: Optional[list[int]] = None):
+    def _explore_repo(
+        self, repo: "Repository", release_ids: Optional[list[int]] = None
+    ):
         logging.info(f"Explore {repo.name}")
         repo_object = self._extract_existing_repo(repo)
         releases = self._repo_releases(repo, release_ids)
