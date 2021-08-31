@@ -5,7 +5,7 @@ import yaml
 
 @functools.total_ordering
 class Release(yaml.YAMLObject):
-    yaml_tag = u"!Release"
+    yaml_tag = "!Release"
 
     def __init__(
         self, title, tag_name, published_at=None, release_url=None, python_version=None
@@ -29,9 +29,7 @@ class Release(yaml.YAMLObject):
         return self.published_at < other.published_at
 
     def __str__(self):
-        return "{yaml_tag}({title},{python_version})".format(
-            yaml_tag=self.yaml_tag, **self.__dict__
-        )
+        return f"{self.yaml_tag}({self.title},{self.python_version})"
 
     def __repr__(self):
         return self.__str__()
@@ -60,16 +58,14 @@ class Repo(yaml.YAMLObject):
         )
 
     def __str__(self):
-        return "{yaml_tag}({name},{releases})".format(
-            yaml_tag=self.yaml_tag, **self.__dict__
-        )
+        return f"{self.yaml_tag}({self.name},{self.releases})"
 
     def __repr__(self):
         return self.__str__()
 
 
 class Shell(Repo):
-    yaml_tag = u"!Shell"
+    yaml_tag = "!Shell"
 
 
 class ShellL1(Repo):
@@ -85,4 +81,4 @@ class Shell2G(Repo):
 
 
 class Package(Repo):
-    yaml_tag = u"!Package"
+    yaml_tag = "!Package"

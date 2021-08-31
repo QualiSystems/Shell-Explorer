@@ -30,7 +30,7 @@ logging.basicConfig(
 )
 
 
-class ShellExplorer(object):
+class ShellExplorer:
     class CONFIG:
         EXPLORE_ORG = "Quali"
         WORKING_REPO = "Shell-Explorer"
@@ -73,7 +73,7 @@ class ShellExplorer(object):
         )
 
     @property
-    @lru_cache()
+    @lru_cache
     def _repo_shells(self):
         content = self.repo_operations.get_working_content(
             self.branch, self.CONFIG.SHELLS_FILE
@@ -81,17 +81,17 @@ class ShellExplorer(object):
         return set(SerializationOperations.load_table(content))
 
     @property
-    @lru_cache()
+    @lru_cache
     def _shells(self):
         return deepcopy(self._repo_shells)
 
     @property
-    @lru_cache()
+    @lru_cache
     def _shells_dict(self):
         return {repo.name: repo for repo in self._shells}
 
     @property
-    @lru_cache()
+    @lru_cache
     def _repo_packages(self):
         content = self.repo_operations.get_working_content(
             self.branch, self.CONFIG.PACKAGES_FILE
@@ -99,12 +99,12 @@ class ShellExplorer(object):
         return set(SerializationOperations.load_table(content))
 
     @property
-    @lru_cache()
+    @lru_cache
     def _packages(self):
         return deepcopy(self._repo_packages)
 
     @property
-    @lru_cache()
+    @lru_cache
     def _packages_dict(self):
         return {repo.name: repo for repo in self._packages}
 
@@ -178,7 +178,7 @@ class ShellExplorer(object):
                 break
 
         sorted_releases = sorted(version_dict.values(), reverse=True)
-        logging.info("New releases: {}".format(sorted_releases))
+        logging.info(f"New releases: {sorted_releases}")
         return sorted_releases
 
     def _repo_releases(
@@ -207,7 +207,7 @@ class ShellExplorer(object):
         return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
 
     def _explore_repo(self, repo: Repository, release_ids: Optional[list[int]] = None):
-        logging.info("Explore {}".format(repo.name))
+        logging.info(f"Explore {repo.name}")
         repo_object = self._extract_existing_repo(repo)
         releases = self._repo_releases(repo, release_ids)
         if not repo_object and releases:
@@ -216,7 +216,7 @@ class ShellExplorer(object):
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
                     repo_object = repo_class(repo_name, repo.html_url)
-                    logging.info("Added {}".format(repo_object))
+                    logging.info(f"Added {repo_object}")
                     break
         if not repo_object or not releases:
             return
