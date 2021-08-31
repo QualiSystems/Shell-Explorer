@@ -1,9 +1,9 @@
 import pytest
 
 from scripts.shell_explorer.helpers import (
+    PyVersion,
     get_package_python_version,
     get_python_requires_str,
-    PyVersion,
 )
 
 
@@ -44,8 +44,8 @@ setup(
     author="QualiSystems",
     author_email="info@qualisystems.com",
     python_requires=(
-        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, 
-        !=3.4.*, !=3.5.*, !=3.6.*, <4"
+        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, "
+        "!=3.4.*, !=3.5.*, !=3.6.*, <4"
     ),
     test_suite="tests",
 )
@@ -133,8 +133,8 @@ setup(
     author="QualiSystems",
     author_email="info@qualisystems.com",
     python_requires=(
-        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, 
-        !=3.4.*, !=3.5.*, !=3.6.*, <4"
+        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, "
+        "!=3.4.*, !=3.5.*, !=3.6.*, <4"
     ),
     test_suite="tests",
 )

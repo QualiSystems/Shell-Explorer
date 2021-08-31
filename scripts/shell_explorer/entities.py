@@ -1,4 +1,3 @@
-import datetime
 import functools
 
 import yaml
@@ -8,7 +7,9 @@ import yaml
 class Release(yaml.YAMLObject):
     yaml_tag = u"!Release"
 
-    def __init__(self, title, tag_name, published_at=None, release_url=None, python_version=None):
+    def __init__(
+        self, title, tag_name, published_at=None, release_url=None, python_version=None
+    ):
         self.title = title
         self.tag_name = tag_name
         self.published_at = published_at
@@ -21,20 +22,16 @@ class Release(yaml.YAMLObject):
     def __hash__(self):
         return hash(self.match_str())
 
-    def __eq__(self, other):
-        """
-        :param Release other:
-        """
+    def __eq__(self, other: "Release"):
         return self.title == other.title and self.tag_name == other.tag_name
 
-    def __lt__(self, other):
-        """
-        :param Release other:
-        """
+    def __lt__(self, other: "Release"):
         return self.published_at < other.published_at
 
     def __str__(self):
-        return "{yaml_tag}({title},{python_version})".format(yaml_tag=self.yaml_tag, **self.__dict__)
+        return "{yaml_tag}({title},{python_version})".format(
+            yaml_tag=self.yaml_tag, **self.__dict__
+        )
 
     def __repr__(self):
         return self.__str__()
@@ -52,20 +49,20 @@ class Repo(yaml.YAMLObject):
     def __hash__(self):
         return hash(self.yaml_tag) | hash(self.name)
 
-    def __eq__(self, other):
-        """
-        :param Repo other:
-        """
+    def __eq__(self, other: "Repo"):
         return self.yaml_tag == other.yaml_tag and self.name == other.name
 
-    def __lt__(self, other):
-        """
-        :param Repo other:
-        """
-        return self.yaml_tag < other.yaml_tag or self.yaml_tag == other.yaml_tag and self.name < other.name
+    def __lt__(self, other: "Repo"):
+        return (
+            self.yaml_tag < other.yaml_tag
+            or self.yaml_tag == other.yaml_tag
+            and self.name < other.name
+        )
 
     def __str__(self):
-        return "{yaml_tag}({name},{releases})".format(yaml_tag=self.yaml_tag, **self.__dict__)
+        return "{yaml_tag}({name},{releases})".format(
+            yaml_tag=self.yaml_tag, **self.__dict__
+        )
 
     def __repr__(self):
         return self.__str__()
@@ -74,52 +71,17 @@ class Repo(yaml.YAMLObject):
 class Shell(Repo):
     yaml_tag = u"!Shell"
 
-    # class TYPE:
-    #     SHELL_L1 = "L1"
-    #     SHELL_1G = "1G"
-    #     SHELL_2G = "2G"
-    #
-    # shell_type = None
-
-    # def __init__(self, name, url, releases=None):
-    #     super().__init__(name, url, releases)
-    #
-
-    # def __hash__(self):
-    #     return Repo.__hash__(self) | hash(self.shell_type)
-    #
-    # def __eq__(self, other):
-    #     """
-    #     :param Shell other:
-    #     """
-    #     return Repo.__eq__(self, other) and self.shell_type == other.shell_type
-
 
 class ShellL1(Repo):
     yaml_tag = "!Shell_L1"
-    # shell_type = Shell.TYPE.SHELL_L1
-
-    # def __init__(self, name, url, releases=None):
-    #     super().__init__(name, url, releases)
-    #     self.shell_type = self.TYPE.SHELL_L1
 
 
 class Shell1G(Repo):
     yaml_tag = "!Shell_1G"
-    # shell_type = Shell.TYPE.SHELL_1G
-
-    # def __init__(self, name, url, releases=None):
-    #     super().__init__(name, url, releases)
-    #     self.shell_type = self.TYPE.SHELL_1G
 
 
 class Shell2G(Repo):
     yaml_tag = "!Shell_2G"
-    # shell_type = Shell.TYPE.SHELL_2G
-
-    # def __init__(self, name, url, releases=None):
-    #     super().__init__(name, url, releases)
-    #     self.shell_type = self.TYPE.SHELL_2G
 
 
 class Package(Repo):

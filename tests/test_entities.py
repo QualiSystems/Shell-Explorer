@@ -2,7 +2,7 @@ import datetime
 
 import yaml
 
-from scripts.shell_explorer.entities import Shell2G, Release, Shell1G, ShellL1
+from scripts.shell_explorer.entities import Release, Shell1G, Shell2G, ShellL1
 
 
 def test_entities():
