@@ -558,3 +558,13 @@
     published_at: 2019-03-04 10:37:45
     release_url: https://github.com/QualiSystems/cloudshell-traffic-virtual/releases/tag/1.1.0
     python_version: PY2
+- !Package
+  name: shellfoundry
+  url: https://github.com/QualiSystems/shellfoundry
+  releases:
+  - !Release
+    title: shellfoundry 1.2.20
+    tag_name: 1.2.20
+    published_at: 2021-08-19 16:49:53
+    release_url: https://github.com/QualiSystems/shellfoundry/releases/tag/1.2.20
+    python_version: PY2PY3
