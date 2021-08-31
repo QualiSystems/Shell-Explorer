@@ -6,6 +6,10 @@ on:
         description: "a dictionary with a new releases: {repo-name: [release-id]}"
         required: true
         default: "{}"
+      branch:
+        description: "branch on which would be updated packages and shells yaml files"
+        required: true
+        default: "dev"
 jobs:
   run_shell_explorer:
     name: run Shell Explorer
@@ -21,5 +25,7 @@ jobs:
         run: |
           python setup.py install
       - name: Execute Shell Explorer
-        run: shell-explorer explore --auth-key ${{ secrets.GH_TOKEN_FOR_SHELL_EXPLORER }}
-          --branch dev --new-releases '${{ github.event.inputs.new_releases }}'
+        run: shell-explorer explore
+          --auth-key ${{ secrets.GH_TOKEN_FOR_SHELL_EXPLORER }}
+          --branch ${{ github.event.inputs.branch }}
+          --new-releases '${{ github.event.inputs.new_releases }}'
