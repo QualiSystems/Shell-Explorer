@@ -10,7 +10,7 @@ def cli():
 
 
 @cli.command("explore")
-@click.option("--aut-key", required=True)
+@click.option("--auth-key", required=True)
 @click.option("--branch", required=True, default="dev")
 @click.option("--new-releases", required=False, default="{}")
 def trigger_auto_tests(auth_key: str, branch: str, new_releases: str):
