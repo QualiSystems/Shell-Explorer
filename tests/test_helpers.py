@@ -1,0 +1,185 @@
+import pytest
+
+from scripts.shell_explorer.helpers import (
+    get_package_python_version,
+    get_python_requires_str,
+    PyVersion,
+)
+
+
+@pytest.mark.parametrize(
+    ("setup_content", "python_requires"),
+    (
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=">=2.7",
+    test_suite="tests",
+)
+""",
+            ">=2.7",
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=">=2.7,<3.0",
+    test_suite="tests",
+)
+""",
+            ">=2.7,<3.0",
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=(
+        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, 
+        !=3.4.*, !=3.5.*, !=3.6.*, <4"
+    ),
+    test_suite="tests",
+)
+""",
+            ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,<4",
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires="~=3.7",
+    test_suite="tests",
+)
+""",
+            "~=3.7",
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires="==2.7.*",
+    test_suite="tests",
+)
+""",
+            "==2.7.*",
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    test_suite="tests",
+)
+""",
+            None,
+        ),
+    ),
+)
+def test_get_python_requires_str(setup_content, python_requires):
+    assert get_python_requires_str(setup_content) == python_requires
+
+
+@pytest.mark.parametrize(
+    ("setup_content", "python_version"),
+    (
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=">=2.7",
+    test_suite="tests",
+)
+""",
+            PyVersion.PY2PY3,
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=">=2.7,<3.0",
+    test_suite="tests",
+)
+""",
+            PyVersion.PY2,
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires=(
+        ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, 
+        !=3.4.*, !=3.5.*, !=3.6.*, <4"
+    ),
+    test_suite="tests",
+)
+""",
+            PyVersion.PY2PY3,
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires="~=3.7",
+    test_suite="tests",
+)
+""",
+            PyVersion.PY3,
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    python_requires="==3.7.*",
+    test_suite="tests",
+)
+""",
+            PyVersion.PY3,
+        ),
+        (
+            """
+setup(
+    name="shellfoundry",
+    version=version_from_file,
+    author="QualiSystems",
+    author_email="info@qualisystems.com",
+    test_suite="tests",
+)
+""",
+            PyVersion.PY2,
+        ),
+    ),
+)
+def test_get_package_python_version(setup_content, python_version):
+    assert get_package_python_version(setup_content) == python_version

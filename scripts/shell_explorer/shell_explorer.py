@@ -9,6 +9,8 @@ from typing import Optional
 from github import Repository
 
 from scripts.shell_explorer.entities import Package, ShellL1, Shell2G, Shell1G, Release
+from scripts.shell_explorer.helpers import PyVersion, get_str_from_git_content, \
+    get_package_python_version
 from scripts.shell_explorer.operations import RepoOperations, SerializationOperations
 import logging
 
@@ -32,8 +34,11 @@ class ShellExplorer(object):
         NAME_PATTERN_L1 = re.compile(r"cloudshell-L1-.+", re.IGNORECASE)
         NAME_PATTERN_1G = re.compile(r".*shell.*", re.IGNORECASE)
         NAME_PATTERN_2G = re.compile(r".*2G.*", re.IGNORECASE)
-        NAME_PATTERN_PACKAGE = re.compile(r"cloudshell-.+", re.IGNORECASE)
+        NAME_PATTERN_PACKAGE = re.compile(
+            r"(cloudshell-.+|^shellfoundry$)", re.IGNORECASE
+        )
         METADATA_FILE = "/src/drivermetadata.xml"
+        SETUP_PY = "setup.py"
         PY_VER_PATTERN = re.compile(r"PythonVersion=(.+)\s")
 
     class VALUES:
@@ -109,39 +114,41 @@ class ShellExplorer(object):
         return self._match_by_name(self.CONST.NAME_PATTERN_L1,
                                    name) and self._match_by_content(content, self.CONST.SHELL_L1_FILES)
 
-    def _py_ver_by_rel_title(self, title):
-        if self.VALUES.PYTHON_VERSION_3.lower() in title.lower():
-            return self.VALUES.PYTHON_VERSION_3
-        elif self.VALUES.PYTHON_VERSION_2.lower() in title.lower():
-            return self.VALUES.PYTHON_VERSION_2
-
-    def _py3_ver_by_metadata(self, git_repo, release):
+    def _py3_ver_by_metadata(self, git_repo, release) -> bool:
         try:
             content = git_repo.get_contents(self.CONST.METADATA_FILE, release.tag_name)
-        except Exception as e:
-            content = None
+            content = get_str_from_git_content(content)
+            match = re.search(self.CONST.PY_VER_PATTERN, content)
+        except Exception:
+            result = False
+        else:
+            result = bool(match)
+        return result
 
-        if content:
-            match = re.search(self.CONST.PY_VER_PATTERN, content.decoded_content.decode("utf-8"))
-            if match:
-                return True
-
-    def _py_version(self, git_repo, release):
+    def _get_shell_py_version(self, git_repo, release) -> "PyVersion":
         if self._py3_ver_by_metadata(git_repo, release):
-            return self.VALUES.PYTHON_VERSION_3
-        return self.VALUES.PYTHON_VERSION_2
+            version = PyVersion.PY3
+        else:
+            version = PyVersion.PY2
+        return version
 
-    def _filter_releases_by_py_ver(self, git_repo, releases, existing_releases):
-        """
-        :param git_repo:
-        :param list releases:
-        :param list existing_releases:
-        """
+    def _get_package_py_version(self, git_repo, release) -> "PyVersion":
+        content = git_repo.get_contents(self.CONST.SETUP_PY, release.tag_name)
+        content = get_str_from_git_content(content)
+        return get_package_python_version(content)
+
+    def _filter_releases_by_py_ver(
+            self, git_repo, releases, existing_releases, is_package: bool
+    ):
         existing_releases = list(filter(lambda r: r in releases, existing_releases))
         version_dict = {r.python_version: r for r in existing_releases}
         for release in releases:
             if release not in existing_releases:
-                release.python_version = self._py_version(git_repo, release)
+                if is_package:
+                    py_version = self._get_package_py_version(git_repo, release)
+                else:
+                    py_version = self._get_shell_py_version(git_repo, release)
+                release.python_version = py_version.value
                 if release.python_version:
                     ex_rel = version_dict.get(release.python_version)
                     if not ex_rel or release > ex_rel:
@@ -187,9 +194,13 @@ class ShellExplorer(object):
                     break
         if not repo_object or not releases:
             return
+
+        is_package = isinstance(repo_object, Package)
         if releases[0] not in repo_object.releases:
-            repo_object.releases = self._filter_releases_by_py_ver(repo, releases, repo_object.releases)
-            if isinstance(repo_object, Package):
+            repo_object.releases = self._filter_releases_by_py_ver(
+                repo, releases, repo_object.releases, is_package
+            )
+            if is_package:
                 self._packages.add(repo_object)
             else:
                 self._shells.add(repo_object)
