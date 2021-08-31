@@ -5,7 +5,6 @@ from typing import Optional
 from github.ContentFile import ContentFile
 from packaging.specifiers import SpecifierSet
 
-
 PYTHON_REQUIRES_PATTERN = re.compile(
     r"python_requires\s*=\s*(\(?(\s*['\"].+?['\"]\s*)+\)?)", re.DOTALL
 )
@@ -34,8 +33,8 @@ def get_package_python_version(setup_content: str) -> PyVersion:
     if not python_requires:
         return DEFAULT_PY_VERSION
 
-    py2_set = {'2.7'}
-    py3_set = {'3.7', '3.8', '3.9', '3.10'}
+    py2_set = {"2.7"}
+    py3_set = {"3.7", "3.8", "3.9", "3.10"}
     specifier = SpecifierSet(python_requires)
     is_py2 = set(specifier.filter(py2_set))
     is_py3 = set(specifier.filter(py3_set))
@@ -51,4 +50,4 @@ def get_package_python_version(setup_content: str) -> PyVersion:
 
 
 def get_str_from_git_content(content: "ContentFile") -> str:
-    return content.decoded_content.decode('utf-8')
+    return content.decoded_content.decode("utf-8")

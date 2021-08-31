@@ -1,7 +1,7 @@
 import click
 
-from scripts.shell_explorer.shell_explorer import ShellExplorer
 from scripts.check_for_new_releases.main import main as check_for_new_releases
+from scripts.shell_explorer.shell_explorer import ShellExplorer
 
 
 @click.group()
@@ -25,3 +25,7 @@ def trigger_auto_tests(auth_key: str, branch: str, new_releases: str):
 @click.option("--auth-key", required=True)
 def check_new_releases(auth_key: str):
     check_for_new_releases(auth_key)
+
+
+if __name__ == "__main__":
+    cli()
