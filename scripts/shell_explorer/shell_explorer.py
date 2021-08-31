@@ -221,16 +221,3 @@ class ShellExplorer(object):
             self.CONFIG.SHELLS_FILE, self.branch)
         self.repo_operations.commit_if_changed(SerializationOperations.dump_table(sorted(list(self._packages))),
                                                self.CONFIG.PACKAGES_FILE, self.branch)
-
-
-if __name__ == '__main__':
-    # print(sys.argv)
-    # username = sys.argv[1]
-    # password = sys.argv[2]
-    _auth_key = sys.argv[1]
-    # _shells_file = sys.argv[2]
-    # _organization = sys.argv[3]
-    _branch = sys.argv[2]
-    _new_releases = sys.argv[3]
-    se = ShellExplorer(_auth_key, _branch, _new_releases)
-    se.scan_and_commit()
