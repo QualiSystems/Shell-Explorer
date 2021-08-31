@@ -7,7 +7,7 @@ from packaging.specifiers import SpecifierSet
 
 
 PYTHON_REQUIRES_PATTERN = re.compile(
-    "python_requires\s*=\s*(\(?\s*['\"].+?['\"]\s*\)?)", re.DOTALL
+    r"python_requires\s*=\s*(\(?(\s*['\"].+?['\"]\s*)+\)?)", re.DOTALL
 )
 
 
@@ -23,7 +23,7 @@ DEFAULT_PY_VERSION = PyVersion.PY2
 def get_python_requires_str(setup_content: str) -> Optional[str]:
     try:
         output = PYTHON_REQUIRES_PATTERN.search(setup_content).group(1)
-        python_requires = re.sub("[()\s'\"]", "", output)
+        python_requires = re.sub(r"[()\s'\"]", "", output)
     except AttributeError:
         python_requires = None
     return python_requires
