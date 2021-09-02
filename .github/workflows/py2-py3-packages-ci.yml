@@ -100,33 +100,6 @@ jobs:
           cd ${{ github.repository }}
           git checkout -qf ${{ github.head_ref }}
           ! git diff --exit-code --quiet origin/master version.txt
-  deploy-to-test-pypi:
-    needs: [tests, pre-commit, build]
-    if: ${{ github.ref == 'refs/heads/dev' && github.event_name == 'push' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install dependencies
-        run: |
-          python -m pip install pip -U
-          pip install tox
-      - name: Add id to a package version
-        run: sed -i -E "s/^([0-9]+\.[0-9]+\.[0-9]+)$/\1.${{ github.run_number }}/" version.txt
-      - name: Build
-        env:
-          TOXENV: build
-        run: tox
-      - name: Publish
-        uses: pypa/gh-action-pypi-publish@v1.4.1
-        with:
-          user: __token__
-          password: ${{ secrets.TEST_PYPI_TOKEN }}
-          repository_url: https://test.pypi.org/legacy/
   create-gh-release:
     needs: [tests, pre-commit, build]
     if: ${{ github.ref == 'refs/heads/master' && github.event_name == 'push' }}
@@ -163,27 +136,3 @@ jobs:
           name: ${{ env.REPO }} ${{ env.TAG }}
           tag: ${{ env.TAG }}
           commit: master
-  deploy-to-pypi:
-    needs: [tests, pre-commit, build]
-    if: startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install dependencies
-        run: |
-          python -m pip install pip -U
-          pip install tox
-      - name: Build
-        env:
-          TOXENV: build
-        run: tox
-      - name: Publish
-        uses: pypa/gh-action-pypi-publish@v1.4.1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
