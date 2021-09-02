@@ -12,7 +12,12 @@ def cli():
 @cli.command("explore")
 @click.option("--auth-key", required=True)
 @click.option("--branch", required=True, default="dev")
-@click.option("--new-releases", required=False, default="{}")
+@click.option(
+    "--new-releases",
+    required=False,
+    default="{}",
+    help="Json dict of repositories and release ids. {<repo_name>: [<release_id1>]}",
+)
 def trigger_auto_tests(auth_key: str, branch: str, new_releases: str):
     se = ShellExplorer(auth_key, branch, new_releases)
     se.scan_and_commit()
