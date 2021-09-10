@@ -1,0 +1,15 @@
+cloudshell-automation-api:
+  '*':
+  - DUT-Shell-2G
+cloudshell-logging:
+  <2,>=1.0:
+  - DUT-Shell-2G
+cloudshell-shell-core:
+  <6,>=5.0:
+  - DUT-Shell-2G
+cloudshell-shell-networking-standard:
+  ==5.0.4:
+  - DUT-Shell-2G
+cloudshell-shell-standards:
+  <2.0,>=1.0:
+  - DUT-Shell-2G
