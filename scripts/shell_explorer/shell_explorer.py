@@ -7,16 +7,25 @@ from copy import deepcopy
 from functools import lru_cache
 from typing import TYPE_CHECKING, Optional
 
-from scripts.shell_explorer.entities import Package, Release, Shell1G, Shell2G, ShellL1
+from scripts.shell_explorer.entities import (
+    Package,
+    Release,
+    Repo,
+    Shell1G,
+    Shell2G,
+    ShellL1,
+)
 from scripts.shell_explorer.helpers import (
     PyVersion,
+    get_all_cloudshell_dependencies,
     get_package_python_version,
+    get_packages_usage,
     get_str_from_git_content,
 )
 from scripts.shell_explorer.operations import RepoOperations, SerializationOperations
 
 if TYPE_CHECKING:
-    from github import Repository
+    from github import Repository as GitRepository
     from github.GitRelease import GitRelease
 
 
@@ -35,6 +44,7 @@ class ShellExplorer:
         WORKING_REPO = "Shell-Explorer"
         SHELLS_FILE = "shells.yaml"
         PACKAGES_FILE = "packages.yaml"
+        PACKAGES_USAGE_FILE = "packages-usage.yaml"
         EXPLORE_RELEASES_DEPTH = 5
 
     class CONST:
@@ -51,6 +61,7 @@ class ShellExplorer:
         METADATA_FILE = "/src/drivermetadata.xml"
         SETUP_PY = "setup.py"
         PY_VER_PATTERN = re.compile(r"PythonVersion=(.+)\s")
+        SHELL_2G_REQUIREMENTS = "scr/requirements.txt"
 
     class VALUES:
         PYTHON_VERSION_2 = "PY2"
@@ -158,13 +169,13 @@ class ShellExplorer:
         return get_package_python_version(content)
 
     def _filter_releases_by_py_ver(
-        self, git_repo, releases, existing_releases, is_package: bool
+        self, git_repo, releases, existing_releases, repo_object: "Repo"
     ):
         existing_releases = list(filter(lambda r: r in releases, existing_releases))
         version_dict = {r.python_version: r for r in existing_releases}
         for release in releases:
             if release not in existing_releases:
-                if is_package:
+                if isinstance(repo_object, Package):
                     py_version = self._get_package_py_version(git_repo, release)
                 else:
                     py_version = self._get_shell_py_version(git_repo, release)
@@ -172,6 +183,8 @@ class ShellExplorer:
                 if release.python_version:
                     ex_rel = version_dict.get(release.python_version)
                     if not ex_rel or release > ex_rel:
+                        if isinstance(repo_object, Shell2G):
+                            self._set_dependencies(release, git_repo)
                         version_dict[release.python_version] = release
             else:
                 break
@@ -181,7 +194,7 @@ class ShellExplorer:
         return sorted_releases
 
     def _repo_releases(
-        self, repo: "Repository", release_ids: Optional[list[str]]
+        self, repo: "GitRepository", release_ids: Optional[list[str]]
     ) -> list[Release]:
         if not release_ids:
             releases = [r for r in repo.get_releases() if r.published_at]
@@ -205,8 +218,17 @@ class ShellExplorer:
     def _extract_existing_repo(self, repo):
         return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
 
+    def _set_dependencies(self, release: "Release", git_repo: "GitRepository"):
+        content = git_repo.get_contents(
+            self.CONST.SHELL_2G_REQUIREMENTS, release.tag_name
+        )
+        content = get_str_from_git_content(content)
+        release.dependencies = get_all_cloudshell_dependencies(
+            content, release.python_version == "PY3"
+        )
+
     def _explore_repo(
-        self, repo: "Repository", release_ids: Optional[list[int]] = None
+        self, repo: "GitRepository", release_ids: Optional[list[int]] = None
     ):
         logging.info(f"Explore {repo.name}")
         repo_object = self._extract_existing_repo(repo)
@@ -222,12 +244,11 @@ class ShellExplorer:
         if not repo_object or not releases:
             return
 
-        is_package = isinstance(repo_object, Package)
         if releases[0] not in repo_object.releases:
             repo_object.releases = self._filter_releases_by_py_ver(
-                repo, releases, repo_object.releases, is_package
+                repo, releases, repo_object.releases, repo_object
             )
-            if is_package:
+            if isinstance(repo_object, Package):
                 self._packages.add(repo_object)
             else:
                 self._shells.add(repo_object)
@@ -251,5 +272,10 @@ class ShellExplorer:
         self.repo_operations.commit_if_changed(
             SerializationOperations.dump_table(sorted(self._packages)),
             self.CONFIG.PACKAGES_FILE,
+            self.branch,
+        )
+        self.repo_operations.commit_if_changed(
+            SerializationOperations.dump_table(get_packages_usage(self._shells)),
+            self.CONFIG.PACKAGES_USAGE_FILE,
             self.branch,
         )

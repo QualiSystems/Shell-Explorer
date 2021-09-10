@@ -8,13 +8,20 @@ class Release(yaml.YAMLObject):
     yaml_tag = "!Release"
 
     def __init__(
-        self, title, tag_name, published_at=None, release_url=None, python_version=None
+        self,
+        title,
+        tag_name,
+        published_at=None,
+        release_url=None,
+        python_version=None,
+        dependencies=None,
     ):
         self.title = title
         self.tag_name = tag_name
         self.published_at = published_at
         self.release_url = release_url
         self.python_version = python_version
+        self.dependencies = dependencies
 
     def match_str(self):
         return self.title + self.tag_name
