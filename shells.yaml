@@ -625,11 +625,17 @@
   url: https://github.com/QualiSystems/DUT-Shell-2G
   releases:
   - !Release
-    title: DUT-Shell-2G 0.2.4
-    tag_name: 0.2.4
-    published_at: 2021-03-17 15:16:40
-    release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.4
+    title: DUT-Shell-2G 0.2.5
+    tag_name: 0.2.5
+    published_at: 2021-09-10 15:05:57
+    release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.5
     python_version: PY3
+    dependencies:
+    - cloudshell-automation-api
+    - cloudshell-logging<2,>=1.0
+    - cloudshell-shell-core<6,>=5.0
+    - cloudshell-shell-networking-standard==5.0.4
+    - cloudshell-shell-standards<2.0,>=1.0
 - !Shell_2G
   name: F5-BIG-IP-Firewall-Shell-2G
   url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G
