@@ -203,7 +203,7 @@ class ShellExplorer:
             releases = list(map(repo.get_release, release_ids))
         return [
             self._create_release_object(r)
-            for r in sorted(releases, key=lambda: r.published_at, reverse=True)
+            for r in sorted(releases, key=lambda r: r.published_at, reverse=True)
         ]
 
     def _create_release_object(self, git_release: "GitRelease") -> Optional["Release"]:
