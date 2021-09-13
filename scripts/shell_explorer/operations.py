@@ -1,11 +1,10 @@
-import logging
 from datetime import datetime
 from functools import cached_property, lru_cache
 
 import yaml
 from github import Github, Organization, Repository
 
-from scripts.shell_explorer.helpers import get_str_from_git_content
+from scripts.shell_explorer.helpers import get_str_from_git_content, logger
 
 
 class RepoOperations:
@@ -45,7 +44,7 @@ class RepoOperations:
         content = self.working_repo.get_contents(path, ref)
         repo_data = get_str_from_git_content(content)
         if data != repo_data:
-            logging.info(f"Commit changes to {path}")
+            logger.info(f"Commit changes to {path}")
             message = f"ShellExplorer {path} {datetime.now()}"
             return self.working_repo.update_file(
                 path, message, data, content.sha, branch=branch
