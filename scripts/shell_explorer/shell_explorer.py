@@ -51,7 +51,7 @@ class ShellExplorer:
         METADATA_FILE = "/src/drivermetadata.xml"
         SETUP_PY = "setup.py"
         PY_VER_PATTERN = re.compile(r"PythonVersion=(.+)\s")
-        SHELL_2G_REQUIREMENTS = "scr/requirements.txt"
+        SHELL_2G_REQUIREMENTS = "src/requirements.txt"
 
     class VALUES:
         PYTHON_VERSION_2 = "PY2"

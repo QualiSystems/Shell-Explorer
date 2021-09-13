@@ -18,7 +18,7 @@ def cli():
     default="{}",
     help="Json dict of repositories and release ids. {<repo_name>: [<release_id1>]}",
 )
-def trigger_auto_tests(auth_key: str, branch: str, new_releases: str):
+def shell_explorer(auth_key: str, branch: str, new_releases: str):
     se = ShellExplorer(auth_key, branch, new_releases)
     se.scan_and_commit()
 
