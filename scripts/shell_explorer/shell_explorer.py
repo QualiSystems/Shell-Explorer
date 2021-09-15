@@ -1,4 +1,5 @@
 import json
+import logging
 import re
 from collections import OrderedDict
 from copy import deepcopy
@@ -19,7 +20,6 @@ from scripts.shell_explorer.helpers import (
     get_package_python_version,
     get_packages_usage,
     get_str_from_git_content,
-    logger,
 )
 from scripts.shell_explorer.operations import RepoOperations, SerializationOperations
 
@@ -180,7 +180,7 @@ class ShellExplorer:
                 break
 
         sorted_releases = sorted(version_dict.values(), reverse=True)
-        logger.info(f"New releases: {sorted_releases}")
+        logging.info(f"New releases: {sorted_releases}")
         return sorted_releases
 
     def _repo_releases(
@@ -220,7 +220,7 @@ class ShellExplorer:
     def _explore_repo(
         self, repo: "GitRepository", release_ids: Optional[list[int]] = None
     ):
-        logger.info(f"Explore {repo.name}")
+        logging.info(f"Explore {repo.name}")
         repo_object = self._extract_existing_repo(repo)
         releases = self._repo_releases(repo, release_ids)
         if not repo_object and releases:
@@ -229,7 +229,7 @@ class ShellExplorer:
             for repo_class, check_func in self._repo_type_dict.items():
                 if check_func(content, repo_name):
                     repo_object = repo_class(repo_name, repo.html_url)
-                    logger.info(f"Added {repo_object}")
+                    logging.info(f"Added {repo_object}")
                     break
         if not repo_object or not releases:
             return

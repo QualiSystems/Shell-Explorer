@@ -1,6 +1,7 @@
 import enum
 import logging
 import re
+import sys
 from typing import TYPE_CHECKING, Optional
 
 from github.ContentFile import ContentFile
@@ -27,20 +28,18 @@ class PyVersion(enum.Enum):
 DEFAULT_PY_VERSION = PyVersion.PY2
 
 
-def create_logger():
-    logger = logging.getLogger("ShellExplorer")
-    logger.setLevel(logging.INFO)
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.INFO)
-    formatter = logging.Formatter(
-        "%(asctime)s [%(levelname)s]: %(name)s %(module)s - %(funcName)-20s %(message)s"
+def set_logger():
+    # remove default handlers
+    logging.getLogger("root").handlers = []
+
+    logging.basicConfig(
+        level=logging.INFO,
+        stream=sys.stdout,
+        format=(
+            "%(asctime)s [%(levelname)s]: %(name)s %(module)s"
+            " - %(funcName)-20s %(message)s"
+        ),
     )
-    ch.setFormatter(formatter)
-    logger.addHandler(ch)
-    return logger
-
-
-logger = create_logger()
 
 
 def get_python_requires_str(setup_content: str) -> Optional[str]:
