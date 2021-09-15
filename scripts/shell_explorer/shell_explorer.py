@@ -6,14 +6,7 @@ from copy import deepcopy
 from functools import lru_cache
 from typing import TYPE_CHECKING, Optional
 
-from scripts.shell_explorer.entities import (
-    Package,
-    Release,
-    Repo,
-    Shell1G,
-    Shell2G,
-    ShellL1,
-)
+from scripts.shell_explorer.entities import Package, Release, Repo, Shell2G, ShellL1
 from scripts.shell_explorer.helpers import (
     PyVersion,
     get_all_cloudshell_dependencies,
@@ -68,7 +61,6 @@ class ShellExplorer:
                 (Package, self._is_it_a_package),
                 (ShellL1, self.is_it_l1_shell),
                 (Shell2G, self.is_it_2g_shell),
-                (Shell1G, self.is_it_1g_shell),
             ]
         )
 
