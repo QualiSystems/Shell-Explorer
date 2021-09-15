@@ -13,11 +13,31 @@
   url: https://github.com/QualiSystems/cloudshell-autodiscovery
   releases:
   - !Release
-    title: CloudShell Autodiscovery Tool 1.0.0
-    tag_name: 1.0.0
-    published_at: 2019-06-04 09:27:02
-    release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/1.0.0
+    title: CloudShell Autodiscovery Tool 2.0.0
+    tag_name: 2.0.0
+    published_at: 2019-05-30 13:56:21
+    release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/2.0.0
     python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 2
+        - 0
+        - 0
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 2
+      - &id001 !!python/object:packaging._structures.InfinityType {}
+      - &id002 !!python/object:packaging._structures.NegativeInfinityType {}
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-cgs
   url: https://github.com/QualiSystems/cloudshell-cgs
@@ -97,7 +117,57 @@
     tag_name: 2.2.1
     published_at: 2021-07-29 10:28:15
     release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.2.1
+    python_version: PY3
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 2
+        - 2
+        - 1
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 2
+        - 2
+        - 1
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: cloudshell-cp-core 1.2.3
+    tag_name: 1.2.3
+    published_at: 2021-05-24 15:22:53
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/1.2.3
     python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 1
+        - 2
+        - 3
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 1
+        - 2
+        - 3
+      - *id001
+      - *id002
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-cp-kubernetes
   url: https://github.com/QualiSystems/cloudshell-cp-kubernetes
@@ -128,6 +198,55 @@
     published_at: 2021-08-05 11:13:18
     release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/3.4.1
     python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 3
+        - 4
+        - 1
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 3
+        - 4
+        - 1
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: cloudshell-cp-vcenter 2.3.0
+    tag_name: 2.3.0
+    published_at: 2021-03-01 16:12:57
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.3.0
+    python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 2
+        - 3
+        - 0
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 2
+        - 3
+      - *id001
+      - *id002
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-cumulus-linux
   url: https://github.com/QualiSystems/cloudshell-cumulus-linux
@@ -143,11 +262,33 @@
   url: https://github.com/QualiSystems/cloudshell-f5
   releases:
   - !Release
-    title: cloudshell-f5 1.1.2
-    tag_name: 1.1.2
-    published_at: 2020-10-12 10:58:06
-    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.1.2
+    title: cloudshell-f5 1.1.3
+    tag_name: 1.1.3
+    published_at: 2020-10-12 10:56:43
+    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.1.3
     python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 1
+        - 1
+        - 3
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 1
+        - 1
+        - 3
+      - *id001
+      - *id002
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-firewall
   url: https://github.com/QualiSystems/cloudshell-firewall
@@ -188,6 +329,54 @@
     published_at: 2021-04-08 12:08:05
     release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/2.0.0
     python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 2
+        - 0
+        - 0
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 2
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: CloudShell Firewall PanOS
+    tag_name: 1.0.5
+    published_at: 2020-12-08 13:54:12
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/1.0.5
+    python_version: PY2
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 1
+        - 0
+        - 5
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 1
+        - 0
+        - 5
+      - *id001
+      - *id002
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-huawei
   url: https://github.com/QualiSystems/cloudshell-huawei
@@ -517,7 +706,113 @@
     tag_name: 4.0.1
     published_at: 2021-08-30 11:24:49
     release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/4.0.1
-    python_version: PY2
+    python_version: PY3
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 4
+        - 0
+        - 1
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 4
+        - 0
+        - 1
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: cloudshell-tc-scripts 3.0.3
+    tag_name: 3.0.3
+    published_at: 2021-04-13 11:12:16
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/3.0.3
+    python_version: PY3
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 3
+        - 0
+        - 3
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 3
+        - 0
+        - 3
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: cloudshell-tc-scripts 2.0.1
+    tag_name: 2.0.1
+    published_at: 2021-02-11 13:48:28
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/2.0.1
+    python_version: PY3
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 2
+        - 0
+        - 1
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 2
+        - 0
+        - 1
+      - *id001
+      - *id002
+      - *id001
+      - *id002
+  - !Release
+    title: cloudshell-tc-scripts 1.0.5
+    tag_name: 1.0.5
+    published_at: 2021-01-08 15:30:47
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/1.0.5
+    python_version: PY3
+    dependencies: null
+    version: !!python/object:packaging.version.Version
+      _version: !!python/object/new:packaging.version._Version
+      - 0
+      - !!python/tuple
+        - 1
+        - 0
+        - 5
+      - null
+      - null
+      - null
+      - null
+      _key: !!python/tuple
+      - 0
+      - !!python/tuple
+        - 1
+        - 0
+        - 5
+      - *id001
+      - *id002
+      - *id001
+      - *id002
 - !Package
   name: cloudshell-tg-breaking-point
   url: https://github.com/QualiSystems/cloudshell-tg-breaking-point
