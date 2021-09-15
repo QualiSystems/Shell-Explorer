@@ -1,14 +1,17 @@
 import json
 import logging
 import re
-from collections import OrderedDict
 from copy import deepcopy
 from functools import lru_cache
 from typing import TYPE_CHECKING, Optional
 
+from github.GithubException import GithubException
+
 from scripts.shell_explorer.entities import Package, Release, Repo, Shell2G, ShellL1
 from scripts.shell_explorer.helpers import (
+    DEFAULT_PY_VERSION,
     PyVersion,
+    get_actual_releases,
     get_all_cloudshell_dependencies,
     get_package_python_version,
     get_packages_usage,
@@ -18,7 +21,6 @@ from scripts.shell_explorer.operations import RepoOperations, SerializationOpera
 
 if TYPE_CHECKING:
     from github import Repository as GitRepository
-    from github.GitRelease import GitRelease
 
 
 class ShellExplorer:
@@ -28,7 +30,8 @@ class ShellExplorer:
         SHELLS_FILE = "shells.yaml"
         PACKAGES_FILE = "packages.yaml"
         PACKAGES_USAGE_FILE = "packages-usage.yaml"
-        EXPLORE_RELEASES_DEPTH = 5
+        EXPLORE_RELEASES_DEPTH = 10
+        MAX_RELEASE_AGE_DAYS = 365
 
     class CONST:
         SHELL_L1_FILES = {"main.py"}
@@ -56,12 +59,10 @@ class ShellExplorer:
         self.repo_operations = RepoOperations(
             auth_key, self.CONFIG.EXPLORE_ORG, self.CONFIG.WORKING_REPO
         )
-        self._repo_type_dict = OrderedDict(
-            [
-                (Package, self._is_it_a_package),
-                (ShellL1, self.is_it_l1_shell),
-                (Shell2G, self.is_it_2g_shell),
-            ]
+        self._repo_types = (
+            (Package, self._is_it_a_package),
+            (ShellL1, self.is_it_l1_shell),
+            (Shell2G, self.is_it_2g_shell),
         )
 
     @property
@@ -145,57 +146,37 @@ class ShellExplorer:
             version = PyVersion.PY2
         return version
 
-    def _get_package_py_version(self, git_repo, release) -> "PyVersion":
-        content = git_repo.get_contents(self.CONST.SETUP_PY, release.tag_name)
-        content = get_str_from_git_content(content)
-        return get_package_python_version(content)
+    def _get_package_py_version(
+        self, git_repo: "GitRepository", release: "Release"
+    ) -> "PyVersion":
+        try:
+            content = git_repo.get_contents(self.CONST.SETUP_PY, release.tag_name)
+            content = get_str_from_git_content(content)
+            py_version = get_package_python_version(content)
+        except Exception:
+            msg = f"Could not get version for {git_repo.name} {release.tag_name}"
+            logging.warning(msg, exc_info=True)
+            py_version = DEFAULT_PY_VERSION
+        return py_version
 
-    def _filter_releases_by_py_ver(
-        self, git_repo, releases, existing_releases, repo_object: "Repo"
-    ):
-        existing_releases = list(filter(lambda r: r in releases, existing_releases))
-        version_dict = {r.python_version: r for r in existing_releases}
-        for release in releases:
-            if release not in existing_releases:
-                if isinstance(repo_object, Package):
-                    py_version = self._get_package_py_version(git_repo, release)
-                else:
-                    py_version = self._get_shell_py_version(git_repo, release)
-                release.python_version = py_version.value
-                if release.python_version:
-                    ex_rel = version_dict.get(release.python_version)
-                    if not ex_rel or release > ex_rel:
-                        if isinstance(repo_object, Shell2G):
-                            self._set_dependencies(release, git_repo)
-                        version_dict[release.python_version] = release
-            else:
-                break
-
-        sorted_releases = sorted(version_dict.values(), reverse=True)
-        logging.info(f"New releases: {sorted_releases}")
-        return sorted_releases
+    def _get_py_version(
+        self, git_repo: "GitRepository", repo_object: "Repo", release: "Release"
+    ) -> str:
+        if isinstance(repo_object, Package):
+            py_version = self._get_package_py_version(git_repo, release)
+        else:
+            py_version = self._get_shell_py_version(git_repo, release)
+        return py_version.value
 
     def _repo_releases(
         self, repo: "GitRepository", release_ids: Optional[list[str]]
-    ) -> list[Release]:
+    ) -> list["Release"]:
         if not release_ids:
             releases = [r for r in repo.get_releases() if r.published_at]
             releases = releases[: self.CONFIG.EXPLORE_RELEASES_DEPTH]
         else:
             releases = list(map(repo.get_release, release_ids))
-        return [
-            self._create_release_object(r)
-            for r in sorted(releases, key=lambda r: r.published_at, reverse=True)
-        ]
-
-    def _create_release_object(self, git_release: "GitRelease") -> Optional["Release"]:
-        if git_release:
-            return Release(
-                git_release.title,
-                git_release.tag_name,
-                git_release.published_at,
-                git_release.html_url,
-            )
+        return get_actual_releases(map(Release.from_git_release, releases))
 
     def _extract_existing_repo(self, repo):
         return self._shells_dict.get(repo.name, self._packages_dict.get(repo.name))
@@ -209,31 +190,36 @@ class ShellExplorer:
             content, release.python_version == "PY3"
         )
 
-    def _explore_repo(
-        self, repo: "GitRepository", release_ids: Optional[list[int]] = None
-    ):
-        logging.info(f"Explore {repo.name}")
-        repo_object = self._extract_existing_repo(repo)
-        releases = self._repo_releases(repo, release_ids)
-        if not repo_object and releases:
-            content = {c.name for c in repo.get_contents("")}
-            repo_name = repo.name
-            for repo_class, check_func in self._repo_type_dict.items():
-                if check_func(content, repo_name):
-                    repo_object = repo_class(repo_name, repo.html_url)
-                    logging.info(f"Added {repo_object}")
-                    break
-        if not repo_object or not releases:
-            return
+    def _create_repo_object(self, git_repo: "GitRepository") -> Optional["Repo"]:
+        try:
+            content = {c.name for c in git_repo.get_contents("")}
+        except GithubException as e:
+            if "repository is empty" not in str(e):
+                raise
+        else:
+            for repo_class, check_func in self._repo_types:
+                if check_func(content, git_repo.name):
+                    repo_object = repo_class(git_repo.name, git_repo.html_url)
+                    return repo_object
 
-        if releases[0] not in repo_object.releases:
-            repo_object.releases = self._filter_releases_by_py_ver(
-                repo, releases, repo_object.releases, repo_object
-            )
-            if isinstance(repo_object, Package):
-                self._packages.add(repo_object)
-            else:
-                self._shells.add(repo_object)
+    def _explore_repo(
+        self, git_repo: "GitRepository", release_ids: Optional[list[int]] = None
+    ):
+        logging.info(f"Explore {git_repo.name}")
+        if repo_object := self._extract_existing_repo(
+            git_repo
+        ) or self._create_repo_object(git_repo):
+            releases = self._repo_releases(git_repo, release_ids)
+            if releases and releases != repo_object.releases:
+                for r in releases:
+                    r.python_version = self._get_py_version(git_repo, repo_object, r)
+                repo_object.releases = releases
+
+                if isinstance(repo_object, Package):
+                    self._packages.add(repo_object)
+                else:
+                    self._shells.add(repo_object)
+                logging.info(f"Added or updated {repo_object}")
 
     def _explore_releases(self):
         if not self.new_releases:

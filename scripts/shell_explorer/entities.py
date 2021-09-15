@@ -1,6 +1,12 @@
 import functools
+from functools import cached_property
+from typing import TYPE_CHECKING
 
 import yaml
+
+if TYPE_CHECKING:
+    from github.GitRelease import GitRelease
+    from packaging.version import Version
 
 
 @functools.total_ordering
@@ -40,6 +46,21 @@ class Release(yaml.YAMLObject):
 
     def __repr__(self):
         return self.__str__()
+
+    @cached_property
+    def version(self) -> "Version":
+        from scripts.shell_explorer.helpers import get_release_version
+
+        return get_release_version(self)
+
+    @classmethod
+    def from_git_release(cls, git_release: "GitRelease") -> "Release":
+        return cls(
+            git_release.title,
+            git_release.tag_name,
+            git_release.published_at,
+            git_release.html_url,
+        )
 
 
 @functools.total_ordering

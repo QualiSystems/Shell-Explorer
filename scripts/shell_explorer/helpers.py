@@ -2,17 +2,20 @@ import enum
 import logging
 import re
 import sys
-from typing import TYPE_CHECKING, Optional
+from datetime import datetime, timedelta
+from typing import TYPE_CHECKING, Iterable, Optional
 
-from github.ContentFile import ContentFile
 from packaging.requirements import Requirement
 from packaging.specifiers import SpecifierSet
+from packaging.version import InvalidVersion, Version
 from pip_download import PipDownloader
 
 from scripts.shell_explorer.entities import Shell2G
 
 if TYPE_CHECKING:
-    from scripts.shell_explorer.entities import Repo
+    from github.ContentFile import ContentFile
+
+    from scripts.shell_explorer.entities import Release, Repo
 
 PYTHON_REQUIRES_PATTERN = re.compile(
     r"python_requires\s*=\s*(\(?(\s*['\"].+?['\"]\s*)+\)?)", re.DOTALL
@@ -26,6 +29,7 @@ class PyVersion(enum.Enum):
 
 
 DEFAULT_PY_VERSION = PyVersion.PY2
+MAX_RELEASE_AGE_DAYS = 365
 
 
 def set_logger():
@@ -112,3 +116,38 @@ def get_packages_usage(shells: set["Repo"]) -> dict[str, dict[str, list[str]]]:
             sorted(packages_usage[package_name].items())
         )
     return packages_usage
+
+
+def get_release_version(release: "Release") -> "Version":
+    try:
+        version = Version(release.tag_name)
+    except InvalidVersion:
+        version = Version("0")
+    return version
+
+
+def sort_releases_by_version(releases: Iterable["Release"]) -> list["Release"]:
+    return sorted(releases, key=lambda r: r.version, reverse=True)
+
+
+def get_max_major_releases(releases: Iterable["Release"]) -> list["Release"]:
+    versions: dict[int, "Release"] = {}
+    for release in releases:
+        max_major_release = versions.get(release.version.major)
+        if not max_major_release:
+            versions[release.version.major] = release
+        elif max_major_release.version < release.version:
+            versions[release.version.major] = release
+    return sort_releases_by_version(versions.values())
+
+
+def is_release_outdated(release: "Release") -> bool:
+    return datetime.now() - release.published_at > timedelta(days=MAX_RELEASE_AGE_DAYS)
+
+
+def get_actual_releases(releases: Iterable["Release"]) -> list["Release"]:
+    max_major_releases = get_max_major_releases(releases)
+    for release in max_major_releases[1:].copy():
+        if is_release_outdated(release):
+            max_major_releases.remove(release)
+    return max_major_releases
