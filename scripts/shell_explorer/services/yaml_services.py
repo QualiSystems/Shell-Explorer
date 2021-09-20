@@ -7,6 +7,7 @@ import yaml
 
 from scripts.shell_explorer.entities import Package, Repo, Shell2G, ShellL1
 from scripts.shell_explorer.services import GhRepo
+from scripts.shell_explorer.services.github_services import EmptyRepo
 
 SHELL_TYPES = (Shell2G, ShellL1)
 REPO_TYPES = (*SHELL_TYPES, Package)
@@ -95,8 +96,13 @@ class ReposContainer:
             self._packages_dict[repo.name] = repo
 
     def create_repo_obj(self, gh_repo: "GhRepo") -> "T_REPOS":
+        try:
+            file_names = set(gh_repo.ls(""))
+        except EmptyRepo:
+            raise RepoIsNotRecognized(gh_repo.name)
+
         for r_type in REPO_TYPES:
-            if r_type.is_type(gh_repo.name, gh_repo.ls("")):
+            if r_type.is_type(gh_repo.name, file_names):
                 repo_obj = r_type(gh_repo.name, gh_repo.url)
                 break
         else:

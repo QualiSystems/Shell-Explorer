@@ -3,9 +3,16 @@ from typing import Iterable, Iterator, Optional, Union
 
 import attr
 from github import Github
+from github.GithubException import GithubException
 from github.GitRelease import GitRelease
 from github.Organization import Organization
 from github.Repository import Repository
+
+
+class EmptyRepo(Exception):
+    def __init__(self, repo: "GhRepo"):
+        self.repo = repo
+        super().__init__(f"The repo {repo.name} is empty")
 
 
 @attr.s(auto_attribs=True)
@@ -41,17 +48,24 @@ class GhRepo:
         content = self._git_repo.get_contents(path, ref)
         return content.decoded_content.decode("utf-8")
 
-    def ls(self, path: str) -> set[str]:
-        files = self._git_repo.get_contents(path)
+    def ls(self, path: str) -> Iterable[str]:
+        try:
+            files = self._git_repo.get_contents(path)
+        except GithubException as e:
+            if "repository is empty" in str(e).lower():
+                raise EmptyRepo(self) from e
+            else:
+                raise
+
         if not isinstance(files, list):
             files = [files]
-        return {file.name for file in files}
+        return (file.name for file in files)
 
-    def get_releases(self, public: bool = True) -> list["GhRelease"]:
+    def get_releases(self, public: bool = True) -> Iterable["GhRelease"]:
         releases = self._git_repo.get_releases()
         if public:
             releases = filter(is_public_release, releases)
-        return list(map(GhRelease, releases))
+        return map(GhRelease, releases)
 
     def update_file(self, path: str, message: str, content: str, branch: str):
         c = self._git_repo.get_contents(path, branch)

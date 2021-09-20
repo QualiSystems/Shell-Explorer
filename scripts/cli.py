@@ -22,7 +22,7 @@ def cli():
     help="Json dict of repositories and release ids. {<repo_name>: [<release_id1>]}",
 )
 def shell_explorer(auth_key: str, branch: str, new_releases: str):
-    se = ShellExplorer(auth_key, branch, new_releases)
+    se = ShellExplorer.from_cli(auth_key, branch, new_releases)
     se.scan_and_commit()
 
 

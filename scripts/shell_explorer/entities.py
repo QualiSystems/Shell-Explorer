@@ -1,7 +1,7 @@
 import functools
 import logging
 import re
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 from datetime import datetime
 from typing import TYPE_CHECKING, Iterable, Optional
 
@@ -70,7 +70,7 @@ class ShellRelease(Release):
 
 
 @functools.total_ordering
-class Repo(yaml.YAMLObject, metaclass=ABCMeta):
+class Repo(yaml.YAMLObject):
     yaml_tag = "!Repository"
 
     def __init__(self, name: str, url: str, releases: Optional[list["Release"]] = None):
@@ -111,12 +111,12 @@ class Repo(yaml.YAMLObject, metaclass=ABCMeta):
     def update_releases(
         self, gh_repo: "GhRepo", gh_releases: Iterable["GhRelease"]
     ) -> bool:
-        if not (is_updated := is_releases_equal(self.releases, gh_releases)):
+        if is_updated := not is_releases_equal(self.releases, gh_releases):
             self.releases = self._create_new_releases(gh_repo, gh_releases)
         return is_updated
 
 
-class Shell(Repo, metaclass=ABCMeta):
+class Shell(Repo):
     yaml_tag = "!Shell"
     METADATA_FILE = "/src/drivermetadata.xml"
     REQUIREMENTS_FILE = "src/requirements.txt"
