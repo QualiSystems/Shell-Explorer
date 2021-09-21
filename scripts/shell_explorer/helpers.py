@@ -76,11 +76,18 @@ def get_py_version_from_shell_metadata(data: str) -> "PyVersion":
     return v
 
 
+class DependenciesInconsistent(Exception):
+    ...
+
+
 def get_all_cloudshell_dependencies(requirements_text: str, is_py3: bool) -> list[str]:
     requirements = [req.strip() for req in requirements_text.splitlines()]
     py_version = "cp37" if is_py3 else "cp27"
     pip_downloader = PipDownloader([py_version], ["win"])
-    all_requirements = pip_downloader.resolve_requirements_range(requirements)
+    try:
+        all_requirements = pip_downloader.resolve_requirements_range(requirements)
+    except Exception as e:
+        raise DependenciesInconsistent from e
     return [str(req) for req in all_requirements if req.name.startswith("cloudshell-")]
 
 

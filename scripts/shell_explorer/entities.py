@@ -9,6 +9,7 @@ import yaml
 
 from scripts.shell_explorer.helpers import (
     DEFAULT_PY_VERSION,
+    DependenciesInconsistent,
     PyVersion,
     get_all_cloudshell_dependencies,
     get_package_python_version,
@@ -167,12 +168,26 @@ class Shell2G(Shell):
     def _get_requirements(self, gh_repo: "GhRepo", ref: str) -> str:
         return gh_repo.get_file_data(self.REQUIREMENTS_FILE, ref)
 
+    def _get_dependencies(self, gh_repo: "GhRepo", ref: str, is_py3: bool) -> list[str]:
+        try:
+            dep = get_all_cloudshell_dependencies(
+                self._get_requirements(gh_repo, ref), is_py3
+            )
+        except DependenciesInconsistent:
+            msg = (
+                f"Dependencies for the repo {gh_repo.name} with ref {ref} "
+                f"are inconsistent"
+            )
+            logging.warning(msg, exc_info=True)
+            dep = []
+        return dep
+
     def _create_new_release(
         self, gh_repo: "GhRepo", gh_release: "GhRelease"
     ) -> "Shell2GRelease":
         py_v = self._get_py_version(gh_repo, gh_release.tag_name)
-        dependencies = get_all_cloudshell_dependencies(
-            self._get_requirements(gh_repo, gh_release.tag_name), py_v is py_v.PY3
+        dependencies = self._get_dependencies(
+            gh_repo, gh_release.tag_name, py_v is py_v.PY3
         )
         return Shell2GRelease(
             title=gh_release.title,
