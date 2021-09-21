@@ -1,448 +1,968 @@
 cloudshell-automation-api:
   '*':
-  - Kubernetes-Cloud-Provider-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - OpenStack-Cloud-Provider-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
-  - OpenStack-Shell-2G
-  - DUT-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    DUT-Shell-2G:
+    - tag_name: 0.2.5
+      id: 49354861
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
   <7.1,>=7.0:
-  - Cisco-IOS-Router-Shell-2G
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-AIREOS-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - SDN-Opendaylight-Shell-2G
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
   <8.4,>=8.3:
-  - Huawei-VRP-Switch-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
   <9.0.1.0,>=9.0.0.0:
-  - VMware-vCenter-Cloud-Provider-Shell-2G
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 3.3.0
+      id: 45486282
+    - tag_name: 2.2.0
+      id: 39109499
   '>=9.2':
-  - Cisco-IOS-Router-Shell-2G
-  - Juniper-JunOS-Router-Shell-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
   '>=9.3':
-  - VIRL-Shell-2G
-  - Amazon-AWS-Cloud-Provider-Shell-2G
-  - OCI-Shell-2G
+    Amazon-AWS-Cloud-Provider-Shell-2G:
+    - tag_name: 1.1.1
+      id: 48494100
+    - tag_name: 0.2.2
+      id: 44209114
+    OCI-Shell-2G:
+    - tag_name: 1.1.9
+      id: 36088821
+    VIRL-Shell-2G:
+    - tag_name: 1.0.2
+      id: 30984573
 cloudshell-checkpoint:
   <1.1,>=1.0:
-  - Checkpoint-Gaia-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
 cloudshell-cli:
   <3.2,>=3.1:
-  - Cisco-AIREOS-Shell-2G
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
   <3.3,>=3.2:
-  - Cisco-IOS-Router-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - SDN-Opendaylight-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
   <3.4,>=3.3:
-  - Huawei-VRP-Switch-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
   <5,>=4.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
   <5.0,>=4.0:
-  - Cisco-IOS-Router-Shell-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
 cloudshell-core:
   <2.2,>=2.1:
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
   <2.3,>=2.2:
-  - Cisco-IOS-Router-Shell-2G
-  - Huawei-VRP-Switch-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-AIREOS-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
-  - SDN-Opendaylight-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
 cloudshell-cp-aws:
   ~=3.0:
-  - Amazon-AWS-Cloud-Provider-Shell-2G
+    Amazon-AWS-Cloud-Provider-Shell-2G:
+    - tag_name: 1.1.1
+      id: 48494100
+    - tag_name: 0.2.2
+      id: 44209114
 cloudshell-cp-azure:
   <3.4.0,>=3.3.0:
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
 cloudshell-cp-core:
   <1.1,>=1.0.4.89:
-  - VIRL-Shell-2G
-  - OCI-Shell-2G
+    OCI-Shell-2G:
+    - tag_name: 1.1.9
+      id: 36088821
+    VIRL-Shell-2G:
+    - tag_name: 1.0.2
+      id: 30984573
+  <1.2.0,>=1.1.0:
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 2.2.0
+      id: 39109499
   <1.3.0,>=1.2.0:
-  - VMware-vCenter-Cloud-Provider-Shell-2G
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 3.3.0
+      id: 45486282
   <3.0.0,>=2.0.0:
-  - Kubernetes-Cloud-Provider-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
   ~=1.2.0:
-  - Amazon-AWS-Cloud-Provider-Shell-2G
+    Amazon-AWS-Cloud-Provider-Shell-2G:
+    - tag_name: 1.1.1
+      id: 48494100
+    - tag_name: 0.2.2
+      id: 44209114
   ~=2.1:
-  - OpenStack-Cloud-Provider-Shell-2G
-  - OpenStack-Shell-2G
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
 cloudshell-cp-kubernetes:
   <2.0.0,>=1.0.0:
-  - Kubernetes-Cloud-Provider-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
 cloudshell-cp-openstack:
-  ~=2.0:
-  - OpenStack-Shell-2G
   ~=2.1:
-  - OpenStack-Cloud-Provider-Shell-2G
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
 cloudshell-cp-vcenter:
+  <2.4.0,>=2.3.0:
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 2.2.0
+      id: 39109499
   <3.5.0,>=3.4.0:
-  - VMware-vCenter-Cloud-Provider-Shell-2G
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 3.3.0
+      id: 45486282
 cloudshell-cumulus-linux:
   <1.1,>=1.0:
-  - Cumulus-Linux-Switch-Shell-2G
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
 cloudshell-f5:
-  <1.1,>=1.0:
-  - F5-BigIp-Firewall-Shell-2G
   <1.2,>=1.1:
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
 cloudshell-firewall:
   <3.1,>=3.0:
-  - a10-acos-firewall-shell-2g
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
-  - Cisco-ASA-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
 cloudshell-firewall-a10:
   <1.1,>=1.0:
-  - a10-acos-firewall-shell-2g
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
 cloudshell-firewall-cisco-asa:
   <3.1,>=3.0:
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
 cloudshell-firewall-fortinet:
   <1.2,>=1.1:
-  - FortiGate-FortiOS-Firewall-Shell-2G
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
 cloudshell-firewall-panos:
   <2.1,>=2.0:
-  - PaloAlto-PanOS-Firewall-Shell-2G
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
 cloudshell-huawei:
   <4.1,>=4.0:
-  - Huawei-VRP-WDM-Shell-2G
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
 cloudshell-huawei-wdm:
   ~=1.0:
-  - Huawei-VRP-WDM-Shell-2G
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
 cloudshell-logging:
+  <1.1.0,<2,>=1.0:
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 2.2.0
+      id: 39109499
   <1.1.0,<2,>=1.0.0:
-  - VMware-vCenter-Cloud-Provider-Shell-2G
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 3.3.0
+      id: 45486282
   <2,>=1:
-  - Cisco-IOS-Router-Shell-2G
-  - OpenStack-Cloud-Provider-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
   <2,>=1.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Kubernetes-Cloud-Provider-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - VIRL-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Amazon-AWS-Cloud-Provider-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
-  - OpenStack-Shell-2G
-  - DUT-Shell-2G
-  - OCI-Shell-2G
+    Amazon-AWS-Cloud-Provider-Shell-2G:
+    - tag_name: 1.1.1
+      id: 48494100
+    - tag_name: 0.2.2
+      id: 44209114
+    DUT-Shell-2G:
+    - tag_name: 0.2.5
+      id: 49354861
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    OCI-Shell-2G:
+    - tag_name: 1.1.9
+      id: 36088821
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
+    VIRL-Shell-2G:
+    - tag_name: 1.0.2
+      id: 30984573
 cloudshell-networking:
   <5.1,>=5.0:
-  - Cisco-AIREOS-Shell-2G
-  - SDN-Opendaylight-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
   <5.2,>=5.1:
-  - Cisco-IOS-Router-Shell-2G
-  - Huawei-VRP-Switch-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
   <5.2.0,>=5.1.0:
-  - Cumulus-Linux-Switch-Shell-2G
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
 cloudshell-networking-alcatel:
   <1.3,>=1.2:
-  - Alcatel-Timetra-Router-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
 cloudshell-networking-arista:
   <2.1,>=2.0:
-  - Arista-EOS-Router-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
 cloudshell-networking-cisco:
   <5.3,>=5.2:
-  - Cisco-IOS-Router-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
   <7.0,>=6.0:
-  - Cisco-IOS-Router-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
 cloudshell-networking-cisco-aireos:
   <2.1,>=2.0:
-  - Cisco-AIREOS-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
 cloudshell-networking-cisco-iosxr:
   <4.1,>=4.0:
-  - Cisco-IOSXR-Router-Shell-2G
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
 cloudshell-networking-cisco-nxos:
   <5.3,>=5.2:
-  - Cisco-NXOS-Switch-Shell-2G
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
 cloudshell-networking-devices:
   <2.1,>=2.0:
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
   <2.2,>=2.1:
-  - Cisco-AIREOS-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
   <2.3,>=2.2:
-  - SDN-Opendaylight-Shell-2G
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
   <2.4,>=2.3:
-  - Cisco-IOS-Router-Shell-2G
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
   <2.5,>=2.4:
-  - Arista-EOS-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - Arista-EOS-Switch-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
   <2.7,>=2.6:
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
   <2.8,>=2.7:
-  - Huawei-VRP-Switch-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
   <2.9,>=2.8:
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
 cloudshell-networking-huawei:
   <3.1,>=3.0:
-  - Huawei-VRP-Switch-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
 cloudshell-networking-juniper:
   <6,>=5.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
 cloudshell-sdn-odl:
   <1.1,>=1.0:
-  - SDN-Opendaylight-Shell-2G
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
 cloudshell-shell-connectivity-flow:
   <2,>=1.0:
-  - Juniper-JunOS-Firewall-Shell-2G
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
   <2.0,>=1.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
   <3.0,>=2.0:
-  - Cisco-IOS-Router-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
   ~=2.0:
-  - OpenStack-Cloud-Provider-Shell-2G
-  - OpenStack-Shell-2G
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
 cloudshell-shell-core:
   <3.1,>=3.0:
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
   <3.2,>=3.1:
-  - Cisco-AIREOS-Shell-2G
-  - SDN-Opendaylight-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
   <4.1,>=4.0:
-  - Cisco-IOS-Router-Shell-2G
-  - Huawei-VRP-Switch-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
   <5.1,<6,>=5.0:
-  - Checkpoint-Gaia-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
   <6,>=5.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - DUT-Shell-2G
+    DUT-Shell-2G:
+    - tag_name: 0.2.5
+      id: 49354861
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
   <6,>=5.0,~=5.0:
-  - OpenStack-Cloud-Provider-Shell-2G
-  - OpenStack-Shell-2G
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
   <6.0,>=5.0:
-  - Cisco-IOS-Router-Shell-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
   <6.0,>=5.0.4:
-  - VIRL-Shell-2G
-  - OCI-Shell-2G
+    OCI-Shell-2G:
+    - tag_name: 1.1.9
+      id: 36088821
+    VIRL-Shell-2G:
+    - tag_name: 1.0.2
+      id: 30984573
   <6.0.0,>=5.0,>=5.0.3:
-  - Kubernetes-Cloud-Provider-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
   <6.0.0,>=5.0.3:
-  - VMware-vCenter-Cloud-Provider-Shell-2G
+    VMware-vCenter-Cloud-Provider-Shell-2G:
+    - tag_name: 3.3.0
+      id: 45486282
+    - tag_name: 2.2.0
+      id: 39109499
   ~=5.0:
-  - Amazon-AWS-Cloud-Provider-Shell-2G
+    Amazon-AWS-Cloud-Provider-Shell-2G:
+    - tag_name: 1.1.1
+      id: 48494100
+    - tag_name: 0.2.2
+      id: 44209114
 cloudshell-shell-firewall-standard:
   <3.1,>=3.0:
-  - Checkpoint-Gaia-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
   ==3.0.2:
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
 cloudshell-shell-flows:
   <2,>=1.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Kubernetes-Cloud-Provider-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
   <2.0,>=1.0:
-  - Cisco-IOS-Router-Shell-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
 cloudshell-shell-networking-standard:
   ==5.0.4:
-  - Cisco-IOS-Router-Shell-2G
-  - Juniper-JunOS-Router-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
-  - DUT-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    DUT-Shell-2G:
+    - tag_name: 0.2.5
+      id: 49354861
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
 cloudshell-shell-standards:
   <2.0,>=1.0:
-  - Cisco-IOS-Router-Shell-2G
-  - Kubernetes-Cloud-Provider-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Kubernetes-Cloud-Provider-Shell-2G
-  - Microsoft-Azure-Cloud-Provider-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
-  - DUT-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    DUT-Shell-2G:
+    - tag_name: 0.2.5
+      id: 49354861
+    Kubernetes-Cloud-Provider-2G:
+    - tag_name: 1.0.1
+      id: 35869556
+    Microsoft-Azure-Cloud-Provider-Shell-2G:
+    - tag_name: 2.3.0
+      id: 47753929
   <2.0,>=1.0,>=1.2:
-  - PaloAlto-PanOS-Firewall-Shell-2G
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
   <2.0,>=1.0,~=1.2:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
   ~=1.1:
-  - OpenStack-Cloud-Provider-Shell-2G
-  - OpenStack-Shell-2G
+    OpenStack-Cloud-Provider-Shell-2G:
+    - tag_name: 1.0.0
+      id: 36289802
 cloudshell-snmp:
   <3.1,>=3.0:
-  - Cisco-ASA-Firewall-Shell-2G
+    Cisco-ASA-Firewall-Shell-2G:
+    - tag_name: 1.0.0
+      id: 6948738
   <3.2,>=3.1:
-  - Cisco-AIREOS-Shell-2G
+    Cisco-AIREOS-Shell-2G:
+    - tag_name: 1.1.0
+      id: 8412158
   <3.3,>=3.2:
-  - Cisco-IOS-Router-Shell-2G
-  - Arista-EOS-Router-Shell-2G
-  - a10-acos-firewall-shell-2g
-  - F5-BigIp-Loadbalancer-Shell-2G
-  - Cisco-NXOS-Switch-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - IxVM-Deployment-App-Chassis-Shell-2G
-  - FortiGate-FortiOS-Firewall-Shell-2G
-  - Arista-EOS-Switch-Shell-2G
-  - Cisco-IOSXR-Router-Shell-2G
-  - Alcatel-Timetra-Router-Shell-2G
-  - F5-BigIp-Firewall-Shell-2G
-  - SDN-Opendaylight-Shell-2G
+    Alcatel-Timetra-Router-Shell-2G:
+    - tag_name: 1.1.1
+      id: 17193877
+    Arista-EOS-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 11438368
+    Arista-EOS-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 10389173
+    Cisco-IOSXR-Router-Shell-2G:
+    - tag_name: 2.0.2
+      id: 9251976
+    Cisco-NXOS-Switch-Shell-2G:
+    - tag_name: 2.0.2
+      id: 32402610
+    FortiGate-FortiOS-Firewall-Shell-2G:
+    - tag_name: 1.1.0
+      id: 20766689
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
+    SDN-Opendaylight-Shell-2G:
+    - tag_name: 1.0.0
+      id: 8454353
+    a10-acos-firewall-shell-2g:
+    - tag_name: 1.0.0
+      id: 10674401
   <3.4,>=3.3:
-  - Huawei-VRP-Switch-Shell-2G
-  - Huawei-VRP-Router-Shell-2G
-  - F5-BIG-IP-Loadbalancer-Shell-2G
-  - Cumulus-Linux-Switch-Shell-2G
-  - BreakingPoint-Controller-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
-  - F5-BIG-IP-Firewall-Shell-2G
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
+    Cumulus-Linux-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 17072661
+    F5-BIG-IP-Firewall-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449058
+    F5-BIG-IP-Loadbalancer-Shell-2G:
+    - tag_name: 1.1.1
+      id: 32449343
+    Huawei-VRP-Router-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817683
+    Huawei-VRP-Switch-Shell-2G:
+    - tag_name: 1.0.0
+      id: 16817739
   <5,>=4.0:
-  - Juniper-JunOS-Router-Shell-2G
-  - Juniper-JunOS-Firewall-Shell-2G
-  - Juniper-JunOS-Switch-Shell-2G
-  - Checkpoint-Gaia-Firewall-Shell-2G
+    Checkpoint-Gaia-Firewall-Shell-2G:
+    - tag_name: 1.0.1
+      id: 38313385
+    Juniper-JunOS-Firewall-Shell-2G:
+    - tag_name: 3.0.3
+      id: 39822780
+    Juniper-JunOS-Router-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825806
+    Juniper-JunOS-Switch-Shell-2G:
+    - tag_name: 3.0.4
+      id: 39825859
   <5,>=4.0,>=4.0.1:
-  - Cisco-IOS-Router-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
   <5.0,>=4.0,>=4.0.1:
-  - PaloAlto-PanOS-Firewall-Shell-2G
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
 cloudshell-snmp-autoload:
   <2.0,>=1.0:
-  - Cisco-IOS-Router-Shell-2G
-  - PaloAlto-PanOS-Firewall-Shell-2G
-  - Cisco-IOS-Switch-Shell-2G
-  - Huawei-VRP-WDM-Shell-2G
+    Cisco-IOS-Router-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31411420
+    Cisco-IOS-Switch-Shell-2G:
+    - tag_name: 3.0.1
+      id: 31463808
+    Huawei-VRP-WDM-Shell-2G:
+    - tag_name: 1.0.0
+      id: 41246362
+    PaloAlto-PanOS-Firewall-Shell-2G:
+    - tag_name: 2.0.0
+      id: 41119829
 cloudshell-tg-breaking-point:
   <2.1,>=2.0:
-  - BreakingPoint-Controller-Shell-2G
-  - BreakingPoint-Chassis-Shell-2G
+    BreakingPoint-Chassis-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15537031
+    BreakingPoint-Controller-Shell-2G:
+    - tag_name: 1.0.0
+      id: 15536912
 cloudshell-traffic-virtual:
   <1.2,>=1.1:
-  - IxVM-Deployment-App-Chassis-Shell-2G
+    IxVM-Deployment-App-Chassis-Shell-2G:
+    - tag_name: 1.0.2
+      id: 17769689
