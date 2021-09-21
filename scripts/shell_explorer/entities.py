@@ -178,7 +178,8 @@ class Shell2G(Shell):
                 f"Dependencies for the repo {gh_repo.name} with ref {ref} "
                 f"are inconsistent"
             )
-            logging.warning(msg, exc_info=True)
+            logging.warning(msg)
+            logging.debug("Resolve error", exc_info=True)
             dep = []
         return dep
 
@@ -221,7 +222,8 @@ class Package(Repo):
             py_version = get_package_python_version(content)
         except Exception:
             msg = f"Could not get version for {gh_repo.name} {ref}"
-            logging.warning(msg, exc_info=True)
+            logging.warning(msg)
+            logging.debug("Get py version error", exc_info=True)
             py_version = DEFAULT_PY_VERSION
         return py_version
 
