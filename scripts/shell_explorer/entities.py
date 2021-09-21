@@ -57,12 +57,8 @@ class Release(yaml.YAMLObject):
         return self.__str__()
 
 
-class PackageRelease(Release):
-    yaml_tag = "!PackageRelease"
-
-
-class ShellRelease(Release):
-    yaml_tag = "!ShellRelease"
+class Shell2GRelease(Release):
+    yaml_tag = "!Shell2GRelease"
 
     def __init__(self, *args, dependencies: Optional[list[str]] = None, **kwargs):
         super().__init__(*args, **kwargs)
@@ -115,42 +111,13 @@ class Repo(yaml.YAMLObject):
             self.releases = self._create_new_releases(gh_repo, gh_releases)
         return is_updated
 
+    @abstractmethod
+    def _get_py_version(self, gh_repo: "GhRepo", ref: str) -> "PyVersion":
+        raise NotImplementedError
+
 
 class Shell(Repo):
     yaml_tag = "!Shell"
-    METADATA_FILE = "/src/drivermetadata.xml"
-    REQUIREMENTS_FILE = "src/requirements.txt"
-    releases: list["ShellRelease"]
-
-    def _get_metadata(self, gh_repo: "GhRepo", ref: str) -> str:
-        return gh_repo.get_file_data(self.METADATA_FILE, ref)
-
-    def _get_requirements(self, gh_repo: "GhRepo", ref: str) -> str:
-        return gh_repo.get_file_data(self.REQUIREMENTS_FILE, ref)
-
-    def _get_py_version(self, gh_repo: "GhRepo", ref: str) -> "PyVersion":
-        return get_py_version_from_shell_metadata(self._get_metadata(gh_repo, ref))
-
-    def _create_new_release(
-        self, gh_repo: "GhRepo", gh_release: "GhRelease"
-    ) -> "ShellRelease":
-        py_v = self._get_py_version(gh_repo, gh_release.tag_name)
-        dependencies = get_all_cloudshell_dependencies(
-            self._get_requirements(gh_repo, gh_release.tag_name), py_v is py_v.PY3
-        )
-        return ShellRelease(
-            title=gh_release.title,
-            tag_name=gh_release.tag_name,
-            published_at=gh_release.published_at,
-            release_url=gh_release.url,
-            python_version=py_v.value,
-            dependencies=dependencies,
-        )
-
-    def _create_new_releases(
-        self, gh_repo: "GhRepo", gh_releases: Iterable["GhRelease"]
-    ) -> list["ShellRelease"]:
-        return [self._create_new_release(gh_repo, gh_r) for gh_r in gh_releases]
 
 
 class ShellL1(Shell):
@@ -161,20 +128,69 @@ class ShellL1(Shell):
     def is_type(cls, repo_name: str, file_names: Iterable[str]) -> bool:
         return cls.NAME_PATTERN.search(repo_name) and "main.py" in file_names
 
+    def _get_py_version(self, gh_repo: "GhRepo", ref: str) -> "PyVersion":
+        return PyVersion.PY2
+
+    def _create_new_releases(
+        self, gh_repo: "GhRepo", gh_releases: Iterable["GhRelease"]
+    ) -> list["Release"]:
+        return [
+            Release(
+                title=gh_r.title,
+                tag_name=gh_r.tag_name,
+                published_at=gh_r.published_at,
+                release_url=gh_r.url,
+                python_version=self._get_py_version(gh_repo, gh_r.tag_name).value,
+            )
+            for gh_r in gh_releases
+        ]
+
 
 class Shell2G(Shell):
+    METADATA_FILE = "/src/drivermetadata.xml"
+    REQUIREMENTS_FILE = "src/requirements.txt"
     yaml_tag = "!Shell_2G"
 
     @classmethod
     def is_type(cls, repo_name: str, file_names: Iterable[str]) -> bool:
         return "shell-definition.yaml" in file_names
 
+    def _get_py_version(self, gh_repo: "GhRepo", ref: str) -> "PyVersion":
+        return get_py_version_from_shell_metadata(self._get_metadata(gh_repo, ref))
+
+    def _get_metadata(self, gh_repo: "GhRepo", ref: str) -> str:
+        return gh_repo.get_file_data(self.METADATA_FILE, ref)
+
+    def _get_requirements(self, gh_repo: "GhRepo", ref: str) -> str:
+        return gh_repo.get_file_data(self.REQUIREMENTS_FILE, ref)
+
+    def _create_new_release(
+        self, gh_repo: "GhRepo", gh_release: "GhRelease"
+    ) -> "Shell2GRelease":
+        py_v = self._get_py_version(gh_repo, gh_release.tag_name)
+        dependencies = get_all_cloudshell_dependencies(
+            self._get_requirements(gh_repo, gh_release.tag_name), py_v is py_v.PY3
+        )
+        return Shell2GRelease(
+            title=gh_release.title,
+            tag_name=gh_release.tag_name,
+            published_at=gh_release.published_at,
+            release_url=gh_release.url,
+            python_version=py_v.value,
+            dependencies=dependencies,
+        )
+
+    def _create_new_releases(
+        self, gh_repo: "GhRepo", gh_releases: Iterable["GhRelease"]
+    ) -> list["Shell2GRelease"]:
+        return [self._create_new_release(gh_repo, gh_r) for gh_r in gh_releases]
+
 
 class Package(Repo):
     NAME_PATTERN = re.compile(r"(^cloudshell-.+|^shellfoundry$)", re.I)
     SETUP_FILE = "setup.py"
     yaml_tag = "!Package"
-    releases: list["PackageRelease"]
+    releases: list["Release"]
 
     @classmethod
     def is_type(cls, repo_name: str, file_names: Iterable[str]) -> bool:
@@ -192,9 +208,9 @@ class Package(Repo):
 
     def _create_new_releases(
         self, gh_repo: "GhRepo", gh_releases: Iterable["GhRelease"]
-    ) -> list["PackageRelease"]:
+    ) -> list["Release"]:
         return [
-            PackageRelease(
+            Release(
                 title=gh_r.title,
                 tag_name=gh_r.tag_name,
                 published_at=gh_r.published_at,

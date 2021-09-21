@@ -9,10 +9,29 @@ from github.Organization import Organization
 from github.Repository import Repository
 
 
-class EmptyRepo(Exception):
-    def __init__(self, repo: "GhRepo"):
-        self.repo = repo
-        super().__init__(f"The repo {repo.name} is empty")
+class GhException(Exception):
+    ...
+
+
+@attr.s(auto_attribs=True, auto_exc=True)
+class EmptyRepo(GhException):
+    repo: "GhRepo"
+
+    def __str__(self):
+        return f"The repo {self.repo.name} is empty"
+
+
+@attr.s(auto_attribs=True, auto_exc=True)
+class NotFound(GhException):
+    gh_repo: "GhRepo"
+    path: str
+    ref: str
+
+    def __str__(self):
+        return (
+            f"File {self.path} not found in repository {self.gh_repo.name} "
+            f"with ref {self.ref}"
+        )
 
 
 @attr.s(auto_attribs=True)
@@ -42,11 +61,18 @@ class GhRepo:
 
     def __attrs_post_init__(self):
         self.name: str = self._git_repo.name
-        self.url: str = self._git_repo.url
+        self.url: str = self._git_repo.html_url
 
     def get_file_data(self, path: str, ref: str) -> str:
-        content = self._git_repo.get_contents(path, ref)
-        return content.decoded_content.decode("utf-8")
+        try:
+            content = self._git_repo.get_contents(path, ref)
+        except GithubException as e:
+            if e.status == 404:
+                raise NotFound(self, path, ref) from e
+            else:
+                raise
+        else:
+            return content.decoded_content.decode("utf-8")
 
     def ls(self, path: str) -> Iterable[str]:
         try:
@@ -56,10 +82,10 @@ class GhRepo:
                 raise EmptyRepo(self) from e
             else:
                 raise
-
-        if not isinstance(files, list):
-            files = [files]
-        return (file.name for file in files)
+        else:
+            if not isinstance(files, list):
+                files = [files]
+            return (file.name for file in files)
 
     def get_releases(self, public: bool = True) -> Iterable["GhRelease"]:
         releases = self._git_repo.get_releases()

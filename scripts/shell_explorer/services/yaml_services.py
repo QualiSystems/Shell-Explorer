@@ -1,11 +1,12 @@
 import logging
 from datetime import datetime
-from typing import TYPE_CHECKING, ClassVar, Optional, Union
+from typing import TYPE_CHECKING, ClassVar, Iterable, Optional, Union
 
 import attr
-import yaml
 
 from scripts.shell_explorer.entities import Package, Repo, Shell2G, ShellL1
+from scripts.shell_explorer.helpers import yaml_dump, yaml_load
+from scripts.shell_explorer.pakcages_usage.entities import PackageUsageContainer
 from scripts.shell_explorer.services import GhRepo
 from scripts.shell_explorer.services.github_services import EmptyRepo
 
@@ -18,13 +19,11 @@ if TYPE_CHECKING:
 
 
 def yaml_str_to_repos_dict(yaml_str: str) -> dict[str, "T_REPOS"]:
-    repos = yaml.load(yaml_str, Loader=yaml.Loader)
-    return {repo.name: repo for repo in repos}
+    return {repo.name: repo for repo in yaml_load(yaml_str)}
 
 
 def repos_dict_to_yaml_str(repos_dict: dict[str, "T_REPOS"]) -> str:
-    repos = sorted(repos_dict.values())
-    return yaml.dump(repos, default_flow_style=False, sort_keys=False)
+    return yaml_dump(sorted(repos_dict.values()))
 
 
 class RepoIsNotRecognized(Exception):
@@ -38,6 +37,7 @@ class RepoIsNotRecognized(Exception):
 class SEWorkingRepo:
     SHELLS_FILE: ClassVar[str] = "shells.yaml"
     PACKAGES_FILE: ClassVar[str] = "packages.yaml"
+    PACKAGES_USAGE_FILE: ClassVar[str] = "packages-usage.yaml"
     _se_repo: "GhRepo"
     working_branch: str
 
@@ -53,12 +53,17 @@ class SEWorkingRepo:
             message = f"ShellExplorer {path} {datetime.now()}"
             self._se_repo.update_file(path, message, new_data, self.working_branch)
 
-    def commit_if_changed(self, repos_container: "ReposContainer"):
+    def update_repo_files(self, repos_container: "ReposContainer"):
         for path, new_data in (
             (self.SHELLS_FILE, repos_container.shells_yaml_str),
             (self.PACKAGES_FILE, repos_container.packages_yaml_str),
         ):
             self._commit_file_if_changed(path, new_data)
+
+    def update_packages_usage(self, packages_usage_container: "PackageUsageContainer"):
+        self._commit_file_if_changed(
+            self.PACKAGES_USAGE_FILE, packages_usage_container.to_yaml_str()
+        )
 
 
 @attr.s(auto_attribs=True)
@@ -82,6 +87,10 @@ class ReposContainer:
     @property
     def packages_yaml_str(self) -> str:
         return repos_dict_to_yaml_str(self._packages_dict)
+
+    @property
+    def shells(self) -> Iterable["T_SHELLS"]:
+        return self._shells_dict.values()
 
     def get(
         self,

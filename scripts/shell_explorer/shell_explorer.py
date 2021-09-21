@@ -3,6 +3,7 @@ import logging
 
 from github import Github
 
+from scripts.shell_explorer.pakcages_usage.entities import PackageUsageContainer
 from scripts.shell_explorer.release_helpers import get_actual_releases
 from scripts.shell_explorer.services import GhOrg
 from scripts.shell_explorer.services.yaml_services import (
@@ -17,11 +18,16 @@ WORKING_REPO = "Shell-Explorer"
 
 class ShellExplorer:
     def __init__(
-        self, gh_client: "Github", branch: str, new_releases: dict[str, list[int]]
+        self,
+        gh_client: "Github",
+        branch: str,
+        new_releases: dict[str, list[int]],
+        force_update: bool = False,
     ):
         self.branch = branch
         self.new_releases = new_releases
         self._gh_client = gh_client
+        self._force_update = force_update
 
     @classmethod
     def from_cli(
@@ -51,6 +57,12 @@ class ShellExplorer:
     def scan_and_commit(self):
         org = GhOrg.get_org(EXPLORE_ORG, self._gh_client)
         se_working_repo = SEWorkingRepo(org.get_repo(WORKING_REPO), self.branch)
-        container = se_working_repo.get_repos_container()
-        self._explore_releases(org, container)
-        se_working_repo.commit_if_changed(container)
+        if self._force_update:
+            repos_container = ReposContainer({}, {})
+        else:
+            repos_container = se_working_repo.get_repos_container()
+        self._explore_releases(org, repos_container)
+        se_working_repo.update_repo_files(repos_container)
+
+        puc = PackageUsageContainer.from_shell_repos(repos_container.shells)
+        se_working_repo.update_packages_usage(puc)

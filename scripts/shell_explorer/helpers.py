@@ -2,16 +2,11 @@ import enum
 import logging
 import re
 import sys
-from typing import TYPE_CHECKING, Optional
+from typing import Optional
 
-from packaging.requirements import Requirement
+import yaml
 from packaging.specifiers import SpecifierSet
 from pip_download import PipDownloader
-
-from scripts.shell_explorer.entities import Shell2G
-
-if TYPE_CHECKING:
-    from scripts.shell_explorer.entities import Repo
 
 PYTHON_REQUIRES_PATTERN = re.compile(
     r"python_requires\s*=\s*(\(?(\s*['\"].+?['\"]\s*)+\)?)", re.DOTALL
@@ -89,31 +84,9 @@ def get_all_cloudshell_dependencies(requirements_text: str, is_py3: bool) -> lis
     return [str(req) for req in all_requirements if req.name.startswith("cloudshell-")]
 
 
-def get_packages_usage(shells: set["Repo"]) -> dict[str, dict[str, list[str]]]:
-    """Returns a dict with packages and their version usage.
+def yaml_load(yaml_str: str):
+    return yaml.load(yaml_str, Loader=yaml.Loader)
 
-    Example, {
-        'cloudshell-cli': {
-            '<5,>=4.0': [
-                'Juniper-JunOS-Firewall-Shell-2G',
-                'Juniper-JunOS-Router-Shell-2G',
-            ],
-            '<3.4,>=3.3': ['FortiGate-FortiOS-Firewall-Shell-2G']
-        }
-    }
-    """
-    packages_usage = {}
-    for shell in filter(lambda s: isinstance(s, Shell2G), shells):
-        for release in shell.releases:
-            for dep in getattr(release, "dependencies", []):
-                req = Requirement(dep)
-                specifier = str(req.specifier) or "*"
-                package_specifiers = packages_usage.setdefault(req.name, {})
-                package_specifiers.setdefault(specifier, []).append(shell.name)
 
-    packages_usage = dict(sorted(packages_usage.items()))
-    for package_name in packages_usage:
-        packages_usage[package_name] = dict(
-            sorted(packages_usage[package_name].items())
-        )
-    return packages_usage
+def yaml_dump(data) -> str:
+    return yaml.dump(data, default_flow_style=False, sort_keys=False)
