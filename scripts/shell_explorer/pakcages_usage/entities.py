@@ -53,7 +53,7 @@ class PackageUsageContainer:
                     package = container.get_or_create(req.name)
                     specifier = package.get_or_create(str(req.specifier) or "*")
                     pu_shell = specifier.get_or_create(shell.name)
-                    pu_shell.get_or_create_release(release.id, release.tag_name)
+                    pu_shell.get_or_create_release(release.release_id, release.tag_name)
         return container
 
 
