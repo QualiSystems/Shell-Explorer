@@ -31,13 +31,18 @@ class ShellExplorer:
 
     @classmethod
     def from_cli(
-        cls, auth_key: str, branch: str, new_releases_json: str
+        cls,
+        auth_key: str,
+        branch: str,
+        new_releases_json: str,
+        force_update: bool = False,
     ) -> "ShellExplorer":
         gh_client = Github(auth_key)
         return cls(
             gh_client,
             branch,
             json.loads(new_releases_json),
+            force_update,
         )
 
     def _explore_releases(self, org: "GhOrg", repos_container: "ReposContainer"):

@@ -21,8 +21,9 @@ def cli():
     default="{}",
     help="Json dict of repositories and release ids. {<repo_name>: [<release_id1>]}",
 )
-def shell_explorer(auth_key: str, branch: str, new_releases: str):
-    se = ShellExplorer.from_cli(auth_key, branch, new_releases)
+@click.option("--force-update", is_flag=True, default=False)
+def shell_explorer(auth_key: str, branch: str, new_releases: str, force_update: bool):
+    se = ShellExplorer.from_cli(auth_key, branch, new_releases, force_update)
     se.scan_and_commit()
 
 
