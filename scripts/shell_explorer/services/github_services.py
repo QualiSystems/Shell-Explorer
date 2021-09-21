@@ -111,3 +111,4 @@ class GhRelease:
         self.tag_name: str = self._git_release.tag_name
         self.published_at: datetime = self._git_release.published_at
         self.url: str = self._git_release.html_url
+        self.id: int = self._git_release.id

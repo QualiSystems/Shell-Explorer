@@ -30,12 +30,14 @@ class Release(yaml.YAMLObject):
         tag_name: str,
         published_at: datetime,
         release_url: str,
+        release_id: int,
         python_version: str,
     ):
         self.title = title
         self.tag_name = tag_name
         self.published_at = published_at
         self.release_url = release_url
+        self.release_id = release_id
         self.python_version = python_version
 
     def match_str(self):
@@ -140,6 +142,7 @@ class ShellL1(Shell):
                 tag_name=gh_r.tag_name,
                 published_at=gh_r.published_at,
                 release_url=gh_r.url,
+                release_id=gh_r.id,
                 python_version=self._get_py_version(gh_repo, gh_r.tag_name).value,
             )
             for gh_r in gh_releases
@@ -176,6 +179,7 @@ class Shell2G(Shell):
             tag_name=gh_release.tag_name,
             published_at=gh_release.published_at,
             release_url=gh_release.url,
+            release_id=gh_release.id,
             python_version=py_v.value,
             dependencies=dependencies,
         )
@@ -215,6 +219,7 @@ class Package(Repo):
                 tag_name=gh_r.tag_name,
                 published_at=gh_r.published_at,
                 release_url=gh_r.url,
+                release_id=gh_r.id,
                 python_version=self._get_py_version(gh_repo, gh_r.tag_name).value,
             )
             for gh_r in gh_releases

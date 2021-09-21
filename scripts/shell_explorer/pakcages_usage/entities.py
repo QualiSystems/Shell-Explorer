@@ -2,6 +2,7 @@ from typing import TYPE_CHECKING, Iterable, Optional
 
 import attr
 from packaging.requirements import Requirement
+from packaging.version import Version
 
 from scripts.shell_explorer.entities import Shell2G
 from scripts.shell_explorer.helpers import yaml_dump, yaml_load
@@ -52,7 +53,7 @@ class PackageUsageContainer:
                     package = container.get_or_create(req.name)
                     specifier = package.get_or_create(str(req.specifier) or "*")
                     pu_shell = specifier.get_or_create(shell.name)
-                    pu_shell.add_tag(release.tag_name)
+                    pu_shell.get_or_create_release(release.id, release.tag_name)
         return container
 
 
@@ -121,14 +122,32 @@ class PackageSpecifier:
 @attr.s(auto_attribs=True, frozen=True, slots=True)
 class Shell:
     name: str
-    tags: set[str] = attr.ib(factory=set, cmp=False, converter=set)
+    _releases: dict[int, "Release"] = attr.ib(cmp=False, factory=dict)
 
-    def add_tag(self, tag: str):
-        self.tags.add(tag)
+    def get_release(self, id_: int):
+        return self._releases.get(id_)
 
-    def to_name_list(self) -> tuple[str, Iterable[str]]:
-        return self.name, sorted(self.tags, reverse=True)
+    def get_or_create_release(self, id_: int, tag_name: str) -> "Release":
+        if not (release := self.get_release(id_)):
+            release = Release(tag_name, id_)
+            self._releases[id_] = release
+        return release
+
+    def __iter__(self) -> Iterable["Release"]:
+        return iter(self._releases.values())
+
+    def to_name_list(self) -> tuple[str, Iterable[dict]]:
+        return self.name, [r.to_dict() for r in sorted(self, reverse=True)]
 
     @classmethod
     def from_name_list(cls, shell_name: str, tags: list["str"]) -> "Shell":
         return cls(shell_name, tags)
+
+
+@attr.s(auto_attribs=True, frozen=True, slots=True)
+class Release:
+    tag_name: str = attr.ib(cmp=Version)
+    id: int = attr.ib(cmp=False)  # noqa: A003
+
+    def to_dict(self):
+        return attr.asdict(self)
