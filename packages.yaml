@@ -7,16 +7,18 @@
     tag_name: 1.0.15
     published_at: 2020-12-16 13:30:41
     release_url: https://github.com/QualiSystems/cloudshell-L1-networking-core/releases/tag/1.0.15
+    release_id: 35350890
     python_version: PY2
 - !Package
   name: cloudshell-autodiscovery
   url: https://github.com/QualiSystems/cloudshell-autodiscovery
   releases:
   - !Release
-    title: CloudShell Autodiscovery Tool 1.0.0
-    tag_name: 1.0.0
-    published_at: 2019-06-04 09:27:02
-    release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/1.0.0
+    title: CloudShell Autodiscovery Tool 2.0.0
+    tag_name: 2.0.0
+    published_at: 2019-05-30 13:56:21
+    release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/2.0.0
+    release_id: 17681204
     python_version: PY2
 - !Package
   name: cloudshell-cgs
@@ -27,6 +29,7 @@
     tag_name: '1.1'
     published_at: 2019-10-28 12:24:09
     release_url: https://github.com/QualiSystems/cloudshell-cgs/releases/tag/1.1
+    release_id: 21020840
     python_version: PY2
 - !Package
   name: cloudshell-checkpoint
@@ -37,7 +40,8 @@
     tag_name: 1.0.4
     published_at: 2021-02-19 14:19:47
     release_url: https://github.com/QualiSystems/cloudshell-checkpoint/releases/tag/1.0.4
-    python_version: PY2
+    release_id: 38312994
+    python_version: PY3
 - !Package
   name: cloudshell-cisco-aci
   url: https://github.com/QualiSystems/cloudshell-cisco-aci
@@ -47,6 +51,7 @@
     tag_name: 1.0.0
     published_at: 2018-12-10 11:27:08
     release_url: https://github.com/QualiSystems/cloudshell-cisco-aci/releases/tag/1.0.0
+    release_id: 14438654
     python_version: PY2
 - !Package
   name: cloudshell-cli
@@ -57,7 +62,8 @@
     tag_name: 4.0.4
     published_at: 2020-12-10 10:53:59
     release_url: https://github.com/QualiSystems/cloudshell-cli/releases/tag/4.0.4
-    python_version: PY2
+    release_id: 35091988
+    python_version: PY2PY3
 - !Package
   name: cloudshell-core
   url: https://github.com/QualiSystems/cloudshell-core
@@ -67,6 +73,7 @@
     tag_name: 2.2.176
     published_at: 2017-01-17 14:19:25
     release_url: https://github.com/QualiSystems/cloudshell-core/releases/tag/2.2.176
+    release_id: 5182192
     python_version: PY2
 - !Package
   name: cloudshell-cp-aws
@@ -77,7 +84,8 @@
     tag_name: 3.2.0
     published_at: 2021-08-19 09:30:32
     release_url: https://github.com/QualiSystems/cloudshell-cp-aws/releases/tag/3.2.0
-    python_version: PY2
+    release_id: 48100236
+    python_version: PY3
 - !Package
   name: cloudshell-cp-azure
   url: https://github.com/QualiSystems/cloudshell-cp-azure
@@ -87,6 +95,7 @@
     tag_name: 3.3.6
     published_at: 2021-08-12 14:55:56
     release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.3.6
+    release_id: 47752093
     python_version: PY2
 - !Package
   name: cloudshell-cp-core
@@ -97,6 +106,14 @@
     tag_name: 2.2.1
     published_at: 2021-07-29 10:28:15
     release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.2.1
+    release_id: 46965342
+    python_version: PY3
+  - !Release
+    title: cloudshell-cp-core 1.2.3
+    tag_name: 1.2.3
+    published_at: 2021-05-24 15:22:53
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/1.2.3
+    release_id: 43471528
     python_version: PY2
 - !Package
   name: cloudshell-cp-kubernetes
@@ -107,7 +124,8 @@
     tag_name: 1.0.18
     published_at: 2021-04-24 12:27:20
     release_url: https://github.com/QualiSystems/cloudshell-cp-kubernetes/releases/tag/1.0.18
-    python_version: PY2
+    release_id: 41832874
+    python_version: PY3
 - !Package
   name: cloudshell-cp-openstack
   url: https://github.com/QualiSystems/cloudshell-cp-openstack
@@ -117,7 +135,8 @@
     tag_name: 2.2.0
     published_at: 2021-02-15 15:25:40
     release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/2.2.0
-    python_version: PY2
+    release_id: 38065189
+    python_version: PY3
 - !Package
   name: cloudshell-cp-vcenter
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
@@ -127,6 +146,21 @@
     tag_name: 3.4.1
     published_at: 2021-08-05 11:13:18
     release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/3.4.1
+    release_id: 47354546
+    python_version: PY2
+  - !Release
+    title: cloudshell-cp-vcenter 2.3.0
+    tag_name: 2.3.0
+    published_at: 2021-03-01 16:12:57
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2.3.0
+    release_id: 39063350
+    python_version: PY2
+  - !Release
+    title: cloudshell-cp-vcenter 2.1.2
+    tag_name: 2,1,2
+    published_at: 2021-01-10 11:26:50
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/2%2C1%2C2
+    release_id: 36192668
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
@@ -137,16 +171,18 @@
     tag_name: 1.0.1
     published_at: 2019-07-30 13:02:41
     release_url: https://github.com/QualiSystems/cloudshell-cumulus-linux/releases/tag/1.0.1
+    release_id: 18955661
     python_version: PY2
 - !Package
   name: cloudshell-f5
   url: https://github.com/QualiSystems/cloudshell-f5
   releases:
   - !Release
-    title: cloudshell-f5 1.1.2
-    tag_name: 1.1.2
-    published_at: 2020-10-12 10:58:06
-    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.1.2
+    title: cloudshell-f5 1.1.3
+    tag_name: 1.1.3
+    published_at: 2020-10-12 10:56:43
+    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.1.3
+    release_id: 32447025
     python_version: PY2
 - !Package
   name: cloudshell-firewall
@@ -157,6 +193,7 @@
     tag_name: 3.0.3
     published_at: 2018-04-23 11:57:32
     release_url: https://github.com/QualiSystems/cloudshell-firewall/releases/tag/3.0.3
+    release_id: 10672305
     python_version: PY2
 - !Package
   name: cloudshell-firewall-a10
@@ -167,6 +204,7 @@
     tag_name: 1.0.1
     published_at: 2018-06-07 10:31:19
     release_url: https://github.com/QualiSystems/cloudshell-firewall-a10/releases/tag/1.0.1
+    release_id: 11367726
     python_version: PY2
 - !Package
   name: cloudshell-firewall-fortinet
@@ -177,6 +215,7 @@
     tag_name: 1.1.1
     published_at: 2020-01-29 16:45:39
     release_url: https://github.com/QualiSystems/cloudshell-firewall-fortinet/releases/tag/1.1.1
+    release_id: 23226880
     python_version: PY2
 - !Package
   name: cloudshell-firewall-panos
@@ -187,6 +226,14 @@
     tag_name: 2.0.0
     published_at: 2021-04-08 12:08:05
     release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/2.0.0
+    release_id: 40622321
+    python_version: PY2
+  - !Release
+    title: CloudShell Firewall PanOS
+    tag_name: 1.0.5
+    published_at: 2020-12-08 13:54:12
+    release_url: https://github.com/QualiSystems/cloudshell-firewall-panos/releases/tag/1.0.5
+    release_id: 34990027
     python_version: PY2
 - !Package
   name: cloudshell-huawei
@@ -197,6 +244,7 @@
     tag_name: 4.0.1
     published_at: 2021-04-19 13:21:27
     release_url: https://github.com/QualiSystems/cloudshell-huawei/releases/tag/4.0.1
+    release_id: 41644598
     python_version: PY2
 - !Package
   name: cloudshell-huawei-wdm
@@ -207,6 +255,7 @@
     tag_name: 1.0.0
     published_at: 2021-04-11 18:58:40
     release_url: https://github.com/QualiSystems/cloudshell-huawei-wdm/releases/tag/1.0.0
+    release_id: 41245885
     python_version: PY2
 - !Package
   name: cloudshell-logging
@@ -217,6 +266,7 @@
     tag_name: 1.1.0
     published_at: 2021-04-12 14:13:25
     release_url: https://github.com/QualiSystems/cloudshell-logging/releases/tag/1.1.0
+    release_id: 41270487
     python_version: PY2
 - !Package
   name: cloudshell-migration
@@ -227,6 +277,7 @@
     tag_name: 1.2.2
     published_at: 2019-05-30 14:50:11
     release_url: https://github.com/QualiSystems/cloudshell-migration/releases/tag/1.2.2
+    release_id: 17682940
     python_version: PY2
 - !Package
   name: cloudshell-networking
@@ -237,6 +288,7 @@
     tag_name: 5.1.0
     published_at: 2018-04-02 10:51:39
     release_url: https://github.com/QualiSystems/cloudshell-networking/releases/tag/5.1.0
+    release_id: 10352220
     python_version: PY2
 - !Package
   name: cloudshell-networking-alcatel
@@ -247,6 +299,7 @@
     tag_name: 1.2.5
     published_at: 2019-05-23 14:51:27
     release_url: https://github.com/QualiSystems/cloudshell-networking-alcatel/releases/tag/1.2.5
+    release_id: 17545840
     python_version: PY2
 - !Package
   name: cloudshell-networking-arista
@@ -257,6 +310,7 @@
     tag_name: 2.0.5
     published_at: 2021-07-08 13:51:39
     release_url: https://github.com/QualiSystems/cloudshell-networking-arista/releases/tag/2.0.5
+    release_id: 45906709
     python_version: PY2
 - !Package
   name: cloudshell-networking-cisco
@@ -267,7 +321,8 @@
     tag_name: 6.1.4
     published_at: 2021-06-28 12:25:51
     release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/6.1.4
-    python_version: PY2
+    release_id: 45352024
+    python_version: PY2PY3
 - !Package
   name: cloudshell-networking-cisco-nxos
   url: https://github.com/QualiSystems/cloudshell-networking-cisco-nxos
@@ -277,7 +332,8 @@
     tag_name: 6.0.0
     published_at: 2021-03-11 18:16:58
     release_url: https://github.com/QualiSystems/cloudshell-networking-cisco-nxos/releases/tag/6.0.0
-    python_version: PY2
+    release_id: 39673112
+    python_version: PY3
 - !Package
   name: cloudshell-networking-devices
   url: https://github.com/QualiSystems/cloudshell-networking-devices
@@ -287,6 +343,7 @@
     tag_name: '2.8'
     published_at: 2019-10-28 12:20:00
     release_url: https://github.com/QualiSystems/cloudshell-networking-devices/releases/tag/2.8
+    release_id: 21020756
     python_version: PY2
 - !Package
   name: cloudshell-networking-ericsson
@@ -297,6 +354,7 @@
     tag_name: '1.0'
     published_at: 2016-09-12 11:57:32
     release_url: https://github.com/QualiSystems/cloudshell-networking-ericsson/releases/tag/1.0
+    release_id: 4104382
     python_version: PY2
 - !Package
   name: cloudshell-networking-ericsson-extended
@@ -307,16 +365,7 @@
     tag_name: 1.0.0.20
     published_at: 2017-02-20 17:42:10
     release_url: https://github.com/QualiSystems/cloudshell-networking-ericsson-extended/releases/tag/1.0.0.20
-    python_version: PY2
-- !Package
-  name: cloudshell-networking-huawei
-  url: https://github.com/QualiSystems/cloudshell-networking-huawei
-  releases:
-  - !Release
-    title: cloudshell-networking-huawei-3.0.4
-    tag_name: 3.0.4
-    published_at: 2019-06-05 13:44:57
-    release_url: https://github.com/QualiSystems/cloudshell-networking-huawei/releases/tag/3.0.4
+    release_id: 5513045
     python_version: PY2
 - !Package
   name: cloudshell-networking-juniper
@@ -327,6 +376,7 @@
     tag_name: 5.0.11
     published_at: 2021-03-30 08:05:47
     release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/5.0.11
+    release_id: 40621796
     python_version: PY2
 - !Package
   name: cloudshell-orch-ixia
@@ -337,6 +387,7 @@
     tag_name: 1.0.0
     published_at: 2019-06-03 08:31:12
     release_url: https://github.com/QualiSystems/cloudshell-orch-ixia/releases/tag/1.0.0
+    release_id: 17736430
     python_version: PY2
 - !Package
   name: cloudshell-orch-trex
@@ -347,6 +398,7 @@
     tag_name: 1.0.0
     published_at: 2018-02-27 17:43:15
     release_url: https://github.com/QualiSystems/cloudshell-orch-trex/releases/tag/1.0.0
+    release_id: 9858889
     python_version: PY2
 - !Package
   name: cloudshell-orch-vbp
@@ -357,6 +409,7 @@
     tag_name: 1.2.0
     published_at: 2020-10-28 10:44:32
     release_url: https://github.com/QualiSystems/cloudshell-orch-vbp/releases/tag/1.2.0
+    release_id: 32423918
     python_version: PY2
 - !Package
   name: cloudshell-package-repo-template
@@ -367,7 +420,8 @@
     tag_name: 1.3.0
     published_at: 2021-09-08 10:39:22
     release_url: https://github.com/QualiSystems/cloudshell-package-repo-template/releases/tag/1.3.0
-    python_version: PY2
+    release_id: 49188536
+    python_version: PY3
 - !Package
   name: cloudshell-pdu-core
   url: https://github.com/QualiSystems/cloudshell-pdu-core
@@ -377,17 +431,19 @@
     tag_name: 1.0.0
     published_at: 2016-10-05 13:57:01
     release_url: https://github.com/QualiSystems/cloudshell-pdu-core/releases/tag/1.0.0
+    release_id: 4309864
     python_version: PY2
 - !Package
   name: cloudshell-pip-download
   url: https://github.com/QualiSystems/cloudshell-pip-download
   releases:
   - !Release
-    title: cloudshell-pip-download 0.5.0
-    tag_name: 0.5.0
-    published_at: 2021-08-27 13:57:43
-    release_url: https://github.com/QualiSystems/cloudshell-pip-download/releases/tag/0.5.0
-    python_version: PY2
+    title: cloudshell-pip-download 0.5.1
+    tag_name: 0.5.1
+    published_at: 2021-09-21 10:12:02
+    release_url: https://github.com/QualiSystems/cloudshell-pip-download/releases/tag/0.5.1
+    release_id: 49971076
+    python_version: PY3
 - !Package
   name: cloudshell-recorder
   url: https://github.com/QualiSystems/cloudshell-recorder
@@ -397,6 +453,7 @@
     tag_name: 1.1.1
     published_at: 2019-10-10 15:59:38
     release_url: https://github.com/QualiSystems/cloudshell-recorder/releases/tag/1.1.1
+    release_id: 20616144
     python_version: PY2
 - !Package
   name: cloudshell-sdn-odl
@@ -407,6 +464,7 @@
     tag_name: 1.0.0
     published_at: 2017-11-09 17:15:59
     release_url: https://github.com/QualiSystems/cloudshell-sdn-odl/releases/tag/1.0.0
+    release_id: 8454384
     python_version: PY2
 - !Package
   name: cloudshell-sdn-odl-lithium
@@ -417,6 +475,7 @@
     tag_name: 1.0.0
     published_at: 2017-05-24 14:49:23
     release_url: https://github.com/QualiSystems/cloudshell-sdn-odl-lithium/releases/tag/1.0.0
+    release_id: 6491452
     python_version: PY2
 - !Package
   name: cloudshell-shell-automation-tests
@@ -427,7 +486,8 @@
     tag_name: 0.16.0
     published_at: 2021-04-29 08:12:47
     release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.16.0
-    python_version: PY2
+    release_id: 42185045
+    python_version: PY3
 - !Package
   name: cloudshell-shell-connectivity-flow
   url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
@@ -437,7 +497,8 @@
     tag_name: 2.0.2
     published_at: 2020-09-02 12:41:18
     release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/2.0.2
-    python_version: PY2
+    release_id: 30581468
+    python_version: PY2PY3
 - !Package
   name: cloudshell-shell-core
   url: https://github.com/QualiSystems/cloudshell-shell-core
@@ -447,6 +508,7 @@
     tag_name: 5.0.5
     published_at: 2020-05-19 06:37:12
     release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.0.5
+    release_id: 26656247
     python_version: PY2
 - !Package
   name: cloudshell-shell-firewall-standard
@@ -457,7 +519,8 @@
     tag_name: 3.0.2
     published_at: 2019-10-03 12:00:55
     release_url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard/releases/tag/3.0.2
-    python_version: PY2
+    release_id: 20442386
+    python_version: PY2PY3
 - !Package
   name: cloudshell-shell-flows
   url: https://github.com/QualiSystems/cloudshell-shell-flows
@@ -467,7 +530,8 @@
     tag_name: 1.0.4
     published_at: 2020-01-14 10:00:55
     release_url: https://github.com/QualiSystems/cloudshell-shell-flows/releases/tag/1.0.4
-    python_version: PY2
+    release_id: 22818481
+    python_version: PY2PY3
 - !Package
   name: cloudshell-shell-networking-standard
   url: https://github.com/QualiSystems/cloudshell-shell-networking-standard
@@ -477,7 +541,8 @@
     tag_name: 5.0.4
     published_at: 2019-09-30 11:37:04
     release_url: https://github.com/QualiSystems/cloudshell-shell-networking-standard/releases/tag/5.0.4
-    python_version: PY2
+    release_id: 20349283
+    python_version: PY2PY3
 - !Package
   name: cloudshell-shell-standards
   url: https://github.com/QualiSystems/cloudshell-shell-standards
@@ -487,6 +552,7 @@
     tag_name: 1.2.1
     published_at: 2021-03-11 09:53:05
     release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/1.2.1
+    release_id: 39641926
     python_version: PY2
 - !Package
   name: cloudshell-snmp
@@ -497,6 +563,7 @@
     tag_name: 4.0.2
     published_at: 2021-02-15 15:14:15
     release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/4.0.2
+    release_id: 37917039
     python_version: PY2
 - !Package
   name: cloudshell-snmp-autoload
@@ -507,7 +574,8 @@
     tag_name: 1.0.2
     published_at: 2020-11-24 09:50:35
     release_url: https://github.com/QualiSystems/cloudshell-snmp-autoload/releases/tag/1.0.2
-    python_version: PY2
+    release_id: 34352260
+    python_version: PY2PY3
 - !Package
   name: cloudshell-tc-scripts
   url: https://github.com/QualiSystems/cloudshell-tc-scripts
@@ -517,7 +585,29 @@
     tag_name: 4.0.1
     published_at: 2021-08-30 11:24:49
     release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/4.0.1
-    python_version: PY2
+    release_id: 48666987
+    python_version: PY3
+  - !Release
+    title: cloudshell-tc-scripts 3.0.3
+    tag_name: 3.0.3
+    published_at: 2021-04-13 11:12:16
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/3.0.3
+    release_id: 41346926
+    python_version: PY3
+  - !Release
+    title: cloudshell-tc-scripts 2.0.1
+    tag_name: 2.0.1
+    published_at: 2021-02-11 13:48:28
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/2.0.1
+    release_id: 37920228
+    python_version: PY3
+  - !Release
+    title: cloudshell-tc-scripts 1.0.5
+    tag_name: 1.0.5
+    published_at: 2021-01-08 15:30:47
+    release_url: https://github.com/QualiSystems/cloudshell-tc-scripts/releases/tag/1.0.5
+    release_id: 36148040
+    python_version: PY3
 - !Package
   name: cloudshell-tg-breaking-point
   url: https://github.com/QualiSystems/cloudshell-tg-breaking-point
@@ -527,6 +617,7 @@
     tag_name: 2.0.2
     published_at: 2019-02-13 15:15:11
     release_url: https://github.com/QualiSystems/cloudshell-tg-breaking-point/releases/tag/2.0.2
+    release_id: 15536826
     python_version: PY2
 - !Package
   name: cloudshell-tg-teravm
@@ -537,6 +628,7 @@
     tag_name: 1.1.1
     published_at: 2020-10-28 10:48:32
     release_url: https://github.com/QualiSystems/cloudshell-tg-teravm/releases/tag/1.1.1
+    release_id: 32425856
     python_version: PY2
 - !Package
   name: cloudshell-tg-trex
@@ -547,6 +639,7 @@
     tag_name: 1.0.0
     published_at: 2018-02-27 17:09:37
     release_url: https://github.com/QualiSystems/cloudshell-tg-trex/releases/tag/1.0.0
+    release_id: 9858256
     python_version: PY2
 - !Package
   name: cloudshell-traffic-virtual
@@ -557,6 +650,7 @@
     tag_name: 1.1.0
     published_at: 2019-03-04 10:37:45
     release_url: https://github.com/QualiSystems/cloudshell-traffic-virtual/releases/tag/1.1.0
+    release_id: 15892347
     python_version: PY2
 - !Package
   name: shellfoundry
@@ -567,4 +661,5 @@
     tag_name: 1.2.20
     published_at: 2021-08-19 16:49:53
     release_url: https://github.com/QualiSystems/shellfoundry/releases/tag/1.2.20
+    release_id: 48128892
     python_version: PY2PY3
