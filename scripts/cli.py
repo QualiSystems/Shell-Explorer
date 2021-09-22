@@ -1,10 +1,12 @@
+import logging.config
+
 import click
 
 from scripts.check_for_new_releases.main import main as check_for_new_releases
-from scripts.shell_explorer.helpers import set_logger
+from scripts.shell_explorer.helpers import LOGGING_CONFIG
 from scripts.shell_explorer.shell_explorer import ShellExplorer
 
-set_logger()
+logging.config.dictConfig(LOGGING_CONFIG)
 
 
 @click.group()

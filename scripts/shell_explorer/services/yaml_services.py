@@ -17,6 +17,8 @@ if TYPE_CHECKING:
     T_SHELLS = Union[SHELL_TYPES]
     T_REPOS = Union[Shell2G, ShellL1, Package]
 
+logger = logging.getLogger(__name__)
+
 
 def yaml_str_to_repos_dict(yaml_str: str) -> dict[str, "T_REPOS"]:
     return {repo.name: repo for repo in yaml_load(yaml_str)}
@@ -49,7 +51,7 @@ class SEWorkingRepo:
 
     def _commit_file_if_changed(self, path: str, new_data: str):
         if self._se_repo.get_file_data(path, self.working_branch) != new_data:
-            logging.info(f"Commit changes to {path}")
+            logger.info(f"Commit changes to {path}")
             message = f"ShellExplorer {path} {datetime.now()}"
             self._se_repo.update_file(path, message, new_data, self.working_branch)
 

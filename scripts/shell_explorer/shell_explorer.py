@@ -15,6 +15,8 @@ from scripts.shell_explorer.services.yaml_services import (
 EXPLORE_ORG = "QualiSystems"
 WORKING_REPO = "Shell-Explorer"
 
+logger = logging.getLogger(__name__)
+
 
 class ShellExplorer:
     def __init__(
@@ -47,17 +49,17 @@ class ShellExplorer:
 
     def _explore_releases(self, org: "GhOrg", repos_container: "ReposContainer"):
         for gh_repo in org.get_repos(self.new_releases):
-            logging.info(f"Explore {gh_repo.name}")
+            logger.info(f"Explore {gh_repo.name}")
             try:
                 repo_obj = repos_container.get_or_create_repo_obj(gh_repo)
                 if gh_releases := get_actual_releases(gh_repo.get_releases()):
                     if repo_obj.update_releases(gh_repo, gh_releases):
-                        logging.debug(f"Added new releases {gh_repo}")
+                        logger.debug(f"Added new releases {gh_repo}")
                 else:
-                    logging.debug(f"Skip repo {gh_repo.name} without releases")
+                    logger.debug(f"Skip repo {gh_repo.name} without releases")
                     repos_container.skip_repo(repo_obj)
             except RepoIsNotRecognized as e:
-                logging.debug(str(e))
+                logger.debug(str(e))
 
     def scan_and_commit(self):
         org = GhOrg.get_org(EXPLORE_ORG, self._gh_client)

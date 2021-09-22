@@ -20,6 +20,8 @@ from scripts.shell_explorer.release_helpers import is_releases_equal
 if TYPE_CHECKING:
     from scripts.shell_explorer.services import GhRelease, GhRepo
 
+logger = logging.getLogger(__name__)
+
 
 @functools.total_ordering
 class Release(yaml.YAMLObject):
@@ -178,8 +180,8 @@ class Shell2G(Shell):
                 f"Dependencies for the repo {gh_repo.name} with ref {ref} "
                 f"are inconsistent"
             )
-            logging.warning(msg)
-            logging.debug("Resolve error", exc_info=True)
+            logger.warning(msg)
+            logger.debug("Resolve error", exc_info=True)
             dep = []
         return dep
 
@@ -222,8 +224,8 @@ class Package(Repo):
             py_version = get_package_python_version(content)
         except Exception:
             msg = f"Could not get version for {gh_repo.name} {ref}"
-            logging.warning(msg)
-            logging.debug("Get py version error", exc_info=True)
+            logger.warning(msg)
+            logger.debug("Get py version error", exc_info=True)
             py_version = DEFAULT_PY_VERSION
         return py_version
 

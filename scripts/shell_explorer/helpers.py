@@ -1,7 +1,5 @@
 import enum
-import logging
 import re
-import sys
 from typing import Optional
 
 import yaml
@@ -24,18 +22,38 @@ class PyVersion(enum.Enum):
 DEFAULT_PY_VERSION = PyVersion.PY2
 
 
-def set_logger():
-    # remove default handlers
-    logging.getLogger("root").handlers = []
-
-    logging.basicConfig(
-        level=logging.INFO,
-        stream=sys.stdout,
-        format=(
-            "%(asctime)s [%(levelname)s]: %(name)s %(module)s"
-            " - %(funcName)-20s %(message)s"
-        ),
-    )
+LOGGING_CONFIG = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "default": {
+            "format": "%(asctime)s [%(levelname)s]: %(name)s - "
+            "%(funcName)-20s %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    "handlers": {
+        "console": {
+            "formatter": "default",
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout",
+        },
+        "null_handler": {
+            "class": "logging.NullHandler",
+        },
+    },
+    "loggers": {
+        "scripts": {
+            "level": "INFO",
+            "handlers": ["console"],
+        }
+    },
+    "root": {
+        "level": "ERROR",
+        "handlers": ["null_handler"],
+    },
+}
 
 
 def get_python_requires_str(setup_content: str) -> Optional[str]:
