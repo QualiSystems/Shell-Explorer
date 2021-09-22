@@ -42,12 +42,7 @@
     release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/0.2.2
     release_id: 44209114
     python_version: PY3
-    dependencies:
-    - cloudshell-automation-api>=9.3
-    - cloudshell-cp-aws~=3.0
-    - cloudshell-cp-core~=1.2.0
-    - cloudshell-logging<2,>=1.0
-    - cloudshell-shell-core~=5.0
+    dependencies: []
 - !Shell_2G
   name: Arista-EOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G
