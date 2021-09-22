@@ -2,11 +2,12 @@
   name: Alcatel-Timetra-Router-Shell-2G
   url: https://github.com/QualiSystems/Alcatel-Timetra-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Alcatel Timetra Router Shell 2G 1.1.1
     tag_name: 1.1.1
     published_at: 2019-05-10 12:24:50
     release_url: https://github.com/QualiSystems/Alcatel-Timetra-Router-Shell-2G/releases/tag/1.1.1
+    release_id: 17193877
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -21,71 +22,37 @@
   name: Amazon-AWS-Cloud-Provider-Shell-2G
   url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Amazon-AWS-Cloud-Provider-Shell-2G 1.1.1
     tag_name: 1.1.1
     published_at: 2021-08-26 12:08:59
     release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/1.1.1
+    release_id: 48494100
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 1
-        - 1
-        - 1
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 1
-        - 1
-        - 1
-      - &id001 !!python/object:packaging._structures.InfinityType {}
-      - &id002 !!python/object:packaging._structures.NegativeInfinityType {}
-      - *id001
-      - *id002
-  - !Release
+    dependencies:
+    - cloudshell-automation-api>=9.3
+    - cloudshell-cp-aws~=3.0
+    - cloudshell-cp-core~=1.2.0
+    - cloudshell-logging<2,>=1.0
+    - cloudshell-shell-core~=5.0
+  - !Shell2GRelease
     title: Amazon-AWS-Cloud-Provider-Shell-2G 0.2.2
     tag_name: 0.2.2
     published_at: 2021-06-07 14:06:07
     release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/0.2.2
+    release_id: 44209114
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 0
-        - 2
-        - 2
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 0
-        - 2
-        - 2
-      - *id001
-      - *id002
-      - *id001
-      - *id002
+    dependencies: []
 - !Shell_2G
   name: Arista-EOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Arista EOS Router Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2018-06-12 11:48:42
     release_url: https://github.com/QualiSystems/Arista-EOS-Router-Shell-2G/releases/tag/1.0.0
+    release_id: 11438368
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -100,11 +67,12 @@
   name: Arista-EOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Arista-EOS-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Arista EOS Switch Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2018-04-04 12:30:19
     release_url: https://github.com/QualiSystems/Arista-EOS-Switch-Shell-2G/releases/tag/1.0.0
+    release_id: 10389173
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -119,11 +87,12 @@
   name: BreakingPoint-Chassis-Shell-2G
   url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: BreakingPoint Chassis Shell 2G v1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2019-02-20 14:59:11
     release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/1.0.0
+    release_id: 15537031
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -137,11 +106,12 @@
   name: BreakingPoint-Controller-Shell-2G
   url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: BreakingPoint Controller Shell 2G v1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2019-02-15 13:14:25
     release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/1.0.0
+    release_id: 15536912
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -155,31 +125,36 @@
   name: CGS-COS-Loadbalancer-Shell-2G
   url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: CGS COS Loadbalancer 2G 1.0.1
     tag_name: 1.0.1
     published_at: 2019-12-04 11:12:11
     release_url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G/releases/tag/1.0.1
+    release_id: 21958529
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: CGS-COS-Switch-Shell-2G
   url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: CGS COS Switch Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2019-09-21 16:46:36
     release_url: https://github.com/QualiSystems/CGS-COS-Switch-Shell-2G/releases/tag/1.0.0
+    release_id: 20157805
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: Checkpoint-Gaia-Firewall-Shell-2G
   url: https://github.com/QualiSystems/Checkpoint-Gaia-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Checkpoint-Gaia-Firewall-Shell-2G 1.0.1
     tag_name: 1.0.1
     published_at: 2021-02-19 14:35:29
     release_url: https://github.com/QualiSystems/Checkpoint-Gaia-Firewall-Shell-2G/releases/tag/1.0.1
+    release_id: 38313385
     python_version: PY3
     dependencies:
     - cloudshell-automation-api
@@ -196,31 +171,36 @@
   name: Cisco-ACI-EPG-Autoload-Shell-2G
   url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco ACI EPG Autoload 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2018-12-10 11:42:44
     release_url: https://github.com/QualiSystems/Cisco-ACI-EPG-Autoload-Shell-2G/releases/tag/1.0.0
+    release_id: 14438879
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: Cisco-ACI-Ports-Autoload-Shell-2G
   url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco ACI Ports Autoload 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2018-12-10 11:42:46
     release_url: https://github.com/QualiSystems/Cisco-ACI-Ports-Autoload-Shell-2G/releases/tag/1.0.0
+    release_id: 14438878
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: Cisco-AIREOS-Shell-2G
   url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco AireOS Shell 2G 1.1.0
     tag_name: 1.1.0
     published_at: 2017-11-07 09:42:24
     release_url: https://github.com/QualiSystems/Cisco-AIREOS-Shell-2G/releases/tag/1.1.0
+    release_id: 8412158
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<7.1,>=7.0
@@ -235,11 +215,12 @@
   name: Cisco-ASA-Firewall-Shell-2G
   url: https://github.com/QualiSystems/Cisco-ASA-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco ASA Firewall 2G Shell Release v1.0.0
     tag_name: 1.0.0
     published_at: 2017-07-06 09:57:47
     release_url: https://github.com/QualiSystems/Cisco-ASA-Firewall-Shell-2G/releases/tag/1.0.0
+    release_id: 6948738
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<7.1,>=7.0
@@ -254,75 +235,58 @@
   name: Cisco-IOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Cisco-IOS-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco IOS Router Shell 2G 3.0.1
     tag_name: 3.0.1
     published_at: 2020-09-17 09:22:24
     release_url: https://github.com/QualiSystems/Cisco-IOS-Router-Shell-2G/releases/tag/3.0.1
+    release_id: 31411420
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - *id001
-      - *id002
-      - *id001
-      - *id002
+    dependencies:
+    - cloudshell-automation-api>=9.2
+    - cloudshell-cli<5.0,>=4.0
+    - cloudshell-logging<2,>=1
+    - cloudshell-networking-cisco<7.0,>=6.0
+    - cloudshell-shell-connectivity-flow<3.0,>=2.0
+    - cloudshell-shell-core<6.0,>=5.0
+    - cloudshell-shell-flows<2.0,>=1.0
+    - cloudshell-shell-networking-standard==5.0.4
+    - cloudshell-shell-standards<2.0,>=1.0
+    - cloudshell-snmp<5.0,>=4.0,>=4.0.1
+    - cloudshell-snmp-autoload<2.0,>=1.0
 - !Shell_2G
   name: Cisco-IOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco IOS Switch Shell 2G 3.0.1
     tag_name: 3.0.1
     published_at: 2020-09-17 12:35:49
     release_url: https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G/releases/tag/3.0.1
+    release_id: 31463808
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - *id001
-      - *id002
-      - *id001
-      - *id002
+    dependencies:
+    - cloudshell-automation-api>=9.2
+    - cloudshell-cli<5.0,>=4.0
+    - cloudshell-logging<2,>=1.0
+    - cloudshell-networking-cisco<7.0,>=6.0
+    - cloudshell-shell-connectivity-flow<3.0,>=2.0
+    - cloudshell-shell-core<6.0,>=5.0
+    - cloudshell-shell-flows<2.0,>=1.0
+    - cloudshell-shell-networking-standard==5.0.4
+    - cloudshell-shell-standards<2.0,>=1.0
+    - cloudshell-snmp<5.0,>=4.0,>=4.0.1
+    - cloudshell-snmp-autoload<2.0,>=1.0
 - !Shell_2G
   name: Cisco-IOSXR-Router-Shell-2G
   url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco IOSXR Router Shell 2G 2.0.2
     tag_name: 2.0.2
     published_at: 2018-01-16 12:54:01
     release_url: https://github.com/QualiSystems/Cisco-IOSXR-Router-Shell-2G/releases/tag/2.0.2
+    release_id: 9251976
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<7.1,>=7.0
@@ -338,11 +302,12 @@
   name: Cisco-NXOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Cisco NXOS Switch Shell 2G 2.0.2
     tag_name: 2.0.2
     published_at: 2020-10-10 12:16:42
     release_url: https://github.com/QualiSystems/Cisco-NXOS-Switch-Shell-2G/releases/tag/2.0.2
+    release_id: 32402610
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<7.1,>=7.0
@@ -358,11 +323,12 @@
   name: Cumulus-Linux-Switch-Shell-2G
   url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: 'Cumulus Linux 2 Gen Shell 1.0.0 '
     tag_name: 1.0.0
     published_at: 2019-04-30 17:13:41
     release_url: https://github.com/QualiSystems/Cumulus-Linux-Switch-Shell-2G/releases/tag/1.0.0
+    release_id: 17072661
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -377,11 +343,12 @@
   name: DUT-Shell-2G
   url: https://github.com/QualiSystems/DUT-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: DUT-Shell-2G 0.2.5
     tag_name: 0.2.5
     published_at: 2021-09-10 15:05:57
     release_url: https://github.com/QualiSystems/DUT-Shell-2G/releases/tag/0.2.5
+    release_id: 49354861
     python_version: PY3
     dependencies:
     - cloudshell-automation-api
@@ -393,11 +360,12 @@
   name: F5-BIG-IP-Firewall-Shell-2G
   url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: F5 BIG-IP Firewall Shell 2G 1.1.1
     tag_name: 1.1.1
     published_at: 2020-10-12 11:48:02
     release_url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G/releases/tag/1.1.1
+    release_id: 32449058
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -412,11 +380,12 @@
   name: F5-BIG-IP-Loadbalancer-Shell-2G
   url: https://github.com/QualiSystems/F5-BIG-IP-Loadbalancer-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: F5 BIG-IP Loadbalancer Shell 2G 1.1.1
     tag_name: 1.1.1
     published_at: 2020-10-12 11:53:25
     release_url: https://github.com/QualiSystems/F5-BIG-IP-Loadbalancer-Shell-2G/releases/tag/1.1.1
+    release_id: 32449343
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -427,50 +396,15 @@
     - cloudshell-shell-core<4.1,>=4.0
     - cloudshell-snmp<3.4,>=3.3
 - !Shell_2G
-  name: F5-BigIp-Firewall-Shell-2G
-  url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G
-  releases:
-  - !Release
-    title: F5 BIG-IP Firewall Shell 2 Generation 1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2018-12-12 15:55:33
-    release_url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
-    dependencies:
-    - cloudshell-automation-api<7.1,>=7.0
-    - cloudshell-cli<3.3,>=3.2
-    - cloudshell-core<2.3,>=2.2
-    - cloudshell-f5<1.1,>=1.0
-    - cloudshell-firewall<3.1,>=3.0
-    - cloudshell-networking-devices<2.4,>=2.3
-    - cloudshell-shell-core<4.1,>=4.0
-    - cloudshell-snmp<3.3,>=3.2
-- !Shell_2G
-  name: F5-BigIp-Loadbalancer-Shell-2G
-  url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G
-  releases:
-  - !Release
-    title: F5 BigIp Loadbalancer Shell 2G 1.0.2
-    tag_name: 1.0.2
-    published_at: 2020-01-13 14:13:04
-    release_url: https://github.com/QualiSystems/F5-BigIp-Loadbalancer-Shell-2G/releases/tag/1.0.2
-    python_version: PY2
-    dependencies:
-    - cloudshell-automation-api<7.1,>=7.0
-    - cloudshell-cli<3.3,>=3.2
-    - cloudshell-core<2.3,>=2.2
-    - cloudshell-networking-devices<2.4,>=2.3
-    - cloudshell-shell-core<4.1,>=4.0
-    - cloudshell-snmp<3.3,>=3.2
-- !Shell_2G
   name: FortiGate-FortiOS-Firewall-Shell-2G
   url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: FortiGate FortiOS Firewall Shell 2G 1.1.0
     tag_name: 1.1.0
     published_at: 2019-10-17 08:43:33
     release_url: https://github.com/QualiSystems/FortiGate-FortiOS-Firewall-Shell-2G/releases/tag/1.1.0
+    release_id: 20766689
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -485,11 +419,12 @@
   name: Huawei-VRP-Router-Shell-2G
   url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Huawei VRP Router Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2019-04-18 09:17:37
     release_url: https://github.com/QualiSystems/Huawei-VRP-Router-Shell-2G/releases/tag/1.0.0
+    release_id: 16817683
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -504,11 +439,12 @@
   name: Huawei-VRP-Switch-Shell-2G
   url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Huawei VRP Switch Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2019-04-18 09:18:08
     release_url: https://github.com/QualiSystems/Huawei-VRP-Switch-Shell-2G/releases/tag/1.0.0
+    release_id: 16817739
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -523,11 +459,12 @@
   name: Huawei-VRP-WDM-Shell-2G
   url: https://github.com/QualiSystems/Huawei-VRP-WDM-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Huawei-VRP-WDM-Shell-2G 1.0.0
     tag_name: 1.0.0
     published_at: 2021-04-11 19:27:06
     release_url: https://github.com/QualiSystems/Huawei-VRP-WDM-Shell-2G/releases/tag/1.0.0
+    release_id: 41246362
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.2
@@ -546,11 +483,12 @@
   name: IxVM-Deployment-App-Chassis-Shell-2G
   url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: IxVM Chassis Deployment App 2nd Generation 1.0.2
     tag_name: 1.0.2
     published_at: 2019-06-04 13:06:49
     release_url: https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G/releases/tag/1.0.2
+    release_id: 17769689
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -564,89 +502,48 @@
   name: Ixia-Chassis-Shell-2G
   url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Ixia-Chassis-Shell-2G 2.1.2-Preview
     tag_name: 2.1.2-Preview
     published_at: 2021-01-06 13:47:25
     release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/2.1.2-Preview
+    release_id: 36046929
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: Ixia-IxLoad-Controller-Shell-2G
   url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Ixia IxLoad Controller Shell 2G 3.0.1
     tag_name: 3.0.1-Preview
     published_at: 2021-01-20 13:28:23
     release_url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G/releases/tag/3.0.1-Preview
+    release_id: 36655619
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - null
-      - &id003 !!python/tuple
-        - rc
-        - 0
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - *id003
-      - *id002
-      - *id001
-      - *id002
+    dependencies: []
 - !Shell_2G
   name: Ixia-IxNetwork-Controller-Shell-2G
   url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Ixia-IxNetwork-Controller-Shell-2G 3.0.2
     tag_name: 3.0.2-Preview
     published_at: 2021-01-20 08:20:34
     release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.0.2-Preview
+    release_id: 36641885
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 2
-      - null
-      - &id004 !!python/tuple
-        - rc
-        - 0
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 2
-      - *id004
-      - *id002
-      - *id001
-      - *id002
+    dependencies: []
 - !Shell_2G
   name: Juniper-JunOS-Firewall-Shell-2G
   url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Juniper-JunOS-Firewall-Shell-2G 3.0.3
     tag_name: 3.0.3
     published_at: 2021-03-15 15:54:26
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Firewall-Shell-2G/releases/tag/3.0.3
+    release_id: 39822780
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.2
@@ -663,11 +560,12 @@
   name: Juniper-JunOS-Router-Shell-2G
   url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Juniper-JunOS-Router-Shell-2G 3.0.4
     tag_name: 3.0.4
     published_at: 2021-03-15 15:53:09
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.4
+    release_id: 39825806
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.2
@@ -684,11 +582,12 @@
   name: Juniper-JunOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Juniper-JunOS-Switch-Shell-2G 3.0.4
     tag_name: 3.0.4
     published_at: 2021-03-15 15:55:21
     release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.4
+    release_id: 39825859
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.2
@@ -705,35 +604,18 @@
   name: Kubernetes-Cloud-Provider-2G
   url: https://github.com/QualiSystems/Kubernetes-Cloud-Provider-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Kubernetes Cloud Provider Shell 2G 1.0.1 Preview
     tag_name: 1.0.1
     published_at: 2021-01-11 09:45:20
     release_url: https://github.com/QualiSystems/Kubernetes-Cloud-Provider-2G/releases/tag/1.0.1
+    release_id: 35869556
     python_version: PY3
     dependencies:
     - cloudshell-automation-api
     - cloudshell-cp-core<3.0.0,>=2.0.0
     - cloudshell-cp-kubernetes<2.0.0,>=1.0.0
-    - cloudshell-logging<2,>=1.0
-    - cloudshell-shell-core<6.0.0,>=5.0,>=5.0.3
-    - cloudshell-shell-flows<2,>=1.0
-    - cloudshell-shell-standards<2.0,>=1.0
-- !Shell_2G
-  name: Kubernetes-Cloud-Provider-Shell-2G
-  url: https://github.com/QualiSystems/Kubernetes-Cloud-Provider-Shell-2G
-  releases:
-  - !Release
-    title: Kubernetes Cloud Provider Shell 2G 1.0.1 Preview
-    tag_name: 1.0.1
-    published_at: 2021-01-11 09:45:20
-    release_url: https://github.com/QualiSystems/Kubernetes-Cloud-Provider-Shell-2G/releases/tag/1.0.1
-    python_version: PY3
-    dependencies:
-    - cloudshell-automation-api
-    - cloudshell-cp-core<3.0.0,>=2.0.0
-    - cloudshell-cp-kubernetes<2.0.0,>=1.0.0
-    - cloudshell-logging<2,>=1.0
+    - cloudshell-logging<2,>=1
     - cloudshell-shell-core<6.0.0,>=5.0,>=5.0.3
     - cloudshell-shell-flows<2,>=1.0
     - cloudshell-shell-standards<2.0,>=1.0
@@ -741,70 +623,39 @@
   name: Microsoft-Azure-Cloud-Provider-Shell-2G
   url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.3.0
     tag_name: 2.3.0
     published_at: 2021-08-12 15:16:18
     release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.3.0
+    release_id: 47753929
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 2
-        - 3
-        - 0
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 2
-        - 3
-      - *id001
-      - *id002
-      - *id001
-      - *id002
-  - !Release
+    dependencies:
+    - cloudshell-automation-api>=9.2
+    - cloudshell-cp-azure<3.4.0,>=3.3.0
+    - cloudshell-cp-core<3.0.0,>=2.0.0
+    - cloudshell-logging<2,>=1.0
+    - cloudshell-shell-core<6.0.0,>=5.0,>=5.0.3
+    - cloudshell-shell-flows<2,>=1.0
+    - cloudshell-shell-standards<2.0,>=1.0
+  - !Shell2GRelease
     title: Microsoft-Azure-Cloud-Provider-Shell-2G 1.1.2
     tag_name: 1.1.2
     published_at: 2020-12-16 13:46:24
     release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/1.1.2
+    release_id: 35351458
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 1
-        - 1
-        - 2
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 1
-        - 1
-        - 2
-      - *id001
-      - *id002
-      - *id001
-      - *id002
+    dependencies: []
 - !Shell_2G
   name: OCI-Shell-2G
   url: https://github.com/QualiSystems/OCI-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: OCI-Shell-2G 1.1.9
     tag_name: 1.1.9
     published_at: 2021-01-10 16:06:39
     release_url: https://github.com/QualiSystems/OCI-Shell-2G/releases/tag/1.1.9
+    release_id: 36088821
     python_version: PY2
     dependencies:
     - cloudshell-automation-api>=9.3
@@ -815,11 +666,12 @@
   name: OpenStack-Cloud-Provider-Shell-2G
   url: https://github.com/QualiSystems/OpenStack-Cloud-Provider-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: OpenStack-Cloud-Provider-Shell-2G 1.0.0
     tag_name: 1.0.0
-    published_at: 2021-01-05 14:26:15
+    published_at: 2021-01-12 16:39:43
     release_url: https://github.com/QualiSystems/OpenStack-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    release_id: 36289802
     python_version: PY3
     dependencies:
     - cloudshell-automation-api
@@ -830,38 +682,21 @@
     - cloudshell-shell-core<6,>=5.0,~=5.0
     - cloudshell-shell-standards~=1.1
 - !Shell_2G
-  name: OpenStack-Shell-2G
-  url: https://github.com/QualiSystems/OpenStack-Shell-2G
-  releases:
-  - !Release
-    title: 'OpenStack Shell 2G '
-    tag_name: 0.1.1
-    published_at: 2020-09-03 08:00:42
-    release_url: https://github.com/QualiSystems/OpenStack-Shell-2G/releases/tag/0.1.1
-    python_version: PY3
-    dependencies:
-    - cloudshell-automation-api
-    - cloudshell-cp-core~=2.1
-    - cloudshell-cp-openstack~=2.0
-    - cloudshell-logging<2,>=1.0
-    - cloudshell-shell-connectivity-flow~=2.0
-    - cloudshell-shell-core<6,>=5.0,~=5.0
-    - cloudshell-shell-standards~=1.1
-- !Shell_2G
   name: PaloAlto-PanOS-Firewall-Shell-2G
   url: https://github.com/QualiSystems/PaloAlto-PanOS-Firewall-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: PaloAlto-PanOS-Firewall-Shell-2G 2.0.0
     tag_name: 2.0.0
     published_at: 2021-04-08 12:50:03
     release_url: https://github.com/QualiSystems/PaloAlto-PanOS-Firewall-Shell-2G/releases/tag/2.0.0
+    release_id: 41119829
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.2
     - cloudshell-cli<5.0,>=4.0
     - cloudshell-firewall-panos<2.1,>=2.0
-    - cloudshell-logging<2,>=1.0
+    - cloudshell-logging<2,>=1
     - cloudshell-shell-core<6.0,>=5.0
     - cloudshell-shell-firewall-standard==3.0.2
     - cloudshell-shell-flows<2.0,>=1.0
@@ -869,34 +704,27 @@
     - cloudshell-snmp<5.0,>=4.0,>=4.0.1
     - cloudshell-snmp-autoload<2.0,>=1.0
 - !Shell_2G
-  name: PaloAlto-PanoOS-Shell
-  url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell
-  releases:
-  - !Release
-    title: PaloAlto PanoOS Firewall Shell
-    tag_name: 1.0.0
-    published_at: 2018-10-04 15:07:15
-    release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Shell/releases/tag/1.0.0
-    python_version: PY2
-- !Shell_2G
   name: PaloAlto-PanoOS-Static-Shell
   url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell
   releases:
-  - !Release
+  - !Shell2GRelease
     title: PaloAlto PanoOS Static Virtual Firewall Shell
     tag_name: 1.0.0
     published_at: 2018-10-04 20:33:15
     release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell/releases/tag/1.0.0
+    release_id: 13253999
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: SDN-Opendaylight-Shell-2G
   url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: SDN-Opendaylight-Shell-2G 1.0.0
     tag_name: 1.0.0
     published_at: 2017-11-09 17:14:23
     release_url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G/releases/tag/1.0.0
+    release_id: 8454353
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<7.1,>=7.0
@@ -911,121 +739,96 @@
   name: Spirent-TestCenter-Chassis-Shell-2G
   url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Spirent-TestCenter-Chassis-Shell-2G 3.0.1
     tag_name: 3.0.1
     published_at: 2021-06-15 09:44:04
     release_url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G/releases/tag/3.0.1
+    release_id: 44632176
     python_version: PY3
+    dependencies: []
 - !Shell_2G
   name: Spirent-TestCenter-Controller-Shell-2G
   url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Spirent-TestCenter-Controller-Shell-2G 3.0.1-Preview
     tag_name: 3.0.1-Preview
     published_at: 2020-12-16 07:25:11
     release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/3.0.1-Preview
+    release_id: 35333431
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - null
-      - &id005 !!python/tuple
-        - rc
-        - 0
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 0
-        - 1
-      - *id005
-      - *id002
-      - *id001
-      - *id002
-- !Shell_2G
-  name: Spirent-TestCenterChassis-Shell-2G
-  url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G
-  releases:
-  - !Release
-    title: Spirent-TestCenterChassis-Shell-2G 3.0.0-Preview
-    tag_name: 3.0.0-Preview
-    published_at: 2020-11-10 18:45:56
-    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G/releases/tag/3.0.0-Preview
-    python_version: PY3
-  - !Release
-    title: Spirent-TestCenterChassis-Shell-2G 2.0.2-Preview
-    tag_name: 2.0.2-Preview
-    published_at: 2019-01-27 10:22:37
-    release_url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G/releases/tag/2.0.2-Preview
-    python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: TRex-Chassis-Shell-2G
   url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: TRex Chassis Shell 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2018-02-27 17:33:14
     release_url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases/tag/1.0.0
+    release_id: 9858335
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: TeraVM-Chassis-Shell-2G
   url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: TeraVM Chassis Shell 2 Generation 1.0.1
     tag_name: 1.0.1
     published_at: 2018-11-07 10:07:08
     release_url: https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G/releases/tag/1.0.1
+    release_id: 13871690
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: TeraVM-Controller-Shell-2G
   url: https://github.com/QualiSystems/TeraVM-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: TeraVM Controller 2G 1.1.1
     tag_name: 1.1.1
     published_at: 2019-05-06 14:31:05
     release_url: https://github.com/QualiSystems/TeraVM-Controller-Shell-2G/releases/tag/1.1.1
+    release_id: 17171818
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: TeraVM-Virtual-Blade-Shell-2G
   url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: TeraVM Virtual Blade Shell 2 Generation 1.0.0 PREVIEW
     tag_name: 1.0.0
     published_at: 2019-03-04 13:06:41
     release_url: https://github.com/QualiSystems/TeraVM-Virtual-Blade-Shell-2G/releases/tag/1.0.0
+    release_id: 15828506
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: TeraVM-Virtual-Chassis-Shell-2G
   url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: TeraVM Virtual Chassis Shell 2 Generation 1.1.0
     tag_name: 1.1.0
     published_at: 2020-10-28 10:50:42
     release_url: https://github.com/QualiSystems/TeraVM-Virtual-Chassis-Shell-2G/releases/tag/1.1.0
+    release_id: 32424705
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: VIRL-Shell-2G
   url: https://github.com/QualiSystems/VIRL-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: VIRL Shell 2G 1.0.2
     tag_name: 1.0.2
     published_at: 2020-09-09 14:40:48
     release_url: https://github.com/QualiSystems/VIRL-Shell-2G/releases/tag/1.0.2
+    release_id: 30984573
     python_version: PY3
     dependencies:
     - cloudshell-automation-api>=9.3
@@ -1036,125 +839,86 @@
   name: VMware-vCenter-Cloud-Provider-Shell-2G
   url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: VMware-vCenter-Cloud-Provider-Shell-2G 3.3.0
     tag_name: 3.3.0
     published_at: 2021-06-30 12:58:22
     release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/3.3.0
+    release_id: 45486282
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 3
-        - 3
-        - 0
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 3
-        - 3
-      - *id001
-      - *id002
-      - *id001
-      - *id002
-  - !Release
+    dependencies:
+    - cloudshell-automation-api<9.0.1.0,>=9.0.0.0
+    - cloudshell-cp-core<1.3.0,>=1.2.0
+    - cloudshell-cp-vcenter<3.5.0,>=3.4.0
+    - cloudshell-logging<1.1.0,<2,>=1.0
+    - cloudshell-shell-core<6.0.0,>=5.0.3
+  - !Shell2GRelease
     title: VMware-vCenter-Cloud-Provider-Shell-2G 2.2.0
     tag_name: 2.2.0
     published_at: 2021-03-15 09:48:12
     release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/2.2.0
+    release_id: 39109499
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 2
-        - 2
-        - 0
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 2
-        - 2
-      - *id001
-      - *id002
-      - *id001
-      - *id002
-  - !Release
+    dependencies:
+    - cloudshell-automation-api<9.0.1.0,>=9.0.0.0
+    - cloudshell-cp-core<1.2.0,>=1.1.0
+    - cloudshell-cp-vcenter<2.4.0,>=2.3.0
+    - cloudshell-logging<1.1.0,<2,>=1.0.0
+    - cloudshell-shell-core<6.0.0,>=5.0.3
+  - !Shell2GRelease
     title: VMware vCenter Cloud Provider Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2020-11-17 13:37:23
     release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/1.0.0
+    release_id: 33880280
     python_version: PY3
-    dependencies: null
-    version: !!python/object:packaging.version.Version
-      _version: !!python/object/new:packaging.version._Version
-      - 0
-      - !!python/tuple
-        - 1
-        - 0
-        - 0
-      - null
-      - null
-      - null
-      - null
-      _key: !!python/tuple
-      - 0
-      - !!python/tuple
-        - 1
-      - *id001
-      - *id002
-      - *id001
-      - *id002
+    dependencies: []
 - !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
   url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: VyOS Deployment App 2nd Generation [PREVIEW]
     tag_name: 1.0.1
     published_at: 2018-09-12 09:33:15
     release_url: https://github.com/QualiSystems/VyOS-Deployment-App-Shell-2G/releases/tag/1.0.1
+    release_id: 12855005
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: Xena-Chassis-Shell-2G
   url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Xena-Chassis-Shell-2G 3.0.1
     tag_name: 3.0.1
     published_at: 2021-06-01 09:16:28
     release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.0.1
+    release_id: 43292708
     python_version: PY3
+    dependencies: []
 - !Shell_2G
   name: Xena-Controller-Shell-2G
   url: https://github.com/QualiSystems/Xena-Controller-Shell-2G
   releases:
-  - !Release
+  - !Shell2GRelease
     title: Xena-Controller-Shell-2G 3.1.0
     tag_name: 3.1.0
     published_at: 2021-06-07 14:19:43
     release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.1.0
+    release_id: 44208979
     python_version: PY3
+    dependencies: []
 - !Shell_2G
   name: a10-acos-firewall-shell-2g
   url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g
   releases:
-  - !Release
+  - !Shell2GRelease
     title: A10 ACOS Firewall Shell 2G 1.0.0
     tag_name: 1.0.0
     published_at: 2018-04-25 09:44:18
     release_url: https://github.com/QualiSystems/a10-acos-firewall-shell-2g/releases/tag/1.0.0
+    release_id: 10674401
     python_version: PY2
     dependencies:
     - cloudshell-automation-api<8.4,>=8.3
@@ -1169,22 +933,26 @@
   name: cloudshell-tg-breakingpoint-static-vblade
   url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade
   releases:
-  - !Release
+  - !Shell2GRelease
     title: CloudShell Traffic Generator BreakingPoint Static Virtual Blade
     tag_name: 1.1.0
     published_at: 2020-12-17 13:22:18
     release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vblade/releases/tag/1.1.0
+    release_id: 35417187
     python_version: PY2
+    dependencies: []
 - !Shell_2G
   name: cloudshell-tg-breakingpoint-static-vchassis
   url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis
   releases:
-  - !Release
+  - !Shell2GRelease
     title: CloudShell Traffic Generator BreakingPoint Static Virtual Chassis
     tag_name: 1.1.0
     published_at: 2020-12-17 13:22:27
     release_url: https://github.com/QualiSystems/cloudshell-tg-breakingpoint-static-vchassis/releases/tag/1.1.0
+    release_id: 35417174
     python_version: PY2
+    dependencies: []
 - !Shell_L1
   name: cloudshell-L1-Telescent
   url: https://github.com/QualiSystems/cloudshell-L1-Telescent
@@ -1194,6 +962,7 @@
     tag_name: 1.0.2
     published_at: 2018-02-19 13:48:04
     release_url: https://github.com/QualiSystems/cloudshell-L1-Telescent/releases/tag/1.0.2
+    release_id: 9734744
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-apcon-cli4
@@ -1204,6 +973,7 @@
     tag_name: 2.0.1
     published_at: 2019-02-27 15:17:43
     release_url: https://github.com/QualiSystems/cloudshell-L1-apcon-cli4/releases/tag/2.0.1
+    release_id: 15809328
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-calient
@@ -1214,6 +984,7 @@
     tag_name: 1.0.3
     published_at: 2018-04-24 15:18:20
     release_url: https://github.com/QualiSystems/cloudshell-L1-calient/releases/tag/1.0.3
+    release_id: 10696232
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-cgs
@@ -1224,6 +995,7 @@
     tag_name: 1.0.1
     published_at: 2019-09-03 11:53:36
     release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.1
+    release_id: 19715353
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-fiberzone_afm
@@ -1234,6 +1006,7 @@
     tag_name: 2.0.0
     published_at: 2019-01-02 14:11:52
     release_url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm/releases/tag/2.0.0
+    release_id: 14767236
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-glimmerglass
@@ -1244,6 +1017,7 @@
     tag_name: 1.0.5
     published_at: 2020-03-15 09:45:24
     release_url: https://github.com/QualiSystems/cloudshell-L1-glimmerglass/releases/tag/1.0.5
+    release_id: 24535477
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-ixia-visionedge
@@ -1254,6 +1028,7 @@
     tag_name: 1.0.9
     published_at: 2020-03-26 11:02:01
     release_url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge/releases/tag/1.0.9
+    release_id: 24885527
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-mrv
@@ -1264,6 +1039,7 @@
     tag_name: 2.0.5
     published_at: 2020-12-15 12:52:47
     release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.5
+    release_id: 35289370
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-horizon
@@ -1274,6 +1050,7 @@
     tag_name: 3.0.0
     published_at: 2018-02-07 14:38:42
     release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-horizon/releases/tag/3.0.0
+    release_id: 9573238
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-teststream
@@ -1284,16 +1061,7 @@
     tag_name: 5.0.1
     published_at: 2018-12-07 13:16:44
     release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.1
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-netvisor_virtualwire
-  url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire
-  releases:
-  - !Release
-    title: Pluribus Netvisor VirtualWire L1 Shell v2.0.0 Preview
-    tag_name: 2.0.0
-    published_at: 2019-01-03 10:33:12
-    release_url: https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases/tag/2.0.0
+    release_id: 14408165
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-pluribus-virtualwire
@@ -1304,6 +1072,7 @@
     tag_name: 3.0.0
     published_at: 2019-12-30 16:28:55
     release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire/releases/tag/3.0.0
+    release_id: 22518097
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-pluribus-vle
@@ -1314,16 +1083,7 @@
     tag_name: 2.0.0
     published_at: 2019-12-30 16:27:20
     release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.0.0
-    python_version: PY2
-- !Shell_L1
-  name: cloudshell-L1-pluribus_netvisor_vle
-  url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle
-  releases:
-  - !Release
-    title: Pluribus Netvisor VLE L1 Shell v1.0.1 Preview
-    tag_name: 1.0.1
-    published_at: 2019-01-02 14:32:45
-    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus_netvisor_vle/releases/tag/1.0.1
+    release_id: 22517954
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-polatis
@@ -1334,6 +1094,7 @@
     tag_name: 3.0.4
     published_at: 2020-04-15 13:45:24
     release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.4
+    release_id: 25530704
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-simpler_networks
@@ -1344,6 +1105,7 @@
     tag_name: 2.0.0
     published_at: 2019-01-03 12:15:23
     release_url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks/releases/tag/2.0.0
+    release_id: 14782810
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-telebyte
@@ -1354,6 +1116,7 @@
     tag_name: 1.0.1
     published_at: 2019-11-26 11:16:07
     release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.1
+    release_id: 21762658
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-w2w-rome
@@ -1364,6 +1127,7 @@
     tag_name: 4.2.2
     published_at: 2021-02-22 16:02:25
     release_url: https://github.com/QualiSystems/cloudshell-L1-w2w-rome/releases/tag/4.2.2
+    release_id: 38433719
     python_version: PY2
 - !Shell_L1
   name: cloudshell-l1-ixia-xstream
@@ -1374,4 +1138,5 @@
     tag_name: 1.0.0
     published_at: 2017-09-15 13:48:58
     release_url: https://github.com/QualiSystems/cloudshell-l1-ixia-xstream/releases/tag/1.0.0
+    release_id: 7769467
     python_version: PY2

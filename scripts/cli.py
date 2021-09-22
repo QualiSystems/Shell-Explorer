@@ -1,10 +1,12 @@
+import logging.config
+
 import click
 
 from scripts.check_for_new_releases.main import main as check_for_new_releases
-from scripts.shell_explorer.helpers import set_logger
+from scripts.shell_explorer.helpers import LOGGING_CONFIG
 from scripts.shell_explorer.shell_explorer import ShellExplorer
 
-set_logger()
+logging.config.dictConfig(LOGGING_CONFIG)
 
 
 @click.group()
@@ -21,8 +23,9 @@ def cli():
     default="{}",
     help="Json dict of repositories and release ids. {<repo_name>: [<release_id1>]}",
 )
-def shell_explorer(auth_key: str, branch: str, new_releases: str):
-    se = ShellExplorer(auth_key, branch, new_releases)
+@click.option("--force-update", is_flag=True, default=False)
+def shell_explorer(auth_key: str, branch: str, new_releases: str, force_update: bool):
+    se = ShellExplorer.from_cli(auth_key, branch, new_releases, force_update)
     se.scan_and_commit()
 
 
