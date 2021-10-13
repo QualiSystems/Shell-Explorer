@@ -83,10 +83,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-azure
   releases:
   - !Release
-    title: cloudshell-cp-azure 3.3.6
-    tag_name: 3.3.6
-    published_at: 2021-08-12 14:55:56
-    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.3.6
+    title: cloudshell-cp-azure 3.4.0
+    tag_name: 3.4.0
+    published_at: 2021-10-13 18:12:33
+    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/3.4.0
     python_version: PY2
 - !Package
   name: cloudshell-cp-core
