@@ -343,9 +343,9 @@
   url: https://github.com/QualiSystems/cloudshell-orch-sandbox
   releases:
   - !Release
-    title: CloudShell v2021.2 GA Sandbox Orchestration
+    title: CloudShell v2021.2 GA
     tag_name: v2021.2
-    published_at: 2021-11-01 15:16:27
+    published_at: 2021-11-01 15:29:41
     release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v2021.2
     python_version: PY2
 - !Shell_1G
