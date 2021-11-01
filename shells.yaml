@@ -343,10 +343,10 @@
   url: https://github.com/QualiSystems/cloudshell-orch-sandbox
   releases:
   - !Release
-    title: CloudShell v9.3 EA Sandbox Orchestration
-    tag_name: v9.3EA
-    published_at: 2019-07-31 12:45:28
-    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v9.3EA
+    title: CloudShell v2021.2 GA Sandbox Orchestration
+    tag_name: v2021.2
+    published_at: 2021-11-01 15:16:27
+    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v2021.2
     python_version: PY2
 - !Shell_1G
   name: cloudshell-tg-breakingpoint-vblade
