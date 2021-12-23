@@ -443,10 +443,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-core
   releases:
   - !Release
-    title: cloudshell-shell-core-5.0.5
-    tag_name: 5.0.5
-    published_at: 2020-05-19 06:37:12
-    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.0.5
+    title: cloudshell-shell-core 5.1.0
+    tag_name: 5.1.0
+    published_at: 2021-12-23 14:50:54
+    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/5.1.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-firewall-standard
