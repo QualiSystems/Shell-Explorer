@@ -403,10 +403,10 @@
   url: https://github.com/QualiSystems/shell-as-service
   releases:
   - !Release
-    title: shell-as-service 0.1.0
-    tag_name: 0.1.0
-    published_at: 2021-01-21 17:18:38
-    release_url: https://github.com/QualiSystems/shell-as-service/releases/tag/0.1.0
+    title: shell-as-service 0.1.9
+    tag_name: 0.1.9
+    published_at: 2022-01-10 20:01:42
+    release_url: https://github.com/QualiSystems/shell-as-service/releases/tag/0.1.9
     python_version: PY2
 - !Shell_1G
   name: vCenterShell
