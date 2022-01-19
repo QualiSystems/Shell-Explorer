@@ -93,10 +93,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-core
   releases:
   - !Release
-    title: cloudshell-cp-core 2.3.1
-    tag_name: 2.3.1
-    published_at: 2021-12-28 16:13:54
-    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.3.1
+    title: cloudshell-cp-core 2.4.0
+    tag_name: 2.4.0
+    published_at: 2022-01-19 15:27:15
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.4.0
     python_version: PY2
 - !Package
   name: cloudshell-cp-kubernetes
