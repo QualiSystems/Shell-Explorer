@@ -907,17 +907,11 @@
   url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G
   releases:
   - !Release
-    title: Spirent-TestCenter-Controller-Shell-2G 3.0.1-Preview
-    tag_name: 3.0.1-Preview
-    published_at: 2020-12-16 07:25:11
-    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/3.0.1-Preview
+    title: Spirent-TestCenter-Controller-Shell-2G 3.0.2-Preview
+    tag_name: 3.0.2-Preview
+    published_at: 2022-01-23 16:58:00
+    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/3.0.2-Preview
     python_version: PY3
-  - !Release
-    title: Spirent-TestCenter-Controller-Shell-2G 2.0.1-Preview
-    tag_name: 2.0.1-Preview
-    published_at: 2019-12-08 10:27:43
-    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Controller-Shell-2G/releases/tag/2.0.1-Preview
-    python_version: PY2
 - !Shell_2G
   name: Spirent-TestCenterChassis-Shell-2G
   url: https://github.com/QualiSystems/Spirent-TestCenterChassis-Shell-2G
