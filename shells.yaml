@@ -13,10 +13,10 @@
   url: https://github.com/QualiSystems/Ansible-Shell
   releases:
   - !Release
-    title: Release 2.0.1 GA
-    tag_name: v2.0.1
-    published_at: 2021-08-10 09:53:09
-    release_url: https://github.com/QualiSystems/Ansible-Shell/releases/tag/v2.0.1
+    title: Release 2.1.0 EA
+    tag_name: v2.1.0
+    published_at: 2022-02-16 09:36:58
+    release_url: https://github.com/QualiSystems/Ansible-Shell/releases/tag/v2.1.0
     python_version: PY2
 - !Shell_1G
   name: Arista-EOS-Shell
