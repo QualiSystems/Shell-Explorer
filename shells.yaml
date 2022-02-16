@@ -343,10 +343,10 @@
   url: https://github.com/QualiSystems/cloudshell-orch-sandbox
   releases:
   - !Release
-    title: CloudShell v2021.2 GA
-    tag_name: v2021.2
-    published_at: 2021-11-01 15:29:41
-    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/v2021.2
+    title: 2022.1 EA
+    tag_name: 2022.1.EA
+    published_at: 2022-02-16 10:40:26
+    release_url: https://github.com/QualiSystems/cloudshell-orch-sandbox/releases/tag/2022.1.EA
     python_version: PY2
 - !Shell_1G
   name: cloudshell-tg-breakingpoint-vblade
