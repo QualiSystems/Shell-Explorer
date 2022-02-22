@@ -93,10 +93,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-core
   releases:
   - !Release
-    title: cloudshell-cp-core 2.4.0
-    tag_name: 2.4.0
-    published_at: 2022-01-19 15:27:15
-    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.4.0
+    title: cloudshell-cp-core 2.4.1
+    tag_name: 2.4.1
+    published_at: 2022-02-22 13:30:50
+    release_url: https://github.com/QualiSystems/cloudshell-cp-core/releases/tag/2.4.1
     python_version: PY2
 - !Package
   name: cloudshell-cp-kubernetes
@@ -123,10 +123,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
   releases:
   - !Release
-    title: cloudshell-cp-vcenter 4.1.2
-    tag_name: 4.1.2
-    published_at: 2022-01-26 16:37:06
-    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/4.1.2
+    title: cloudshell-cp-vcenter 4.2.0
+    tag_name: 4.2.0
+    published_at: 2022-02-22 13:35:02
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/4.2.0
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
