@@ -827,10 +827,10 @@
   url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.4.1
-    tag_name: 2.4.1
-    published_at: 2021-11-18 19:03:23
-    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.4.1
+    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.4.2
+    tag_name: 2.4.2
+    published_at: 2022-03-10 16:31:35
+    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.4.2
     python_version: PY3
 - !Shell_2G
   name: OCI-Shell-2G
