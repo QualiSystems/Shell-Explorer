@@ -1023,10 +1023,10 @@
   url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G
   releases:
   - !Release
-    title: Xena-Chassis-Shell-2G 3.0.1
-    tag_name: 3.0.1
-    published_at: 2021-06-01 09:16:28
-    release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.0.1
+    title: Xena-Chassis-Shell-2G 3.0.2-Preview
+    tag_name: 3.0.2-Preview
+    published_at: 2022-04-07 15:32:47
+    release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.0.2-Preview
     python_version: PY3
 - !Shell_2G
   name: Xena-Controller-Shell-2G
