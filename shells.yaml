@@ -1013,10 +1013,10 @@
   url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: VMware-vCenter-Cloud-Provider-Shell-2G 5.0.1
-    tag_name: 5.0.1
-    published_at: 2022-04-20 13:54:12
-    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/5.0.1
+    title: VMware-vCenter-Cloud-Provider-Shell-2G 5.0.2
+    tag_name: 5.0.2
+    published_at: 2022-04-27 14:09:11
+    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/5.0.2
     python_version: PY3
 - !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
