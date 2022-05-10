@@ -489,6 +489,26 @@
     release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
+  name: ByteBlower-Chassis-Shell-2G
+  url: https://github.com/QualiSystems/ByteBlower-Chassis-Shell-2G
+  releases:
+  - !Release
+    title: ByteBlower-Chassis-Shell-2G 3.0.2-Preview
+    tag_name: 3.0.2
+    published_at: 2022-05-10 12:59:47
+    release_url: https://github.com/QualiSystems/ByteBlower-Chassis-Shell-2G/releases/tag/3.0.2
+    python_version: PY3
+- !Shell_2G
+  name: ByteBlower-Controller-Shell-2G
+  url: https://github.com/QualiSystems/ByteBlower-Controller-Shell-2G
+  releases:
+  - !Release
+    title: ByteBlower-Controller-Shell-2G 3.0.0-Preview
+    tag_name: 3.0.0
+    published_at: 2022-05-10 13:02:55
+    release_url: https://github.com/QualiSystems/ByteBlower-Controller-Shell-2G/releases/tag/3.0.0
+    python_version: PY3
+- !Shell_2G
   name: CGS-COS-Loadbalancer-Shell-2G
   url: https://github.com/QualiSystems/CGS-COS-Loadbalancer-Shell-2G
   releases:
