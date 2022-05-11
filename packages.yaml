@@ -19,6 +19,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-autodiscovery/releases/tag/1.0.0
     python_version: PY2
 - !Package
+  name: cloudshell-calix
+  url: https://github.com/QualiSystems/cloudshell-calix
+  releases:
+  - !Release
+    title: cloudshell-calix 0.2.0
+    tag_name: 0.2.0
+    published_at: 2022-05-11 17:28:53
+    release_url: https://github.com/QualiSystems/cloudshell-calix/releases/tag/0.2.0
+    python_version: PY2
+- !Package
   name: cloudshell-cgs
   url: https://github.com/QualiSystems/cloudshell-cgs
   releases:
