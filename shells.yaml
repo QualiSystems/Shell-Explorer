@@ -1063,10 +1063,10 @@
   url: https://github.com/QualiSystems/Xena-Controller-Shell-2G
   releases:
   - !Release
-    title: Xena-Controller-Shell-2G 3.1.1-Preview
-    tag_name: 3.1.1
-    published_at: 2022-04-11 11:39:33
-    release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.1.1
+    title: Xena-Controller-Shell-2G 3.1.2-Preview
+    tag_name: 3.1.2-Preview
+    published_at: 2022-04-17 07:46:54
+    release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.1.2-Preview
     python_version: PY3
 - !Shell_2G
   name: a10-acos-firewall-shell-2g
