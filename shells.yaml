@@ -1193,10 +1193,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream
   releases:
   - !Release
-    title: Netscout TestStream L1 Shell v5.0.1 PREVIEW
-    tag_name: 5.0.1
-    published_at: 2018-12-07 13:16:44
-    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.1
+    title: Netscout TestStream L1 Shell v5.0.2
+    tag_name: 5.0.2
+    published_at: 2022-07-05 13:59:25
+    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.2
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netvisor_virtualwire
