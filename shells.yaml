@@ -473,11 +473,11 @@
   url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G
   releases:
   - !Release
-    title: BreakingPoint Chassis Shell 2G v1.0.0 PREVIEW
-    tag_name: 1.0.0
-    published_at: 2019-02-20 14:59:11
-    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/1.0.0
-    python_version: PY2
+    title: BreakingPoint-Chassis-Shell-2G 3.0.0
+    tag_name: 3.0.0
+    published_at: 2022-07-14 13:00:11
+    release_url: https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/3.0.0
+    python_version: PY3
 - !Shell_2G
   name: BreakingPoint-Controller-Shell-2G
   url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G
