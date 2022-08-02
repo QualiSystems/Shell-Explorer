@@ -781,10 +781,10 @@
   url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G
   releases:
   - !Release
-    title: Ixia-IxNetwork-Controller-Shell-2G 3.1.2
-    tag_name: 3.1.2
-    published_at: 2022-07-28 09:50:46
-    release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.1.2
+    title: ''
+    tag_name: 3.1.1-Patch
+    published_at: 2022-07-07 11:09:48
+    release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.1.1-Patch
     python_version: PY3
 - !Shell_2G
   name: Juniper-JunOS-Firewall-Shell-2G
@@ -1027,10 +1027,10 @@
   url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: VMware-vCenter-Cloud-Provider-Shell-2G 5.0.3
-    tag_name: 5.0.3
-    published_at: 2022-05-24 10:39:57
-    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/5.0.3
+    title: VMware-vCenter-Cloud-Provider-Shell-2G 4.2.3
+    tag_name: 4.2.3
+    published_at: 2022-05-24 10:05:54
+    release_url: https://github.com/QualiSystems/VMware-vCenter-Cloud-Provider-Shell-2G/releases/tag/4.2.3
     python_version: PY3
 - !Shell_2G
   name: VyOS-Deployment-App-Shell-2G
