@@ -4,9 +4,9 @@
   releases:
   - !Release
     title: ''
-    tag_name: 3.4.1
-    published_at: 2022-07-21 12:09:14
-    release_url: https://github.com/QualiSystems/CloudShell-Traffic/releases/tag/3.4.1
+    tag_name: 3.4.0
+    published_at: 2022-07-14 08:35:47
+    release_url: https://github.com/QualiSystems/CloudShell-Traffic/releases/tag/3.4.0
     python_version: PY2
 - !Package
   name: cloudshell-L1-networking-core
