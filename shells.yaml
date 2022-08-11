@@ -289,6 +289,16 @@
     release_url: https://github.com/QualiSystems/Raritan-PDU-Shell/releases/tag/1.0.0
     python_version: PY2
 - !Shell_1G
+  name: Shellfoundry-Traffic
+  url: https://github.com/QualiSystems/Shellfoundry-Traffic
+  releases:
+  - !Release
+    title: First release to PiPI
+    tag_name: 0.3.0
+    published_at: 2022-08-11 14:25:43
+    release_url: https://github.com/QualiSystems/Shellfoundry-Traffic/releases/tag/0.3.0
+    python_version: PY2
+- !Shell_1G
   name: Spirent-AvalancheController-Shell
   url: https://github.com/QualiSystems/Spirent-AvalancheController-Shell
   releases:
