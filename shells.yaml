@@ -1051,20 +1051,20 @@
   url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G
   releases:
   - !Release
-    title: Xena-Chassis-Shell-2G 3.0.3-Preview
-    tag_name: 3.0.3-Preview
-    published_at: 2022-04-17 07:41:56
-    release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.0.3-Preview
+    title: Xena-Chassis-Shell-2G 3.1.0
+    tag_name: 3.1.0
+    published_at: 2022-08-18 12:52:33
+    release_url: https://github.com/QualiSystems/Xena-Chassis-Shell-2G/releases/tag/3.1.0
     python_version: PY3
 - !Shell_2G
   name: Xena-Controller-Shell-2G
   url: https://github.com/QualiSystems/Xena-Controller-Shell-2G
   releases:
   - !Release
-    title: Xena-Controller-Shell-2G 3.1.2-Preview
-    tag_name: 3.1.2-Preview
-    published_at: 2022-04-17 07:46:54
-    release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.1.2-Preview
+    title: Xena-Controller-Shell-2G 3.2.0
+    tag_name: 3.2.0
+    published_at: 2022-08-18 12:54:59
+    release_url: https://github.com/QualiSystems/Xena-Controller-Shell-2G/releases/tag/3.2.0
     python_version: PY3
 - !Shell_2G
   name: a10-acos-firewall-shell-2g
