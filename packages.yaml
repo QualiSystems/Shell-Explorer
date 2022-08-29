@@ -133,10 +133,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-openstack
   releases:
   - !Release
-    title: cloudshell-cp-openstack 3.0.0
-    tag_name: 3.0.0
-    published_at: 2022-08-16 10:55:51
-    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/3.0.0
+    title: cloudshell-cp-openstack 3.0.1
+    tag_name: 3.0.1
+    published_at: 2022-08-29 11:36:22
+    release_url: https://github.com/QualiSystems/cloudshell-cp-openstack/releases/tag/3.0.1
     python_version: PY2
 - !Package
   name: cloudshell-cp-vcenter
