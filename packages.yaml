@@ -593,8 +593,8 @@
   url: https://github.com/QualiSystems/shellfoundry
   releases:
   - !Release
-    title: shellfoundry 1.2.21
-    tag_name: 1.2.21
-    published_at: 2022-04-13 12:01:42
-    release_url: https://github.com/QualiSystems/shellfoundry/releases/tag/1.2.21
+    title: shellfoundry 1.2.22
+    tag_name: 1.2.22
+    published_at: 2022-09-07 14:46:40
+    release_url: https://github.com/QualiSystems/shellfoundry/releases/tag/1.2.22
     python_version: PY2
