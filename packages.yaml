@@ -163,10 +163,10 @@
   url: https://github.com/QualiSystems/cloudshell-f5
   releases:
   - !Release
-    title: cloudshell-f5 1.1.2
-    tag_name: 1.1.2
-    published_at: 2020-10-12 10:58:06
-    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/1.1.2
+    title: cloudshell-f5 2.0.4
+    tag_name: 2.0.4
+    published_at: 2022-09-27 11:54:54
+    release_url: https://github.com/QualiSystems/cloudshell-f5/releases/tag/2.0.4
     python_version: PY2
 - !Package
   name: cloudshell-firewall
