@@ -665,21 +665,21 @@
   url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G
   releases:
   - !Release
-    title: F5 BIG-IP Firewall Shell 2G 1.1.1
-    tag_name: 1.1.1
-    published_at: 2020-10-12 11:48:02
-    release_url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G/releases/tag/1.1.1
-    python_version: PY2
+    title: F5-BIG-IP-Firewall-Shell-2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2022-09-27 15:45:53
+    release_url: https://github.com/QualiSystems/F5-BIG-IP-Firewall-Shell-2G/releases/tag/2.0.0
+    python_version: PY3
 - !Shell_2G
   name: F5-BIG-IP-Loadbalancer-Shell-2G
   url: https://github.com/QualiSystems/F5-BIG-IP-Loadbalancer-Shell-2G
   releases:
   - !Release
-    title: F5 BIG-IP Loadbalancer Shell 2G 1.1.1
-    tag_name: 1.1.1
-    published_at: 2020-10-12 11:53:25
-    release_url: https://github.com/QualiSystems/F5-BIG-IP-Loadbalancer-Shell-2G/releases/tag/1.1.1
-    python_version: PY2
+    title: F5-BIG-IP-Loadbalancer-Shell-2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2022-09-27 15:44:50
+    release_url: https://github.com/QualiSystems/F5-BIG-IP-Loadbalancer-Shell-2G/releases/tag/2.0.0
+    python_version: PY3
 - !Shell_2G
   name: F5-BigIp-Firewall-Shell-2G
   url: https://github.com/QualiSystems/F5-BigIp-Firewall-Shell-2G
