@@ -765,10 +765,10 @@
   url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
   releases:
   - !Release
-    title: Ixia-Chassis-Shell-2G 3.0.1
-    tag_name: 3.0.1
-    published_at: 2022-07-28 11:41:09
-    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/3.0.1
+    title: Refactor connect to chassis nethod
+    tag_name: 3.1.0
+    published_at: 2022-10-15 13:48:39
+    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/3.1.0
     python_version: PY3
 - !Shell_2G
   name: Ixia-IxLoad-Controller-Shell-2G
