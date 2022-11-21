@@ -785,10 +785,10 @@
   url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G
   releases:
   - !Release
-    title: Ixia-IxNetwork-Controller-Shell-2G 3.1.2
-    tag_name: 3.1.2
-    published_at: 2022-07-28 09:50:46
-    release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.1.2
+    title: Ixia-IxNetwork-Controller-Shell-2G 3.1.3
+    tag_name: 3.1.3
+    published_at: 2022-11-21 08:36:05
+    release_url: https://github.com/QualiSystems/Ixia-IxNetwork-Controller-Shell-2G/releases/tag/3.1.3
     python_version: PY3
 - !Shell_2G
   name: Juniper-JunOS-Firewall-Shell-2G
