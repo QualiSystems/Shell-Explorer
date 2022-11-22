@@ -1111,10 +1111,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-apcon-cli4
   releases:
   - !Release
-    title: Apcon CLI4 L1 Shell 2.0.1 Preview
-    tag_name: 2.0.1
-    published_at: 2019-02-27 15:17:43
-    release_url: https://github.com/QualiSystems/cloudshell-L1-apcon-cli4/releases/tag/2.0.1
+    title: Apcon CLI4 L1 Shell 2.0.2 Preview
+    tag_name: 2.0.2
+    published_at: 2022-11-22 14:14:13
+    release_url: https://github.com/QualiSystems/cloudshell-L1-apcon-cli4/releases/tag/2.0.2
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-calient
@@ -1131,10 +1131,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-cgs
   releases:
   - !Release
-    title: CGS L1 Shell v1.0.1
-    tag_name: 1.0.1
-    published_at: 2019-09-03 11:53:36
-    release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.1
+    title: CGS L1 Shell v1.0.2
+    tag_name: 1.0.2
+    published_at: 2022-11-22 14:13:07
+    release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.2
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-cisco-nexus
@@ -1151,10 +1151,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm
   releases:
   - !Release
-    title: FiberZone AFM L1 Shell v2.0.0 Preview
-    tag_name: 2.0.0
-    published_at: 2019-01-02 14:11:52
-    release_url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm/releases/tag/2.0.0
+    title: FiberZone AFM L1 Shell v2.0.1 Preview
+    tag_name: 2.0.1
+    published_at: 2022-11-22 14:15:17
+    release_url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm/releases/tag/2.0.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-glimmerglass
@@ -1171,10 +1171,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge
   releases:
   - !Release
-    title: Cloudshell-L1-ixia-visionedge 1.0.9
-    tag_name: 1.0.9
-    published_at: 2020-03-26 11:02:01
-    release_url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge/releases/tag/1.0.9
+    title: Cloudshell-L1-ixia-visionedge 1.0.10
+    tag_name: 1.0.10
+    published_at: 2022-11-22 14:07:21
+    release_url: https://github.com/QualiSystems/cloudshell-L1-ixia-visionedge/releases/tag/1.0.10
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-mrv
@@ -1221,10 +1221,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire
   releases:
   - !Release
-    title: Pluribus VirtualWire L1 Shell v3.0.0 Preview
-    tag_name: 3.0.0
-    published_at: 2019-12-30 16:28:55
-    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire/releases/tag/3.0.0
+    title: Pluribus VirtualWire L1 Shell v3.0.1 Preview
+    tag_name: 3.0.1
+    published_at: 2022-11-22 14:06:23
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-virtualwire/releases/tag/3.0.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-pluribus-vle
@@ -1251,20 +1251,20 @@
   url: https://github.com/QualiSystems/cloudshell-L1-polatis
   releases:
   - !Release
-    title: Polatis L1 Shell v3.0.4
-    tag_name: 3.0.4
-    published_at: 2020-04-15 13:45:24
-    release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.4
+    title: Polatis L1 Shell v3.0.5
+    tag_name: 3.0.5
+    published_at: 2022-11-22 14:05:18
+    release_url: https://github.com/QualiSystems/cloudshell-L1-polatis/releases/tag/3.0.5
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-simpler_networks
   url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks
   releases:
   - !Release
-    title: Simpler Networks L1 Shell v2.0.0 Preview
-    tag_name: 2.0.0
-    published_at: 2019-01-03 12:15:23
-    release_url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks/releases/tag/2.0.0
+    title: Simpler Networks L1 Shell v2.0.1 Preview
+    tag_name: 2.0.1
+    published_at: 2022-11-22 14:16:30
+    release_url: https://github.com/QualiSystems/cloudshell-L1-simpler_networks/releases/tag/2.0.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-telebyte
