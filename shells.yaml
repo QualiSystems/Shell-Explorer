@@ -875,10 +875,10 @@
   url: https://github.com/QualiSystems/OpenStack-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: OpenStack-Cloud-Provider-Shell-2G 1.2.1
-    tag_name: 1.2.1
-    published_at: 2022-10-12 13:48:55
-    release_url: https://github.com/QualiSystems/OpenStack-Cloud-Provider-Shell-2G/releases/tag/1.2.1
+    title: OpenStack-Cloud-Provider-Shell-2G 1.2.0
+    tag_name: 1.2.0
+    published_at: 2022-10-10 12:43:31
+    release_url: https://github.com/QualiSystems/OpenStack-Cloud-Provider-Shell-2G/releases/tag/1.2.0
     python_version: PY3
 - !Shell_2G
   name: OpenStack-Shell-2G
