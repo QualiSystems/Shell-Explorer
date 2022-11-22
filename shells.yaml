@@ -1137,6 +1137,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-L1-cgs/releases/tag/1.0.1
     python_version: PY2
 - !Shell_L1
+  name: cloudshell-L1-cisco-nexus
+  url: https://github.com/QualiSystems/cloudshell-L1-cisco-nexus
+  releases:
+  - !Release
+    title: Cisco Nexus L1 0.1.1
+    tag_name: 0.1.1
+    published_at: 2022-11-22 14:02:28
+    release_url: https://github.com/QualiSystems/cloudshell-L1-cisco-nexus/releases/tag/0.1.1
+    python_version: PY2
+- !Shell_L1
   name: cloudshell-L1-fiberzone_afm
   url: https://github.com/QualiSystems/cloudshell-L1-fiberzone_afm
   releases:
@@ -1171,10 +1181,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-mrv
   releases:
   - !Release
-    title: MRV MCC L1 Shell v2.0.5
-    tag_name: 2.0.5
-    published_at: 2020-12-15 12:52:47
-    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.5
+    title: MRV MCC L1 Shell v2.0.6
+    tag_name: 2.0.6
+    published_at: 2022-11-22 14:01:09
+    release_url: https://github.com/QualiSystems/cloudshell-L1-mrv/releases/tag/2.0.6
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netscout-horizon
@@ -1191,10 +1201,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream
   releases:
   - !Release
-    title: Netscout TestStream L1 Shell v5.0.2
-    tag_name: 5.0.2
-    published_at: 2022-07-05 13:59:25
-    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.2
+    title: Netscout TestStream L1 Shell v5.0.3
+    tag_name: 5.0.3
+    published_at: 2022-11-22 13:59:17
+    release_url: https://github.com/QualiSystems/cloudshell-L1-netscout-teststream/releases/tag/5.0.3
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-netvisor_virtualwire
@@ -1221,10 +1231,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle
   releases:
   - !Release
-    title: Pluribus VLE L1 Shell v2.1.0
-    tag_name: 2.1.0
-    published_at: 2022-05-24 07:09:18
-    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.1.0
+    title: Pluribus VLE L1 Shell v2.1.1
+    tag_name: 2.1.1
+    published_at: 2022-11-22 13:47:17
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.1.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-pluribus_netvisor_vle
@@ -1261,10 +1271,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-telebyte
   releases:
   - !Release
-    title: Telebyte L1 Shell v1.0.1
-    tag_name: 1.0.1
-    published_at: 2019-11-26 11:16:07
-    release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.1
+    title: Telebyte L1 Shell v1.0.2
+    tag_name: 1.0.2
+    published_at: 2022-11-22 14:04:00
+    release_url: https://github.com/QualiSystems/cloudshell-L1-telebyte/releases/tag/1.0.2
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-test-switch
