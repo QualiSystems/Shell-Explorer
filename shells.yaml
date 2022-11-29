@@ -971,10 +971,10 @@
   url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G
   releases:
   - !Release
-    title: TRex-Chassis-Shell-2G 3.0.0
-    tag_name: 3.0.0
-    published_at: 2022-11-29 09:19:33
-    release_url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases/tag/3.0.0
+    title: TRex-Chassis-Shell-2G 3.0.1
+    tag_name: 3.0.1
+    published_at: 2022-11-29 10:02:05
+    release_url: https://github.com/QualiSystems/TRex-Chassis-Shell-2G/releases/tag/3.0.1
     python_version: PY3
 - !Shell_2G
   name: TeraVM-Chassis-Shell-2G
