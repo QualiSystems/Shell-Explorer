@@ -493,10 +493,10 @@
   url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G
   releases:
   - !Release
-    title: BreakingPoint-Controller-Shell-2G 3.0.1
-    tag_name: 3.0.1
-    published_at: 2022-09-05 11:31:06
-    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/3.0.1
+    title: BreakingPoint-Controller-Shell-2G 3.0.0
+    tag_name: 3.0.0
+    published_at: 2022-07-21 12:15:15
+    release_url: https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G/releases/tag/3.0.0
     python_version: PY3
 - !Shell_2G
   name: ByteBlower-Chassis-Shell-2G
