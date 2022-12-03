@@ -1231,10 +1231,10 @@
   url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle
   releases:
   - !Release
-    title: Pluribus VLE L1 Shell v2.1.0
-    tag_name: 2.1.0
-    published_at: 2022-05-24 07:09:18
-    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.1.0
+    title: Pluribus VLE L1 Shell v2.1.1
+    tag_name: 2.1.1
+    published_at: 2022-11-22 13:47:17
+    release_url: https://github.com/QualiSystems/cloudshell-L1-pluribus-vle/releases/tag/2.1.1
     python_version: PY2
 - !Shell_L1
   name: cloudshell-L1-pluribus_netvisor_vle
