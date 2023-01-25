@@ -33,10 +33,10 @@
   url: https://github.com/QualiSystems/cloudshell-calix
   releases:
   - !Release
-    title: cloudshell-calix 0.2.0
-    tag_name: 0.2.0
-    published_at: 2022-05-11 17:28:53
-    release_url: https://github.com/QualiSystems/cloudshell-calix/releases/tag/0.2.0
+    title: cloudshell-calix 0.2.1
+    tag_name: 0.2.1
+    published_at: 2023-01-25 14:51:08
+    release_url: https://github.com/QualiSystems/cloudshell-calix/releases/tag/0.2.1
     python_version: PY2
 - !Package
   name: cloudshell-cgs
@@ -103,10 +103,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-azure
   releases:
   - !Release
-    title: cloudshell-cp-azure 4.0.0
-    tag_name: 4.0.0
-    published_at: 2022-11-18 19:10:30
-    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/4.0.0
+    title: cloudshell-cp-azure 4.0.1
+    tag_name: 4.0.1
+    published_at: 2023-01-25 14:34:43
+    release_url: https://github.com/QualiSystems/cloudshell-cp-azure/releases/tag/4.0.1
     python_version: PY2
 - !Package
   name: cloudshell-cp-core
