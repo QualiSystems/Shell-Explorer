@@ -33,10 +33,10 @@
   url: https://github.com/QualiSystems/cloudshell-calix
   releases:
   - !Release
-    title: cloudshell-calix 0.2.5
-    tag_name: 0.2.5
-    published_at: 2023-02-24 14:55:29
-    release_url: https://github.com/QualiSystems/cloudshell-calix/releases/tag/0.2.5
+    title: cloudshell-calix 0.2.2
+    tag_name: 0.2.2
+    published_at: 2023-01-25 15:47:55
+    release_url: https://github.com/QualiSystems/cloudshell-calix/releases/tag/0.2.2
     python_version: PY2
 - !Package
   name: cloudshell-cgs
