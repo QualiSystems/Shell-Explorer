@@ -543,10 +543,10 @@
   url: https://github.com/QualiSystems/cloudshell-snmp-autoload
   releases:
   - !Release
-    title: cloudshell-snmp-autoload 1.0.3
-    tag_name: 1.0.3
-    published_at: 2022-04-18 17:33:02
-    release_url: https://github.com/QualiSystems/cloudshell-snmp-autoload/releases/tag/1.0.3
+    title: cloudshell-snmp-autoload 2.0.1
+    tag_name: 2.0.1
+    published_at: 2023-04-10 15:21:06
+    release_url: https://github.com/QualiSystems/cloudshell-snmp-autoload/releases/tag/2.0.1
     python_version: PY2
 - !Package
   name: cloudshell-tc-scripts
