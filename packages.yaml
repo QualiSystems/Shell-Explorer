@@ -289,6 +289,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-networking-cisco/releases/tag/7.0.0
     python_version: PY2
 - !Package
+  name: cloudshell-networking-cisco-iosxr
+  url: https://github.com/QualiSystems/cloudshell-networking-cisco-iosxr
+  releases:
+  - !Release
+    title: cloudshell-networking-cisco-iosxr 5.0.0
+    tag_name: 5.0.0
+    published_at: 2023-04-20 23:15:39
+    release_url: https://github.com/QualiSystems/cloudshell-networking-cisco-iosxr/releases/tag/5.0.0
+    python_version: PY2
+- !Package
   name: cloudshell-networking-cisco-nxos
   url: https://github.com/QualiSystems/cloudshell-networking-cisco-nxos
   releases:
