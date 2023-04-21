@@ -543,10 +543,10 @@
   url: https://github.com/QualiSystems/cloudshell-snmp
   releases:
   - !Release
-    title: cloudshell-snmp 4.0.4
-    tag_name: 4.0.4
-    published_at: 2022-09-21 19:34:29
-    release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/4.0.4
+    title: cloudshell-snmp 5.0.0
+    tag_name: 5.0.0
+    published_at: 2023-03-22 21:23:55
+    release_url: https://github.com/QualiSystems/cloudshell-snmp/releases/tag/5.0.0
     python_version: PY2
 - !Package
   name: cloudshell-snmp-autoload
