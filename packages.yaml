@@ -439,6 +439,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-recorder/releases/tag/1.1.1
     python_version: PY2
 - !Package
+  name: cloudshell-rest-api
+  url: https://github.com/QualiSystems/cloudshell-rest-api
+  releases:
+  - !Release
+    title: cloudshell-rest-api 9.0.0
+    tag_name: 9.0.0
+    published_at: 2023-05-04 11:16:27
+    release_url: https://github.com/QualiSystems/cloudshell-rest-api/releases/tag/9.0.0
+    python_version: PY2
+- !Package
   name: cloudshell-sdn-odl
   url: https://github.com/QualiSystems/cloudshell-sdn-odl
   releases:
