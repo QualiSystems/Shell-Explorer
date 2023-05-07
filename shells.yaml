@@ -833,10 +833,10 @@
   url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.5.0
-    tag_name: 2.5.0
-    published_at: 2022-11-18 19:56:56
-    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.5.0
+    title: Microsoft-Azure-Cloud-Provider-Shell-2G 2.4.2
+    tag_name: 2.4.2
+    published_at: 2022-03-10 16:31:35
+    release_url: https://github.com/QualiSystems/Microsoft-Azure-Cloud-Provider-Shell-2G/releases/tag/2.4.2
     python_version: PY3
 - !Shell_2G
   name: NVIDIA-Onyx-Switch-Shell-2G
