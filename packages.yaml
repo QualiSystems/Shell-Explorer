@@ -483,10 +483,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow
   releases:
   - !Release
-    title: cloudshell-shell-connectivity-flow 3.2.1
-    tag_name: 3.2.1
-    published_at: 2023-03-14 14:57:12
-    release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/3.2.1
+    title: cloudshell-shell-connectivity-flow 4.0.0
+    tag_name: 4.0.0
+    published_at: 2023-06-02 11:06:12
+    release_url: https://github.com/QualiSystems/cloudshell-shell-connectivity-flow/releases/tag/4.0.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-core
