@@ -923,10 +923,10 @@
   url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G
   releases:
   - !Release
-    title: Spirent-TestCenter-Chassis-Shell-2G 3.0.1
-    tag_name: 3.0.1
-    published_at: 2021-06-15 09:44:04
-    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G/releases/tag/3.0.1
+    title: Spirent-TestCenter-Chassis-Shell-2G 3.1.1
+    tag_name: 3.1.1
+    published_at: 2022-08-11 13:33:31
+    release_url: https://github.com/QualiSystems/Spirent-TestCenter-Chassis-Shell-2G/releases/tag/3.1.1
     python_version: PY3
 - !Shell_2G
   name: Spirent-TestCenter-Controller-Shell-2G
