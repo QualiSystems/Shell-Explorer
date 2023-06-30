@@ -793,20 +793,20 @@
   url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G
   releases:
   - !Release
-    title: Juniper-JunOS-Router-Shell-2G 3.0.4
-    tag_name: 3.0.4
-    published_at: 2021-03-15 15:53:09
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/3.0.4
+    title: Juniper-JunOS-Router-Shell-2G 4.0.0
+    tag_name: 4.0.0
+    published_at: 2023-06-30 07:18:46
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Router-Shell-2G/releases/tag/4.0.0
     python_version: PY3
 - !Shell_2G
   name: Juniper-JunOS-Switch-Shell-2G
   url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G
   releases:
   - !Release
-    title: Juniper-JunOS-Switch-Shell-2G 3.0.4
-    tag_name: 3.0.4
-    published_at: 2021-03-15 15:55:21
-    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/3.0.4
+    title: Juniper-JunOS-Switch-Shell-2G 4.0.0
+    tag_name: 4.0.0
+    published_at: 2023-06-30 07:32:56
+    release_url: https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases/tag/4.0.0
     python_version: PY3
 - !Shell_2G
   name: Kubernetes-Cloud-Provider-2G
