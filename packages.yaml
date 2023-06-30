@@ -503,10 +503,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard
   releases:
   - !Release
-    title: cloudshell-shell-firewall-standard 3.0.2
-    tag_name: 3.0.2
-    published_at: 2019-10-03 12:00:55
-    release_url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard/releases/tag/3.0.2
+    title: cloudshell-shell-firewall-standard 4.0.0
+    tag_name: 4.0.0
+    published_at: 2023-06-30 13:37:03
+    release_url: https://github.com/QualiSystems/cloudshell-shell-firewall-standard/releases/tag/4.0.0
     python_version: PY2
 - !Package
   name: cloudshell-shell-flows
