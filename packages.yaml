@@ -353,10 +353,10 @@
   url: https://github.com/QualiSystems/cloudshell-networking-juniper
   releases:
   - !Release
-    title: cloudshell-networking-juniper 6.0.1
-    tag_name: 6.0.1
-    published_at: 2023-06-29 15:11:27
-    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/6.0.1
+    title: cloudshell-networking-juniper 6.0.2
+    tag_name: 6.0.2
+    published_at: 2023-07-04 15:20:02
+    release_url: https://github.com/QualiSystems/cloudshell-networking-juniper/releases/tag/6.0.2
     python_version: PY2
 - !Package
   name: cloudshell-nvidia-onyx
