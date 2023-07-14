@@ -753,10 +753,10 @@
   url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G
   releases:
   - !Release
-    title: Ixia-Chassis-Shell-2G 3.1.1
-    tag_name: 3.1.1
-    published_at: 2022-11-19 13:34:50
-    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/3.1.1
+    title: Ixia-Chassis-Shell-2G 3.1.2
+    tag_name: 3.1.2
+    published_at: 2023-05-16 15:16:46
+    release_url: https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases/tag/3.1.2
     python_version: PY3
   - !Release
     title: Ixia-Chassis-Shell-2G 2.1.2-Preview
