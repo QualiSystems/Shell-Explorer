@@ -543,10 +543,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-standards
   releases:
   - !Release
-    title: cloudshell-shell-standards 2.0.3
-    tag_name: 2.0.3
-    published_at: 2023-05-12 13:09:08
-    release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/2.0.3
+    title: cloudshell-shell-standards 2.0.4
+    tag_name: 2.0.4
+    published_at: 2023-08-02 14:01:57
+    release_url: https://github.com/QualiSystems/cloudshell-shell-standards/releases/tag/2.0.4
     python_version: PY2
 - !Package
   name: cloudshell-snmp
