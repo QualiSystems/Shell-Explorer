@@ -143,10 +143,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-vcenter
   releases:
   - !Release
-    title: cloudshell-cp-vcenter 6.0.1
-    tag_name: 6.0.1
-    published_at: 2023-08-18 13:18:03
-    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/6.0.1
+    title: cloudshell-cp-vcenter 6.0.2
+    tag_name: 6.0.2
+    published_at: 2023-08-21 08:30:44
+    release_url: https://github.com/QualiSystems/cloudshell-cp-vcenter/releases/tag/6.0.2
     python_version: PY2
 - !Package
   name: cloudshell-cumulus-linux
