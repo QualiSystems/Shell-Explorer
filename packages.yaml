@@ -473,10 +473,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-automation-tests
   releases:
   - !Release
-    title: cloudshell-shell-automation-tests 0.17.2
-    tag_name: 0.17.2
-    published_at: 2022-09-22 09:26:41
-    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.17.2
+    title: cloudshell-shell-automation-tests 0.17.4
+    tag_name: 0.17.4
+    published_at: 2023-08-02 12:29:26
+    release_url: https://github.com/QualiSystems/cloudshell-shell-automation-tests/releases/tag/0.17.4
     python_version: PY2
 - !Package
   name: cloudshell-shell-connectivity-flow
