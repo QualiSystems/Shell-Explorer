@@ -493,10 +493,10 @@
   url: https://github.com/QualiSystems/cloudshell-shell-core
   releases:
   - !Release
-    title: cloudshell-shell-core 6.0.0
-    tag_name: 6.0.0
-    published_at: 2023-05-05 07:45:59
-    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/6.0.0
+    title: cloudshell-shell-core 6.0.1
+    tag_name: 6.0.1
+    published_at: 2023-10-16 14:51:52
+    release_url: https://github.com/QualiSystems/cloudshell-shell-core/releases/tag/6.0.1
     python_version: PY2
 - !Package
   name: cloudshell-shell-firewall-standard
