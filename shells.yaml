@@ -769,10 +769,10 @@
   url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G
   releases:
   - !Release
-    title: Ixia-IxLoad-Controller-Shell-2G 3.1.0
-    tag_name: 3.1.0
-    published_at: 2022-08-11 07:17:39
-    release_url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G/releases/tag/3.1.0
+    title: Ixia IxLoad Controller Shell 2G 3.0.1
+    tag_name: 3.0.1-Preview
+    published_at: 2021-01-20 13:28:23
+    release_url: https://github.com/QualiSystems/Ixia-IxLoad-Controller-Shell-2G/releases/tag/3.0.1-Preview
     python_version: PY3
 - !Shell_2G
   name: Ixia-IxNetwork-Controller-Shell-2G
