@@ -443,10 +443,10 @@
   url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G
   releases:
   - !Release
-    title: Amazon-AWS-Cloud-Provider-Shell-2G 1.4.0
-    tag_name: 1.4.0
-    published_at: 2023-07-26 13:40:35
-    release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/1.4.0
+    title: Amazon-AWS-Cloud-Provider-Shell-2G 1.5.1
+    tag_name: 1.5.1
+    published_at: 2023-12-21 14:06:28
+    release_url: https://github.com/QualiSystems/Amazon-AWS-Cloud-Provider-Shell-2G/releases/tag/1.5.1
     python_version: PY3
 - !Shell_2G
   name: Arista-EOS-Router-Shell-2G
