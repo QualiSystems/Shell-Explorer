@@ -93,10 +93,10 @@
   url: https://github.com/QualiSystems/cloudshell-cp-aws
   releases:
   - !Release
-    title: cloudshell-cp-aws 3.6.2
-    tag_name: 3.6.2
-    published_at: 2023-12-21 13:48:53
-    release_url: https://github.com/QualiSystems/cloudshell-cp-aws/releases/tag/3.6.2
+    title: cloudshell-cp-aws 3.5.0
+    tag_name: 3.5.0
+    published_at: 2023-07-26 13:12:12
+    release_url: https://github.com/QualiSystems/cloudshell-cp-aws/releases/tag/3.5.0
     python_version: PY2
 - !Package
   name: cloudshell-cp-azure
