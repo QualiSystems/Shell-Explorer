@@ -915,6 +915,16 @@
     release_url: https://github.com/QualiSystems/PaloAlto-PanoOS-Static-Shell/releases/tag/1.0.0
     python_version: PY2
 - !Shell_2G
+  name: Raritan-PDU-Shell-2G
+  url: https://github.com/QualiSystems/Raritan-PDU-Shell-2G
+  releases:
+  - !Release
+    title: Raritan-PDU-Shell-2G 2.0.0
+    tag_name: 2.0.0
+    published_at: 2024-01-26 19:50:37
+    release_url: https://github.com/QualiSystems/Raritan-PDU-Shell-2G/releases/tag/2.0.0
+    python_version: PY3
+- !Shell_2G
   name: SDN-Opendaylight-Shell-2G
   url: https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G
   releases:
