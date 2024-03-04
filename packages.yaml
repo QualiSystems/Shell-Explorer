@@ -439,6 +439,16 @@
     release_url: https://github.com/QualiSystems/cloudshell-pip-download/releases/tag/0.5.1
     python_version: PY2
 - !Package
+  name: cloudshell-qualix-link
+  url: https://github.com/QualiSystems/cloudshell-qualix-link
+  releases:
+  - !Release
+    title: cloudshell-qualix-link 0.0.2
+    tag_name: 0.0.2
+    published_at: 2023-09-26 08:16:02
+    release_url: https://github.com/QualiSystems/cloudshell-qualix-link/releases/tag/0.0.2
+    python_version: PY2
+- !Package
   name: cloudshell-raritan
   url: https://github.com/QualiSystems/cloudshell-raritan
   releases:
