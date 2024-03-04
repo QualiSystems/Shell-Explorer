@@ -1,26 +1,32 @@
 import json
+import sys
 from collections import defaultdict
 from datetime import datetime, timedelta
-import sys
+from typing import TYPE_CHECKING
 
-from github import Github, Repository, UnknownObjectException, Organization
+from github import Github, UnknownObjectException
+
+if TYPE_CHECKING:
+    from github import Organization, Repository
 
 REPO_NAME = "Shell-Explorer"
 WORKFLOW_FILE_NAME = "check-for-new-releases.yml"
 SHELL_EXPLORER_WORKFLOW_FILE_NAME = "shell-explorer.yml"
 
 
-def get_time_of_last_run(repo: Repository) -> datetime:
+def get_time_of_last_run(repo: "Repository") -> datetime:
     try:
         workflow = repo.get_workflow(WORKFLOW_FILE_NAME)
-        last_run = next(iter(workflow.get_runs(branch='master', status='success')))
+        last_run = next(iter(workflow.get_runs(branch="master", status="success")))
     except (UnknownObjectException, StopIteration):
         return datetime(2021, 1, 1)
     else:
         return last_run.created_at - timedelta(minutes=5)
 
 
-def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list[int]]:
+def get_last_releases(
+    org: "Organization", check_from: datetime
+) -> dict[str, list[int]]:
     new_releases = defaultdict(list)
     for repo in org.get_repos():
         for release in repo.get_releases():
@@ -31,7 +37,7 @@ def get_last_releases(org: Organization, check_from: datetime) -> dict[str, list
     return new_releases
 
 
-def run_shell_explorer_workflow(repo: Repository, new_releases: dict[str, list[int]]):
+def run_shell_explorer_workflow(repo: "Repository", new_releases: dict[str, list[int]]):
     workflow = repo.get_workflow(SHELL_EXPLORER_WORKFLOW_FILE_NAME)
     data = json.dumps(new_releases)
     workflow.create_dispatch("master", {"new_releases": data})

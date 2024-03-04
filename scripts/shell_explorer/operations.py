@@ -1,12 +1,14 @@
 import logging
 from datetime import datetime
-from functools import lru_cache, cached_property
+from functools import cached_property, lru_cache
 
 import yaml
 from github import Github, Organization, Repository
 
+from scripts.shell_explorer.helpers import get_str_from_git_content
 
-class RepoOperations(object):
+
+class RepoOperations:
     def __init__(self, auth_key, org_name, working_repo):
         self._github = Github(auth_key)
         self._org_name = org_name
@@ -23,7 +25,7 @@ class RepoOperations(object):
         return self._get_org(self._org_name)
 
     @property
-    @lru_cache()
+    @lru_cache
     def working_repo(self):
         return self.org.get_repo(self._working_repo)
 
@@ -33,23 +35,24 @@ class RepoOperations(object):
     def get_org_repo(self, name: str) -> Repository:
         return self.org.get_repo(name)
 
-    def get_working_content(self, branch, path):
+    def get_working_content(self, branch, path) -> str:
         ref = self.working_repo.get_branch(branch).commit.sha
         content = self.working_repo.get_contents(path, ref)
-        return content.decoded_content.decode("utf-8")
+        return get_str_from_git_content(content)
 
     def commit_if_changed(self, data, path, branch):
         ref = self.working_repo.get_branch(branch).commit.sha
         content = self.working_repo.get_contents(path, ref)
-        repo_data = content.decoded_content.decode("utf-8")
+        repo_data = get_str_from_git_content(content)
         if data != repo_data:
-            logging.info("Commit changes to {}".format(path))
-            message = "ShellExplorer {} {}".format(path, datetime.now())
-            return self.working_repo.update_file(path, message, data, content.sha, branch=branch)
+            logging.info(f"Commit changes to {path}")
+            message = f"ShellExplorer {path} {datetime.now()}"
+            return self.working_repo.update_file(
+                path, message, data, content.sha, branch=branch
+            )
 
 
-class SerializationOperations(object):
-
+class SerializationOperations:
     @staticmethod
     def load_table(data):
         return yaml.load(data, Loader=yaml.Loader)
